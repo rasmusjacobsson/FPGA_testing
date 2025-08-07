@@ -1,0 +1,8 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../UART_Test.srcs/sources_1/new/UART_RXmod.vhd" \
+"../../../../UART_Test.srcs/sources_1/new/UART_TXmod.vhd" \
+"../../../../UART_Test.srcs/sim_1/new/UART_TB.vhd" \
+
+# Do not sort compile order
+nosort

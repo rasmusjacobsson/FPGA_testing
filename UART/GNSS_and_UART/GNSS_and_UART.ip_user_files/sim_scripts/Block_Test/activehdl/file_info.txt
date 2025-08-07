@@ -1,0 +1,8 @@
+Block_Test_UART_RXmod_0_0.vhd,vhdl,xil_defaultlib,../../../bd/Block_Test/ip/Block_Test_UART_RXmod_0_0/sim/Block_Test_UART_RXmod_0_0.vhd,
+Block_Test_UART_TXmod_0_0.vhd,vhdl,xil_defaultlib,../../../bd/Block_Test/ip/Block_Test_UART_TXmod_0_0/sim/Block_Test_UART_TXmod_0_0.vhd,
+Block_Test_Switchmod_0_0.vhd,vhdl,xil_defaultlib,../../../bd/Block_Test/ip/Block_Test_Switchmod_0_0/sim/Block_Test_Switchmod_0_0.vhd,
+Block_Test_UART_TXmod_1_0.vhd,vhdl,xil_defaultlib,../../../bd/Block_Test/ip/Block_Test_UART_TXmod_1_0/sim/Block_Test_UART_TXmod_1_0.vhd,
+Block_Test_UART_TXmod_2_0.vhd,vhdl,xil_defaultlib,../../../bd/Block_Test/ip/Block_Test_UART_TXmod_2_0/sim/Block_Test_UART_TXmod_2_0.vhd,
+Block_Test_UART_RXmod_1_0.vhd,vhdl,xil_defaultlib,../../../bd/Block_Test/ip/Block_Test_UART_RXmod_1_0/sim/Block_Test_UART_RXmod_1_0.vhd,
+Block_Test_MUX_2to1_0_4.vhd,vhdl,xil_defaultlib,../../../bd/Block_Test/ip/Block_Test_MUX_2to1_0_4/sim/Block_Test_MUX_2to1_0_4.vhd,
+Block_Test.vhd,vhdl,xil_defaultlib,../../../bd/Block_Test/sim/Block_Test.vhd,

@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Aug  5 20:07:24 2025" VIVADOVERSION="2024.2">
+
+  <SYSTEMINFO ARCH="artix7" DEVICE="7a35t" NAME="TM_Block" PACKAGE="cpg236" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="O" NAME="GNSS_EN" SIGIS="undef" SIGNAME="Switchmod_0_o_signal">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Switchmod_0" PORT="o_signal"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="GNSS_RX" SIGIS="undef" SIGNAME="GNSS_Reader_NO_TX_0_GNSS_RX">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="GNSS_Reader_NO_TX_0" PORT="GNSS_RX"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="GNSS_TX" SIGIS="undef" SIGNAME="External_Ports_GNSS_TX">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="GNSS_Reader_NO_TX_0" PORT="GNSS_TX"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="btn0" SIGIS="undef" SIGNAME="External_Ports_btn0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="MUX_2to1_0" PORT="sel"/>
+        <CONNECTION INSTANCE="Switchmod_0" PORT="i_signal"/>
+        <CONNECTION INSTANCE="util_vector_logic_0" PORT="Op1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="led0" SIGIS="undef" SIGNAME="Switchmod_0_led0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Switchmod_0" PORT="led0"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="led1" SIGIS="undef" SIGNAME="I2C_Reader_NO_TX_0_led2">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="I2C_Reader_NO_TX_0" PORT="led2"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="scl_i" SIGIS="undef" SIGNAME="External_Ports_scl_i">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="I2C_Reader_NO_TX_0" PORT="scl_i"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="scl_o" SIGIS="undef" SIGNAME="I2C_Reader_NO_TX_0_scl_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="I2C_Reader_NO_TX_0" PORT="scl_o"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="scl_t" SIGIS="undef" SIGNAME="I2C_Reader_NO_TX_0_scl_t">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="I2C_Reader_NO_TX_0" PORT="scl_t"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="sda_i" SIGIS="undef" SIGNAME="External_Ports_sda_i">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="I2C_Reader_NO_TX_0" PORT="sda_i"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="sda_o" SIGIS="undef" SIGNAME="I2C_Reader_NO_TX_0_sda_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="I2C_Reader_NO_TX_0" PORT="sda_o"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="sda_t" SIGIS="undef" SIGNAME="I2C_Reader_NO_TX_0_sda_t">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="I2C_Reader_NO_TX_0" PORT="sda_t"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="sysclk" SIGIS="undef" SIGNAME="External_Ports_sysclk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="MUX_2to1_0" PORT="sysclk"/>
+        <CONNECTION INSTANCE="UART_TXmod_0" PORT="sysclk"/>
+        <CONNECTION INSTANCE="Switchmod_0" PORT="sysclk"/>
+        <CONNECTION INSTANCE="GNSS_Reader_NO_TX_0" PORT="sysclk"/>
+        <CONNECTION INSTANCE="I2C_Reader_NO_TX_0" PORT="sysclk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="uart_rxd_out" SIGIS="undef" SIGNAME="UART_TXmod_0_o_TX_Serial">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="UART_TXmod_0" PORT="o_TX_Serial"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE BD="GNSS_Reader_NO_TX_inst_0" BDTYPE="BLOCK_CONTAINER" DRIVERMODE="SUBCORE" FULLNAME="/GNSS_Reader_NO_TX_0" INSTANCE="GNSS_Reader_NO_TX_0" IS_ENABLE="1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="ACTIVE_SIM_BD" VALUE="GNSS_Reader_NO_TX.bd"/>
+        <PARAMETER NAME="ACTIVE_SYNTH_BD" VALUE="GNSS_Reader_NO_TX.bd"/>
+        <PARAMETER NAME="ENABLE_DFX" VALUE="0"/>
+        <PARAMETER NAME="LIST_SIM_BD" VALUE="GNSS_Reader_NO_TX.bd"/>
+        <PARAMETER NAME="LIST_SYNTH_BD" VALUE="GNSS_Reader_NO_TX.bd"/>
+        <PARAMETER NAME="LOCK_PROPAGATE" VALUE="0"/>
+        <PARAMETER NAME="TRAINING_MODULE" VALUE="GNSS_Reader_NO_TX.bd"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" NAME="GNSS_RX" SIGIS="undef" SIGNAME="GNSS_Reader_NO_TX_0_GNSS_RX">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="GNSS_RX"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="GNSS_TX" SIGIS="undef" SIGNAME="External_Ports_GNSS_TX">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="GNSS_TX"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="o_GNSS_RX_BYTE" RIGHT="0" SIGIS="undef" SIGNAME="GNSS_Reader_NO_TX_0_o_GNSS_RX_BYTE">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MUX_2to1_0" PORT="i_TX_Byte_1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_GNSS_RX_DV" SIGIS="undef" SIGNAME="GNSS_Reader_NO_TX_0_o_GNSS_RX_DV">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MUX_2to1_0" PORT="i_TX_DV_1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="sysclk" SIGIS="undef" SIGNAME="External_Ports_sysclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sysclk"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE BD="I2C_Reader_NO_TX_inst_0" BDTYPE="BLOCK_CONTAINER" DRIVERMODE="SUBCORE" FULLNAME="/I2C_Reader_NO_TX_0" INSTANCE="I2C_Reader_NO_TX_0" IS_ENABLE="1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="ACTIVE_SIM_BD" VALUE="I2C_Reader_NO_TX.bd"/>
+        <PARAMETER NAME="ACTIVE_SYNTH_BD" VALUE="I2C_Reader_NO_TX.bd"/>
+        <PARAMETER NAME="ENABLE_DFX" VALUE="0"/>
+        <PARAMETER NAME="LIST_SIM_BD" VALUE="I2C_Reader_NO_TX.bd"/>
+        <PARAMETER NAME="LIST_SYNTH_BD" VALUE="I2C_Reader_NO_TX.bd"/>
+        <PARAMETER NAME="LOCK_PROPAGATE" VALUE="0"/>
+        <PARAMETER NAME="TRAINING_MODULE" VALUE="I2C_Reader_NO_TX.bd"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" NAME="I2C_TX_DV" SIGIS="undef" SIGNAME="I2C_Reader_NO_TX_0_I2C_TX_DV">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MUX_2to1_0" PORT="i_TX_DV_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="I2C_TX_byte" RIGHT="0" SIGIS="undef" SIGNAME="I2C_Reader_NO_TX_0_I2C_TX_byte">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MUX_2to1_0" PORT="i_TX_Byte_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_TX_Done" SIGIS="undef" SIGNAME="UART_TXmod_0_o_TX_Done">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="UART_TXmod_0" PORT="o_TX_Done"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="led2" SIGIS="undef" SIGNAME="I2C_Reader_NO_TX_0_led2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="led1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="reset_n" POLARITY="ACTIVE_LOW" SIGIS="undef" SIGNAME="util_vector_logic_0_Res">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="util_vector_logic_0" PORT="Res"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="scl_i" SIGIS="undef" SIGNAME="External_Ports_scl_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="scl_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="scl_o" SIGIS="undef" SIGNAME="I2C_Reader_NO_TX_0_scl_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="scl_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="scl_t" SIGIS="undef" SIGNAME="I2C_Reader_NO_TX_0_scl_t">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="scl_t"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="sda_i" SIGIS="undef" SIGNAME="External_Ports_sda_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sda_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="sda_o" SIGIS="undef" SIGNAME="I2C_Reader_NO_TX_0_sda_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sda_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="sda_t" SIGIS="undef" SIGNAME="I2C_Reader_NO_TX_0_sda_t">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sda_t"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="sysclk" SIGIS="undef" SIGNAME="External_Ports_sysclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sysclk"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/MUX_2to1_0" HWVERSION="1.0" INSTANCE="MUX_2to1_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="MUX_2to1" VLNV="xilinx.com:module_ref:MUX_2to1:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="TM_Block_MUX_2to1_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="7" NAME="i_TX_Byte_0" RIGHT="0" SIGIS="undef" SIGNAME="I2C_Reader_NO_TX_0_I2C_TX_byte">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="I2C_Reader_NO_TX_0" PORT="I2C_TX_byte"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="i_TX_Byte_1" RIGHT="0" SIGIS="undef" SIGNAME="GNSS_Reader_NO_TX_0_o_GNSS_RX_BYTE">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GNSS_Reader_NO_TX_0" PORT="o_GNSS_RX_BYTE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_TX_DV_0" SIGIS="undef" SIGNAME="I2C_Reader_NO_TX_0_I2C_TX_DV">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="I2C_Reader_NO_TX_0" PORT="I2C_TX_DV"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_TX_DV_1" SIGIS="undef" SIGNAME="GNSS_Reader_NO_TX_0_o_GNSS_RX_DV">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GNSS_Reader_NO_TX_0" PORT="o_GNSS_RX_DV"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="mux_TX_DV_out" SIGIS="undef" SIGNAME="MUX_2to1_0_mux_TX_DV_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="UART_TXmod_0" PORT="i_TX_DV"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="mux_TX_out" RIGHT="0" SIGIS="undef" SIGNAME="MUX_2to1_0_mux_TX_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="UART_TXmod_0" PORT="i_TX_Byte"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="sel" SIGIS="undef" SIGNAME="External_Ports_btn0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="btn0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="sysclk" SIGIS="undef" SIGNAME="External_Ports_sysclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sysclk"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/Switchmod_0" HWVERSION="1.0" INSTANCE="Switchmod_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Switchmod" VLNV="xilinx.com:module_ref:Switchmod:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="TM_Block_Switchmod_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="i_signal" SIGIS="undef" SIGNAME="External_Ports_btn0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="btn0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="led0" SIGIS="undef" SIGNAME="Switchmod_0_led0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="led0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_signal" SIGIS="undef" SIGNAME="Switchmod_0_o_signal">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="GNSS_EN"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="sysclk" SIGIS="undef" SIGNAME="External_Ports_sysclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sysclk"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/UART_TXmod_0" HWVERSION="1.0" INSTANCE="UART_TXmod_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="UART_TXmod" VLNV="xilinx.com:module_ref:UART_TXmod:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Baud_Rate" VALUE="115200"/>
+        <PARAMETER NAME="Clockfrequency" VALUE="12000000"/>
+        <PARAMETER NAME="Component_Name" VALUE="TM_Block_UART_TXmod_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="7" NAME="i_TX_Byte" RIGHT="0" SIGIS="undef" SIGNAME="MUX_2to1_0_mux_TX_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MUX_2to1_0" PORT="mux_TX_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_TX_DV" SIGIS="undef" SIGNAME="MUX_2to1_0_mux_TX_DV_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MUX_2to1_0" PORT="mux_TX_DV_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_TX_Active" SIGIS="undef"/>
+        <PORT DIR="O" NAME="o_TX_Done" SIGIS="undef" SIGNAME="UART_TXmod_0_o_TX_Done">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="I2C_Reader_NO_TX_0" PORT="i_TX_Done"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_TX_Serial" SIGIS="undef" SIGNAME="UART_TXmod_0_o_TX_Serial">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="uart_rxd_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="sysclk" SIGIS="undef" SIGNAME="External_Ports_sysclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sysclk"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="4" FULLNAME="/util_vector_logic_0" HWVERSION="2.0" INSTANCE="util_vector_logic_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="util_vector_logic" VLNV="xilinx.com:ip:util_vector_logic:2.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="C_OPERATION" VALUE="not"/>
+        <PARAMETER NAME="C_SIZE" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="TM_Block_util_vector_logic_0_0"/>
+        <PARAMETER NAME="LOGO_FILE" VALUE="data/sym_notgate.png"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="0" NAME="Op1" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_btn0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="btn0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="Res" POLARITY="ACTIVE_LOW" RIGHT="0" SIGIS="undef" SIGNAME="util_vector_logic_0_Res">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="I2C_Reader_NO_TX_0" PORT="reset_n"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

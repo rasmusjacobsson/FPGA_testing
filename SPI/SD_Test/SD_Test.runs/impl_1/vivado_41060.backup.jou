@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Wed Aug  6 18:34:46 2025
+# Process ID         : 41060
+# Current directory  : D:/Code/GLITCH-Software/FPGA/SPI/SD_Test/SD_Test.runs/impl_1
+# Command line       : vivado.exe -log SD_init_test_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source SD_init_test_wrapper.tcl -notrace
+# Log file           : D:/Code/GLITCH-Software/FPGA/SPI/SD_Test/SD_Test.runs/impl_1/SD_init_test_wrapper.vdi
+# Journal file       : D:/Code/GLITCH-Software/FPGA/SPI/SD_Test/SD_Test.runs/impl_1\vivado.jou
+# Running On         : DESKTOP-TTFS3R7
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 19045
+# Processor Detail   : Intel(R) Core(TM) i5-7600K CPU @ 3.80GHz
+# CPU Frequency      : 3792 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 4
+# Host memory        : 17142 MB
+# Swap memory        : 16699 MB
+# Total Virtual      : 33842 MB
+# Available Virtual  : 6225 MB
+#-----------------------------------------------------------
+source SD_init_test_wrapper.tcl -notrace

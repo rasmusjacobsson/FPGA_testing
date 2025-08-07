@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Apr  2 14:23:44 2025" VIVADOVERSION="2024.2">
+
+  <SYSTEMINFO ARCH="artix7" DEVICE="7a35t" NAME="Block_Test" PACKAGE="cpg236" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="I" NAME="btn0" SIGIS="undef" SIGNAME="External_Ports_btn0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Pulsemod_0" PORT="i_signal"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="led0" SIGIS="undef" SIGNAME="UART_TXmod_0_o_TX_Active">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="UART_TXmod_0" PORT="o_TX_Active"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="led1" SIGIS="undef" SIGNAME="UART_TXmod_0_o_TX_Done">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="UART_TXmod_0" PORT="o_TX_Done"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="sysclk" SIGIS="undef" SIGNAME="External_Ports_sysclk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="UART_TXmod_0" PORT="sysclk"/>
+        <CONNECTION INSTANCE="UART_RXmod_0" PORT="sysclk"/>
+        <CONNECTION INSTANCE="Pulsemod_0" PORT="sysclk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="uart_rxd_out" SIGIS="undef" SIGNAME="UART_TXmod_0_o_TX_Serial">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="UART_TXmod_0" PORT="o_TX_Serial"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="uart_txd_in" SIGIS="undef" SIGNAME="External_Ports_uart_txd_in">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="UART_RXmod_0" PORT="i_RX_Serial"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/Pulsemod_0" HWVERSION="1.0" INSTANCE="Pulsemod_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Pulsemod" VLNV="xilinx.com:module_ref:Pulsemod:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="PULSE_LENGTH" VALUE="2"/>
+        <PARAMETER NAME="Component_Name" VALUE="Block_Test_Pulsemod_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="i_signal" SIGIS="undef" SIGNAME="External_Ports_btn0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="btn0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_pulse" SIGIS="undef" SIGNAME="Pulsemod_0_o_pulse">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="UART_TXmod_0" PORT="i_TX_DV"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="sysclk" SIGIS="undef" SIGNAME="External_Ports_sysclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sysclk"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/UART_RXmod_0" HWVERSION="1.0" INSTANCE="UART_RXmod_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="UART_RXmod" VLNV="xilinx.com:module_ref:UART_RXmod:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Baud_Rate" VALUE="115200"/>
+        <PARAMETER NAME="Clockfrequency" VALUE="12000000"/>
+        <PARAMETER NAME="Component_Name" VALUE="Block_Test_UART_RXmod_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="i_RX_Serial" SIGIS="undef" SIGNAME="External_Ports_uart_txd_in">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="uart_txd_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_RX_DV" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="7" NAME="o_RX_byte" RIGHT="0" SIGIS="undef" SIGNAME="UART_RXmod_0_o_RX_byte">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="UART_TXmod_0" PORT="i_TX_Byte"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="sysclk" SIGIS="undef" SIGNAME="External_Ports_sysclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sysclk"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/UART_TXmod_0" HWVERSION="1.0" INSTANCE="UART_TXmod_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="UART_TXmod" VLNV="xilinx.com:module_ref:UART_TXmod:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Baud_Rate" VALUE="115200"/>
+        <PARAMETER NAME="Clockfrequency" VALUE="12000000"/>
+        <PARAMETER NAME="Component_Name" VALUE="Block_Test_UART_TXmod_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="7" NAME="i_TX_Byte" RIGHT="0" SIGIS="undef" SIGNAME="UART_RXmod_0_o_RX_byte">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="UART_RXmod_0" PORT="o_RX_byte"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_TX_DV" SIGIS="undef" SIGNAME="Pulsemod_0_o_pulse">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Pulsemod_0" PORT="o_pulse"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_TX_Active" SIGIS="undef" SIGNAME="UART_TXmod_0_o_TX_Active">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="led0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_TX_Done" SIGIS="undef" SIGNAME="UART_TXmod_0_o_TX_Done">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="led1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_TX_Serial" SIGIS="undef" SIGNAME="UART_TXmod_0_o_TX_Serial">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="uart_rxd_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="sysclk" SIGIS="undef" SIGNAME="External_Ports_sysclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sysclk"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

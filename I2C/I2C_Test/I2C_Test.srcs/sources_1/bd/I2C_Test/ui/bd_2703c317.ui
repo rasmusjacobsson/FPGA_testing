@@ -1,0 +1,49 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.733572",
+   "Default View_TopLeft":"-267,109",
+   "ExpandedHierarchyInLayout":"",
+   "PinnedPorts":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
+#  -string -flagsOSRD
+preplace port port-id_sysclk -pg 1 -lvl 0 -x 0 -y 680 -defaultsOSRD
+preplace port port-id_uart_rxd_out -pg 1 -lvl 3 -x 830 -y 80 -defaultsOSRD
+preplace port port-id_btn0 -pg 1 -lvl 0 -x 0 -y 250 -defaultsOSRD
+preplace port port-id_led1 -pg 1 -lvl 3 -x 830 -y 250 -defaultsOSRD
+preplace port port-id_led2 -pg 1 -lvl 3 -x 830 -y 500 -defaultsOSRD
+preplace port port-id_sda_i -pg 1 -lvl 0 -x 0 -y 620 -defaultsOSRD
+preplace port port-id_scl_i -pg 1 -lvl 0 -x 0 -y 650 -defaultsOSRD
+preplace port port-id_sda_o -pg 1 -lvl 3 -x 830 -y 620 -defaultsOSRD
+preplace port port-id_sda_t -pg 1 -lvl 3 -x 830 -y 650 -defaultsOSRD
+preplace port port-id_scl_o -pg 1 -lvl 3 -x 830 -y 680 -defaultsOSRD
+preplace port port-id_scl_t -pg 1 -lvl 3 -x 830 -y 710 -defaultsOSRD
+preplace inst I2Cmod_0 -pg 1 -lvl 1 -x 210 -y 700 -defaultsOSRD
+preplace inst UART_TXmod_0 -pg 1 -lvl 1 -x 210 -y 80 -defaultsOSRD
+preplace inst Read_Sensorsmod_0 -pg 1 -lvl 2 -x 590 -y 440 -defaultsOSRD
+preplace inst Switchmod_0 -pg 1 -lvl 1 -x 210 -y 240 -defaultsOSRD
+preplace netloc I2Cmod_0_busy 1 1 1 380 440n
+preplace netloc I2Cmod_0_data_rd 1 1 1 400 460n
+preplace netloc I2Cmod_0_scl_o 1 1 2 NJ 680 NJ
+preplace netloc I2Cmod_0_scl_t 1 1 2 350J 710 NJ
+preplace netloc I2Cmod_0_sda_o 1 1 2 390J 620 NJ
+preplace netloc I2Cmod_0_sda_t 1 1 2 420J 650 NJ
+preplace netloc Read_Sensorsmod_0_led2 1 2 1 NJ 500
+preplace netloc Read_Sensorsmod_0_o_TX_DV 1 0 3 70 530 420J 570 770
+preplace netloc Read_Sensorsmod_0_o_TX_data 1 0 3 60 540 410J 560 750
+preplace netloc Read_Sensorsmod_0_o_i2c_address 1 0 3 70 570 360J 580 760
+preplace netloc Read_Sensorsmod_0_o_i2c_data_wr 1 0 3 60 560 350J 600 790
+preplace netloc Read_Sensorsmod_0_o_i2c_ena 1 0 3 40 550 370J 590 780
+preplace netloc Read_Sensorsmod_0_o_i2c_rw 1 0 3 70 830 NJ 830 800
+preplace netloc Switchmod_0_led0 1 1 2 NJ 250 NJ
+preplace netloc Switchmod_0_o_signal 1 0 2 50 420 400
+preplace netloc UART_TXmod_0_o_TX_Done 1 1 1 420 100n
+preplace netloc UART_TXmod_0_o_TX_Serial 1 1 2 NJ 80 NJ
+preplace netloc i_signal_0_1 1 0 1 NJ 250
+preplace netloc scl_i_0_1 1 0 1 NJ 650
+preplace netloc sda_i_0_1 1 0 1 20J 620n
+preplace netloc sysclk_0_1 1 0 2 30 400 NJ
+levelinfo -pg 1 0 210 590 830
+pagesize -pg 1 -db -bbox -sgen -100 0 970 840
+"
+}
+0

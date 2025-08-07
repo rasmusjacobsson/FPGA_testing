@@ -1,0 +1,188 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x9EC3EB28F0FE85C1",
+      "device": "xc7a35tcpg236-1",
+      "gen_directory": "../../../../SD_Test.gen/sources_1/bd/SD_init_test",
+      "name": "SD_init_test",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2024.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "UART_TXmod_0": "",
+      "SD_init_0": ""
+    },
+    "ports": {
+      "sysclk": {
+        "direction": "I"
+      },
+      "MISO": {
+        "direction": "I"
+      },
+      "MOSI": {
+        "direction": "O"
+      },
+      "btn0": {
+        "direction": "I"
+      },
+      "SCLK": {
+        "direction": "O"
+      },
+      "CS": {
+        "direction": "O"
+      },
+      "uart_rxd_out": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "UART_TXmod_0": {
+        "vlnv": "xilinx.com:module_ref:UART_TXmod:1.0",
+        "ip_revision": "1",
+        "xci_name": "SD_init_test_UART_TXmod_0_0",
+        "xci_path": "ip\\SD_init_test_UART_TXmod_0_0\\SD_init_test_UART_TXmod_0_0.xci",
+        "inst_hier_path": "UART_TXmod_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "UART_TXmod",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "sysclk": {
+            "direction": "I"
+          },
+          "i_TX_DV": {
+            "direction": "I"
+          },
+          "i_TX_Byte": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "o_TX_Active": {
+            "direction": "O"
+          },
+          "o_TX_Serial": {
+            "direction": "O"
+          },
+          "o_TX_Done": {
+            "direction": "O"
+          }
+        }
+      },
+      "SD_init_0": {
+        "vlnv": "xilinx.com:module_ref:SD_init:1.0",
+        "ip_revision": "1",
+        "xci_name": "SD_init_test_SD_init_0_1",
+        "xci_path": "ip\\SD_init_test_SD_init_0_1\\SD_init_test_SD_init_0_1.xci",
+        "inst_hier_path": "SD_init_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "SD_init",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "sck": {
+            "direction": "O"
+          },
+          "mosi": {
+            "direction": "O"
+          },
+          "miso": {
+            "direction": "I"
+          },
+          "cs": {
+            "direction": "O"
+          },
+          "done": {
+            "direction": "O"
+          },
+          "test_byte": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "test_DV": {
+            "direction": "O"
+          },
+          "test_give_response": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "MISO_1": {
+        "ports": [
+          "MISO",
+          "SD_init_0/miso"
+        ]
+      },
+      "SD_init_0_cs": {
+        "ports": [
+          "SD_init_0/cs",
+          "CS"
+        ]
+      },
+      "SD_init_0_mosi": {
+        "ports": [
+          "SD_init_0/mosi",
+          "MOSI"
+        ]
+      },
+      "SD_init_0_sck": {
+        "ports": [
+          "SD_init_0/sck",
+          "SCLK"
+        ]
+      },
+      "SD_init_0_test_DV": {
+        "ports": [
+          "SD_init_0/test_DV",
+          "UART_TXmod_0/i_TX_DV"
+        ]
+      },
+      "SD_init_0_test_byte": {
+        "ports": [
+          "SD_init_0/test_byte",
+          "UART_TXmod_0/i_TX_Byte"
+        ]
+      },
+      "UART_TXmod_0_o_TX_Serial": {
+        "ports": [
+          "UART_TXmod_0/o_TX_Serial",
+          "uart_rxd_out"
+        ]
+      },
+      "btn0_1": {
+        "ports": [
+          "btn0",
+          "SD_init_0/rst"
+        ]
+      },
+      "sysclk_1": {
+        "ports": [
+          "sysclk",
+          "UART_TXmod_0/sysclk",
+          "SD_init_0/clk"
+        ]
+      }
+    }
+  }
+}

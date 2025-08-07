@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Wed Aug  6 12:05:21 2025
+# Process ID         : 4464
+# Current directory  : D:/Code/GLITCH-Software/FPGA/SPI/SD_Test/SD_Test.runs/SD_Block_handover_2to1_2_0_synth_1
+# Command line       : vivado.exe -log SD_Block_handover_2to1_2_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source SD_Block_handover_2to1_2_0.tcl
+# Log file           : D:/Code/GLITCH-Software/FPGA/SPI/SD_Test/SD_Test.runs/SD_Block_handover_2to1_2_0_synth_1/SD_Block_handover_2to1_2_0.vds
+# Journal file       : D:/Code/GLITCH-Software/FPGA/SPI/SD_Test/SD_Test.runs/SD_Block_handover_2to1_2_0_synth_1\vivado.jou
+# Running On         : DESKTOP-TTFS3R7
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 19045
+# Processor Detail   : Intel(R) Core(TM) i5-7600K CPU @ 3.80GHz
+# CPU Frequency      : 3792 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 4
+# Host memory        : 17142 MB
+# Swap memory        : 7247 MB
+# Total Virtual      : 24390 MB
+# Available Virtual  : 6490 MB
+#-----------------------------------------------------------
+source SD_Block_handover_2to1_2_0.tcl -notrace

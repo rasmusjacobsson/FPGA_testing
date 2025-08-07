@@ -1,0 +1,102 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date         : Tue Aug  5 20:23:39 2025
+| Host         : DESKTOP-TTFS3R7 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file TM_Block_wrapper_control_sets_placed.rpt
+| Design       : TM_Block_wrapper
+| Device       : xc7a35t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    24 |
+|    Minimum number of control sets                        |    24 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    61 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    24 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |     3 |
+| >= 6 to < 8        |     2 |
+| >= 8 to < 10       |    12 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     4 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              65 |           27 |
+| No           | No                    | Yes                    |              19 |           10 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |              34 |           13 |
+| Yes          | No                    | Yes                    |             132 |           36 |
+| Yes          | Yes                   | No                     |              17 |            7 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------+------------------------------------------------------------------------------------+-----------------------------------------------------------------------+------------------+----------------+--------------+
+|    Clock Signal   |                                    Enable Signal                                   |                            Set/Reset Signal                           | Slice Load Count | Bel Load Count | Bels / Slice |
++-------------------+------------------------------------------------------------------------------------+-----------------------------------------------------------------------+------------------+----------------+--------------+
+|  sysclk_IBUF_BUFG | TM_Block_i/GNSS_Reader_NO_TX_0/UART_RXmod_0/U0/r_Clk_Count[6]_i_2_n_0              |                                                                       |                1 |              1 |         1.00 |
+|  sysclk_IBUF_BUFG | TM_Block_i/GNSS_Reader_NO_TX_0/UART_RXmod_0/U0/r_Clk_Count[6]_i_2_n_0              | TM_Block_i/GNSS_Reader_NO_TX_0/UART_RXmod_0/U0/r_Clk_Count[6]_i_1_n_0 |                3 |              3 |         1.00 |
+|  sysclk_IBUF_BUFG | TM_Block_i/I2C_Reader_NO_TX_0/Read_Sensorsmod_0/U0/o_i2c_address0                  |                                                                       |                1 |              4 |         4.00 |
+|  sysclk_IBUF_BUFG | TM_Block_i/I2C_Reader_NO_TX_0/Read_Sensorsmod_0/U0/FSM_sequential_state[3]_i_1_n_0 | btn0_IBUF                                                             |                2 |              4 |         2.00 |
+|  sysclk_IBUF_BUFG | TM_Block_i/I2C_Reader_NO_TX_0/Read_Sensorsmod_0/U0/busy_cnt                        | btn0_IBUF                                                             |                3 |              4 |         1.33 |
+|  sysclk_IBUF_BUFG | TM_Block_i/UART_TXmod_0/U0/r_Clk_Count_1                                           | TM_Block_i/UART_TXmod_0/U0/r_Clk_Count0                               |                2 |              7 |         3.50 |
+|  sysclk_IBUF_BUFG | TM_Block_i/GNSS_Reader_NO_TX_0/UART_TXmod_0/U0/r_Clk_Count_1                       | TM_Block_i/GNSS_Reader_NO_TX_0/UART_TXmod_0/U0/r_Clk_Count0           |                2 |              7 |         3.50 |
+|  sysclk_IBUF_BUFG | TM_Block_i/I2C_Reader_NO_TX_0/Read_Sensorsmod_0/U0/alt_data[15]                    | btn0_IBUF                                                             |                2 |              8 |         4.00 |
+|  sysclk_IBUF_BUFG | TM_Block_i/I2C_Reader_NO_TX_0/Read_Sensorsmod_0/U0/alt_data[23]                    | btn0_IBUF                                                             |                1 |              8 |         8.00 |
+|  sysclk_IBUF_BUFG | TM_Block_i/I2C_Reader_NO_TX_0/Read_Sensorsmod_0/U0/alt_data[7]                     | btn0_IBUF                                                             |                2 |              8 |         4.00 |
+|  sysclk_IBUF_BUFG | TM_Block_i/I2C_Reader_NO_TX_0/Read_Sensorsmod_0/U0/rtc_data[15]                    | btn0_IBUF                                                             |                1 |              8 |         8.00 |
+|  sysclk_IBUF_BUFG | TM_Block_i/I2C_Reader_NO_TX_0/Read_Sensorsmod_0/U0/rtc_data[23]                    | btn0_IBUF                                                             |                3 |              8 |         2.67 |
+|  sysclk_IBUF_BUFG | TM_Block_i/I2C_Reader_NO_TX_0/Read_Sensorsmod_0/U0/temp_data[7]                    | btn0_IBUF                                                             |                2 |              8 |         4.00 |
+|  sysclk_IBUF_BUFG | TM_Block_i/I2C_Reader_NO_TX_0/Read_Sensorsmod_0/U0/temp_data[15]                   | btn0_IBUF                                                             |                3 |              8 |         2.67 |
+|  sysclk_IBUF_BUFG | TM_Block_i/I2C_Reader_NO_TX_0/Read_Sensorsmod_0/U0/rtc_data[7]                     | btn0_IBUF                                                             |                1 |              8 |         8.00 |
+|  sysclk_IBUF_BUFG | TM_Block_i/UART_TXmod_0/U0/r_TX_Data_0                                             |                                                                       |                2 |              8 |         4.00 |
+|  sysclk_IBUF_BUFG | TM_Block_i/I2C_Reader_NO_TX_0/I2Cmod_0/U0/data_rd[7]_i_1_n_0                       | btn0_IBUF                                                             |                1 |              8 |         8.00 |
+|  sysclk_IBUF_BUFG | TM_Block_i/I2C_Reader_NO_TX_0/Read_Sensorsmod_0/U0/o_TX_data0                      |                                                                       |                5 |              8 |         1.60 |
+|  sysclk_IBUF_BUFG | TM_Block_i/I2C_Reader_NO_TX_0/I2Cmod_0/U0/busy1                                    | btn0_IBUF                                                             |                3 |              9 |         3.00 |
+|  sysclk_IBUF_BUFG | TM_Block_i/I2C_Reader_NO_TX_0/I2Cmod_0/U0/addr_rw0                                 |                                                                       |                4 |             13 |         3.25 |
+|  sysclk_IBUF_BUFG | TM_Block_i/I2C_Reader_NO_TX_0/Read_Sensorsmod_0/U0/conv_cnt                        | btn0_IBUF                                                             |                5 |             17 |         3.40 |
+|  sysclk_IBUF_BUFG |                                                                                    | btn0_IBUF                                                             |               10 |             19 |         1.90 |
+|  sysclk_IBUF_BUFG | TM_Block_i/I2C_Reader_NO_TX_0/Read_Sensorsmod_0/U0/Main.sec_cnt[0]_i_1_n_0         | btn0_IBUF                                                             |                7 |             26 |         3.71 |
+|  sysclk_IBUF_BUFG |                                                                                    |                                                                       |               27 |             65 |         2.41 |
++-------------------+------------------------------------------------------------------------------------+-----------------------------------------------------------------------+------------------+----------------+--------------+
+
+

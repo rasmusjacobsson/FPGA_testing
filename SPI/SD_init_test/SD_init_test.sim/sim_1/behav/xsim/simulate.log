@@ -1,0 +1,173 @@
+Time resolution is 1 ps
+Note: Response after CMD0: 0
+Time: 7775 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 16575 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 25375 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 34175 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 42975 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 51775 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 60575 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 69375 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 78175 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 86975 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 95775 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 104575 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 113375 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 122175 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 130975 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 139775 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 148575 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 157375 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 166175 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 174975 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 183775 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 192575 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 201375 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 210175 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 218975 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 227775 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 236575 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 245375 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 254175 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 262975 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 271775 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 280575 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 289375 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 298175 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 306975 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 315775 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 324575 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 333375 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 342175 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 350975 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 359775 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 368575 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 377375 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 386175 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 394975 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 403775 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 412575 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 421375 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 430175 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 438975 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 447775 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 456575 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 465375 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 474175 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 482975 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 491775 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 500575 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 509375 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 518175 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 526975 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 535775 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 544575 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 553375 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 562175 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 570975 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 579775 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 588575 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 597375 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 606175 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 614975 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 623775 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 632575 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 641375 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 650175 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 658975 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 667775 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 676575 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 685375 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 694175 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 702975 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 711775 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 720575 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 729375 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 738175 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 746975 ns  Iteration: 2  Process: /tb_SD_init/stimulus  File: D:/Code/GLITCH-Software/FPGA/SPI/SD_init_test/SD_init_test.srcs/sources_1/new/tb_SD_init.vhd
+Note: Response after CMD0: 255
+Time: 755775 ns  Iterat

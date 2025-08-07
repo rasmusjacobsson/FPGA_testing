@@ -1,0 +1,42 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.719888",
+   "Default View_TopLeft":"-25,-690",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
+#  -string -flagsOSRD
+preplace port port-id_led0 -pg 1 -lvl 4 -x 1180 -y -160 -defaultsOSRD
+preplace port port-id_led1 -pg 1 -lvl 4 -x 1180 -y -540 -defaultsOSRD
+preplace port port-id_sysclk -pg 1 -lvl 0 -x -30 -y -530 -defaultsOSRD
+preplace port port-id_uart_txd_in -pg 1 -lvl 0 -x -30 -y -100 -defaultsOSRD
+preplace port port-id_btn0 -pg 1 -lvl 0 -x -30 -y -280 -defaultsOSRD
+preplace port port-id_GNSS_EN -pg 1 -lvl 4 -x 1180 -y -560 -defaultsOSRD
+preplace port port-id_GNSS_RX -pg 1 -lvl 4 -x 1180 -y -680 -defaultsOSRD
+preplace port port-id_GNSS_TX -pg 1 -lvl 0 -x -30 -y -390 -defaultsOSRD
+preplace port port-id_uart_rxd_out -pg 1 -lvl 4 -x 1180 -y -270 -defaultsOSRD
+preplace inst UART_RXmod_0 -pg 1 -lvl 1 -x 130 -y -110 -defaultsOSRD
+preplace inst UART_TXmod_0 -pg 1 -lvl 3 -x 830 -y -270 -defaultsOSRD
+preplace inst Switchmod_0 -pg 1 -lvl 2 -x 490 -y -550 -defaultsOSRD
+preplace inst UART_TXmod_1 -pg 1 -lvl 2 -x 490 -y -680 -defaultsOSRD
+preplace inst UART_RXmod_1 -pg 1 -lvl 1 -x 130 -y -400 -defaultsOSRD
+preplace inst MUX_2to1_0 -pg 1 -lvl 2 -x 490 -y -270 -defaultsOSRD
+preplace netloc sysclk_1 1 0 3 -10 -470 310 -160 660
+preplace netloc uart_txd_in_1 1 0 1 N -100
+preplace netloc UART_TXmod_0_o_TX_Active 1 3 1 970 -290n
+preplace netloc GNSS_TX_1 1 0 1 N -390
+preplace netloc btn0_1 1 0 2 NJ -280 290J
+preplace netloc UART_TXmod_1_o_TX_Serial 1 2 2 NJ -680 N
+preplace netloc Switchmod_0_o_signal 1 2 2 NJ -560 N
+preplace netloc Switchmod_0_led0 1 2 2 N -540 N
+preplace netloc UART_RXmod_0_o_RX_DV 1 1 1 320 -280n
+preplace netloc UART_RXmod_1_o_RX_DV 1 1 1 330 -410n
+preplace netloc UART_RXmod_1_o_RX_byte 1 1 1 300 -390n
+preplace netloc UART_RXmod_0_o_RX_byte 1 1 1 330 -240n
+preplace netloc MUX_2to1_0_mux_TX_DV_out 1 2 1 670 -280n
+preplace netloc MUX_2to1_0_mux_TX_signal_out 1 2 1 650 -260n
+preplace netloc UART_TXmod_0_o_TX_Serial 1 3 1 N -270
+levelinfo -pg 1 -30 130 490 830 1180
+pagesize -pg 1 -db -bbox -sgen -160 -840 1320 150
+"
+}
+

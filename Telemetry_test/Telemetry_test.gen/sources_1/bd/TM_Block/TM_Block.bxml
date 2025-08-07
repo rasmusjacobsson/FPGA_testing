@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root MajorVersion="0" MinorVersion="43">
+  <CompositeFile CompositeFileTopName="TM_Block" CanBeSetAsTop="false" CanDisplayChildGraph="true">
+    <Description>Composite Fileset</Description>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1754417246"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1754417246"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1754417246"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1754417246"/>
+    <FileCollection Name="SOURCES" Type="SOURCES">
+      <File Name="TM_Block.bmj" Type="BMJ">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="PRE_SYNTHESIS"/>
+        <UsedIn Val="PRE_SIMULATION"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
+      <File Name="TM_Block_bmstub.v" Type="Verilog">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="PRE_SYNTHESIS"/>
+        <UsedIn Val="PRE_SIMULATION"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
+      <File Name="synth\TM_Block.vhd" Type="VHDL">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
+      <File Name="sim\TM_Block.vhd" Type="VHDL">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SIMULATION"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
+      <File Name="TM_Block_ooc.xdc" Type="XDC">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="OUT_OF_CONTEXT"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
+      <File Name="hw_handoff\TM_Block.hwh" Type="HwHandoff">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="HW_HANDOFF"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
+      <File Name="TM_Block.bda">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="HW_HANDOFF"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
+      <File Name="synth\TM_Block.hwdef">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="HW_HANDOFF"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
+      <File Name="sim\TM_Block.protoinst">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SIMULATION"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
+    </FileCollection>
+    <BlockContainerCollection>
+      <BlockContainer InstPath="/GNSS_Reader_NO_TX_0" IsPR="false" State="Generated">
+        <ActiveVariantSynth FileName="bd\GNSS_Reader_NO_TX_inst_0\GNSS_Reader_NO_TX_inst_0.bd"/>
+        <ActiveVariantSim FileName="bd\GNSS_Reader_NO_TX_inst_0\GNSS_Reader_NO_TX_inst_0.bd"/>
+        <VariantsCollection>
+          <BDFile BDFilePath="bd\GNSS_Reader_NO_TX_inst_0\GNSS_Reader_NO_TX_inst_0.bd" BDFileset="GNSS_Reader_NO_TX_inst_0" BDSourceFile="..\..\..\..\Telemetry_test.srcs\sources_1\bd\GNSS_Reader_NO_TX\GNSS_Reader_NO_TX.bd" BDSourceFileset="sources_1" BDVariantType="ALL"/>
+        </VariantsCollection>
+      </BlockContainer>
+      <BlockContainer InstPath="/I2C_Reader_NO_TX_0" IsPR="false" State="Generated">
+        <ActiveVariantSynth FileName="bd\I2C_Reader_NO_TX_inst_0\I2C_Reader_NO_TX_inst_0.bd"/>
+        <ActiveVariantSim FileName="bd\I2C_Reader_NO_TX_inst_0\I2C_Reader_NO_TX_inst_0.bd"/>
+        <VariantsCollection>
+          <BDFile BDFilePath="bd\I2C_Reader_NO_TX_inst_0\I2C_Reader_NO_TX_inst_0.bd" BDFileset="I2C_Reader_NO_TX_inst_0" BDSourceFile="..\..\..\..\Telemetry_test.srcs\sources_1\bd\I2C_Reader_NO_TX\I2C_Reader_NO_TX.bd" BDSourceFileset="sources_1" BDVariantType="ALL"/>
+        </VariantsCollection>
+      </BlockContainer>
+    </BlockContainerCollection>
+    <ReferenceCollection>
+      <ModuleReference TargetName="GNSS_Reader_NO_TX" Type="Block Design" SubInstancePath="TM_Block_GNSS_Reader_NO_TX_0">
+        <TopFile Name="..\..\..\..\Telemetry_test.srcs\sources_1\bd\GNSS_Reader_NO_TX\GNSS_Reader_NO_TX.bd"/>
+        <FileCollection>
+          <File Name="..\..\..\..\..\UART\UART_Test\UART_Test.srcs\sources_1\new\UART_RXmod.vhd"/>
+          <File Name="..\..\..\..\..\UART\UART_Test\UART_Test.srcs\sources_1\new\UART_TXmod.vhd"/>
+          <File Name="..\..\..\..\Telemetry_test.srcs\sources_1\bd\GNSS_Reader_NO_TX\GNSS_Reader_NO_TX.bd"/>
+        </FileCollection>
+      </ModuleReference>
+      <ModuleReference TargetName="I2C_Reader_NO_TX" Type="Block Design" SubInstancePath="TM_Block_I2C_Reader_NO_TX_0">
+        <TopFile Name="..\..\..\..\Telemetry_test.srcs\sources_1\bd\I2C_Reader_NO_TX\I2C_Reader_NO_TX.bd"/>
+        <FileCollection>
+          <File Name="..\..\..\..\..\I2C\I2C_Test\I2C_Test.srcs\sources_1\new\I2Cmod.vhd"/>
+          <File Name="..\..\..\..\..\I2C\I2C_Test\I2C_Test.srcs\sources_1\new\Read_Sensorsmod.vhd"/>
+          <File Name="..\..\..\..\Telemetry_test.srcs\sources_1\bd\I2C_Reader_NO_TX\I2C_Reader_NO_TX.bd"/>
+        </FileCollection>
+      </ModuleReference>
+    </ReferenceCollection>
+  </CompositeFile>
+</Root>

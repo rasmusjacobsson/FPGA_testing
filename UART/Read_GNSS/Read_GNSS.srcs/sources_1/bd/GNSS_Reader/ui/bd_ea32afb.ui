@@ -1,0 +1,32 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.758454",
+   "Default View_TopLeft":"-508,3",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
+#  -string -flagsOSRD
+preplace port port-id_sysclk -pg 1 -lvl 0 -x -10 -y 280 -defaultsOSRD
+preplace port port-id_GNSS_TX -pg 1 -lvl 0 -x -10 -y 360 -defaultsOSRD
+preplace port port-id_GNSS_RX -pg 1 -lvl 3 -x 590 -y 80 -defaultsOSRD
+preplace port port-id_uart_rxd_out -pg 1 -lvl 3 -x 590 -y 340 -defaultsOSRD
+preplace port port-id_btn0 -pg 1 -lvl 0 -x -10 -y 220 -defaultsOSRD
+preplace port port-id_GNSS_EN -pg 1 -lvl 3 -x 590 -y 200 -defaultsOSRD
+preplace port port-id_led0 -pg 1 -lvl 3 -x 590 -y 230 -defaultsOSRD
+preplace inst UART_TXmod_0 -pg 1 -lvl 2 -x 430 -y 80 -defaultsOSRD
+preplace inst UART_RXmod_0 -pg 1 -lvl 1 -x 150 -y 350 -defaultsOSRD
+preplace inst UART_TXmod_1 -pg 1 -lvl 2 -x 430 -y 340 -defaultsOSRD
+preplace inst Switchmod_0 -pg 1 -lvl 2 -x 430 -y 210 -defaultsOSRD
+preplace netloc Switchmod_0_led0 1 2 1 570J 220n
+preplace netloc Switchmod_0_o_signal 1 2 1 NJ 200
+preplace netloc UART_RXmod_0_o_RX_DV 1 1 1 N 340
+preplace netloc UART_RXmod_0_o_RX_byte 1 1 1 N 360
+preplace netloc UART_TXmod_0_o_TX_Serial 1 2 1 NJ 80
+preplace netloc UART_TXmod_1_o_TX_Serial 1 2 1 NJ 340
+preplace netloc i_RX_Serial_0_1 1 0 1 NJ 360
+preplace netloc i_signal_0_1 1 0 2 NJ 220 NJ
+preplace netloc sysclk_0_1 1 0 2 10 280 290
+levelinfo -pg 1 -10 150 430 590
+pagesize -pg 1 -db -bbox -sgen -130 0 730 420
+"
+}
+0

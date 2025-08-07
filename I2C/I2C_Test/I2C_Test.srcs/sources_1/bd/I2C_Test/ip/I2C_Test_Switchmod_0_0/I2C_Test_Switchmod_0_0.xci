@@ -1,0 +1,46 @@
+{
+  "schema": "xilinx.com:schema:json_instance:1.0",
+  "ip_inst": {
+    "xci_name": "I2C_Test_Switchmod_0_0",
+    "cell_name": "Switchmod_0",
+    "component_reference": "xilinx.com:module_ref:Switchmod:1.0",
+    "ip_revision": "1",
+    "gen_directory": "../../../../../../I2C_Test.gen/sources_1/bd/I2C_Test/ip/I2C_Test_Switchmod_0_0",
+    "parameters": {
+      "component_parameters": {
+        "Component_Name": [ { "value": "I2C_Test_Switchmod_0_0", "resolve_type": "user", "usage": "all" } ]
+      },
+      "project_parameters": {
+        "ARCHITECTURE": [ { "value": "artix7" } ],
+        "BASE_BOARD_PART": [ { "value": "" } ],
+        "BOARD_CONNECTIONS": [ { "value": "" } ],
+        "DEVICE": [ { "value": "xc7a35t" } ],
+        "PACKAGE": [ { "value": "cpg236" } ],
+        "PREFHDL": [ { "value": "VHDL" } ],
+        "SILICON_REVISION": [ { "value": "" } ],
+        "SIMULATOR_LANGUAGE": [ { "value": "MIXED" } ],
+        "SPEEDGRADE": [ { "value": "-1" } ],
+        "STATIC_POWER": [ { "value": "" } ],
+        "TEMPERATURE_GRADE": [ { "value": "" } ]
+      },
+      "runtime_parameters": {
+        "IPCONTEXT": [ { "value": "IP_Integrator" } ],
+        "IPREVISION": [ { "value": "1" } ],
+        "MANAGED": [ { "value": "TRUE" } ],
+        "OUTPUTDIR": [ { "value": "../../../../../../I2C_Test.gen/sources_1/bd/I2C_Test/ip/I2C_Test_Switchmod_0_0" } ],
+        "SELECTEDSIMMODEL": [ { "value": "" } ],
+        "SHAREDDIR": [ { "value": "../../ipshared" } ],
+        "SWVERSION": [ { "value": "2024.2" } ],
+        "SYNTHESISFLOW": [ { "value": "OOC_HIERARCHICAL" } ]
+      }
+    },
+    "boundary": {
+      "ports": {
+        "sysclk": [ { "direction": "in" } ],
+        "i_signal": [ { "direction": "in" } ],
+        "o_signal": [ { "direction": "out", "driver_value": "0x0" } ],
+        "led0": [ { "direction": "out", "driver_value": "0x0" } ]
+      }
+    }
+  }
+}

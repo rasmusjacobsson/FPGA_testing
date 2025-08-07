@@ -1,0 +1,378 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xB0CA4D99B0CA4D99",
+      "device": "xc7a35tcpg236-1",
+      "gen_directory": "../../../../SPI_Test.gen/sources_1/bd/Block_design_for_SPI",
+      "name": "Block_design_for_SPI",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2024.2"
+    },
+    "design_tree": {
+      "spi_master_0": "",
+      "Switchmod_0": "",
+      "Store_And_Read_mod_0": "",
+      "UART_RXmod_0": "",
+      "UART_TXmod_0": ""
+    },
+    "ports": {
+      "btn0": {
+        "direction": "I"
+      },
+      "sysclk": {
+        "direction": "I"
+      },
+      "SCLK": {
+        "direction": "O"
+      },
+      "CS": {
+        "direction": "O"
+      },
+      "MOSI": {
+        "direction": "O"
+      },
+      "MISO": {
+        "direction": "I"
+      },
+      "led0": {
+        "direction": "O"
+      },
+      "uart_rxd_out": {
+        "direction": "O"
+      },
+      "uart_txd_in": {
+        "direction": "I"
+      }
+    },
+    "components": {
+      "spi_master_0": {
+        "vlnv": "xilinx.com:module_ref:spi_master:1.0",
+        "ip_revision": "1",
+        "xci_name": "Block_design_for_SPI_spi_master_0_0",
+        "xci_path": "ip\\Block_design_for_SPI_spi_master_0_0\\Block_design_for_SPI_spi_master_0_0.xci",
+        "inst_hier_path": "spi_master_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "spi_master",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "sysclk": {
+            "direction": "I"
+          },
+          "reset_n": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "enable": {
+            "direction": "I"
+          },
+          "cont": {
+            "direction": "I"
+          },
+          "tx_data": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "miso": {
+            "direction": "I"
+          },
+          "sclk": {
+            "direction": "O"
+          },
+          "ss_n": {
+            "direction": "O"
+          },
+          "mosi": {
+            "direction": "O"
+          },
+          "busy": {
+            "direction": "O"
+          },
+          "rx_data": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "Switchmod_0": {
+        "vlnv": "xilinx.com:module_ref:Switchmod:1.0",
+        "ip_revision": "1",
+        "xci_name": "Block_design_for_SPI_Switchmod_0_0",
+        "xci_path": "ip\\Block_design_for_SPI_Switchmod_0_0\\Block_design_for_SPI_Switchmod_0_0.xci",
+        "inst_hier_path": "Switchmod_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Switchmod",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "sysclk": {
+            "direction": "I"
+          },
+          "i_signal": {
+            "direction": "I"
+          },
+          "o_signal": {
+            "direction": "O"
+          },
+          "led0": {
+            "direction": "O"
+          }
+        }
+      },
+      "Store_And_Read_mod_0": {
+        "vlnv": "xilinx.com:module_ref:Store_And_Read_mod:1.0",
+        "ip_revision": "1",
+        "xci_name": "Block_design_for_SPI_Store_And_Read_mod_0_0",
+        "xci_path": "ip\\Block_design_for_SPI_Store_And_Read_mod_0_0\\Block_design_for_SPI_Store_And_Read_mod_0_0.xci",
+        "inst_hier_path": "Store_And_Read_mod_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Store_And_Read_mod",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "sysclk": {
+            "direction": "I"
+          },
+          "reset_n": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "i_busy": {
+            "direction": "I"
+          },
+          "i_data_read": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "i_TX_done": {
+            "direction": "I"
+          },
+          "i_RX_DV": {
+            "direction": "I"
+          },
+          "i_RX_byte": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "o_spi_ena": {
+            "direction": "O"
+          },
+          "o_spi_cont": {
+            "direction": "O"
+          },
+          "o_spi_data": {
+            "direction": "O"
+          },
+          "led0": {
+            "direction": "O"
+          },
+          "o_TX_DV": {
+            "direction": "O"
+          },
+          "o_TX_data": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "UART_RXmod_0": {
+        "vlnv": "xilinx.com:module_ref:UART_RXmod:1.0",
+        "ip_revision": "1",
+        "xci_name": "Block_design_for_SPI_UART_RXmod_0_0",
+        "xci_path": "ip\\Block_design_for_SPI_UART_RXmod_0_0\\Block_design_for_SPI_UART_RXmod_0_0.xci",
+        "inst_hier_path": "UART_RXmod_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "UART_RXmod",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "sysclk": {
+            "direction": "I"
+          },
+          "i_RX_Serial": {
+            "direction": "I"
+          },
+          "o_RX_DV": {
+            "direction": "O"
+          },
+          "o_RX_byte": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "UART_TXmod_0": {
+        "vlnv": "xilinx.com:module_ref:UART_TXmod:1.0",
+        "ip_revision": "1",
+        "xci_name": "Block_design_for_SPI_UART_TXmod_0_0",
+        "xci_path": "ip\\Block_design_for_SPI_UART_TXmod_0_0\\Block_design_for_SPI_UART_TXmod_0_0.xci",
+        "inst_hier_path": "UART_TXmod_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "UART_TXmod",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "sysclk": {
+            "direction": "I"
+          },
+          "i_TX_DV": {
+            "direction": "I"
+          },
+          "i_TX_Byte": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "o_TX_Active": {
+            "direction": "O"
+          },
+          "o_TX_Serial": {
+            "direction": "O"
+          },
+          "o_TX_Done": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "Store_And_Read_mod_0_o_TX_DV": {
+        "ports": [
+          "Store_And_Read_mod_0/o_TX_DV",
+          "UART_TXmod_0/i_TX_DV"
+        ]
+      },
+      "Store_And_Read_mod_0_o_TX_data": {
+        "ports": [
+          "Store_And_Read_mod_0/o_TX_data",
+          "UART_TXmod_0/i_TX_Byte"
+        ]
+      },
+      "Store_And_Read_mod_0_o_spi_cont": {
+        "ports": [
+          "Store_And_Read_mod_0/o_spi_cont",
+          "spi_master_0/cont"
+        ]
+      },
+      "Store_And_Read_mod_0_o_spi_data": {
+        "ports": [
+          "Store_And_Read_mod_0/o_spi_data",
+          "spi_master_0/tx_data"
+        ]
+      },
+      "Store_And_Read_mod_0_o_spi_ena": {
+        "ports": [
+          "Store_And_Read_mod_0/o_spi_ena",
+          "spi_master_0/enable"
+        ]
+      },
+      "Switchmod_0_led0": {
+        "ports": [
+          "Switchmod_0/led0",
+          "led0"
+        ]
+      },
+      "Switchmod_0_o_signal": {
+        "ports": [
+          "Switchmod_0/o_signal",
+          "spi_master_0/reset_n",
+          "Store_And_Read_mod_0/reset_n"
+        ]
+      },
+      "UART_RXmod_0_o_RX_DV": {
+        "ports": [
+          "UART_RXmod_0/o_RX_DV",
+          "Store_And_Read_mod_0/i_RX_DV"
+        ]
+      },
+      "UART_RXmod_0_o_RX_byte": {
+        "ports": [
+          "UART_RXmod_0/o_RX_byte",
+          "Store_And_Read_mod_0/i_RX_byte"
+        ]
+      },
+      "UART_TXmod_0_o_TX_Done": {
+        "ports": [
+          "UART_TXmod_0/o_TX_Done",
+          "Store_And_Read_mod_0/i_TX_done"
+        ]
+      },
+      "UART_TXmod_0_o_TX_Serial": {
+        "ports": [
+          "UART_TXmod_0/o_TX_Serial",
+          "uart_rxd_out"
+        ]
+      },
+      "i_RX_Serial_0_1": {
+        "ports": [
+          "uart_txd_in",
+          "UART_RXmod_0/i_RX_Serial"
+        ]
+      },
+      "i_signal_0_1": {
+        "ports": [
+          "btn0",
+          "Switchmod_0/i_signal"
+        ]
+      },
+      "miso_0_1": {
+        "ports": [
+          "MISO",
+          "spi_master_0/miso"
+        ]
+      },
+      "spi_master_0_busy": {
+        "ports": [
+          "spi_master_0/busy",
+          "Store_And_Read_mod_0/i_busy"
+        ]
+      },
+      "spi_master_0_mosi": {
+        "ports": [
+          "spi_master_0/mosi",
+          "MOSI"
+        ]
+      },
+      "spi_master_0_rx_data": {
+        "ports": [
+          "spi_master_0/rx_data",
+          "Store_And_Read_mod_0/i_data_read"
+        ]
+      },
+      "spi_master_0_sclk": {
+        "ports": [
+          "spi_master_0/sclk",
+          "SCLK"
+        ]
+      },
+      "spi_master_0_ss_n": {
+        "ports": [
+          "spi_master_0/ss_n",
+          "CS"
+        ]
+      },
+      "sysclk_0_1": {
+        "ports": [
+          "sysclk",
+          "Switchmod_0/sysclk",
+          "spi_master_0/sysclk",
+          "UART_TXmod_0/sysclk",
+          "UART_RXmod_0/sysclk",
+          "Store_And_Read_mod_0/sysclk"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,1 @@
+--incr --debug typical --relax --mt 2  -L xil_defaultlib -L util_vector_logic_v2_0_4 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot TM_Block_wrapper xil_defaultlib.TM_Block_wrapper xil_defaultlib.glbl -log elaborate.log

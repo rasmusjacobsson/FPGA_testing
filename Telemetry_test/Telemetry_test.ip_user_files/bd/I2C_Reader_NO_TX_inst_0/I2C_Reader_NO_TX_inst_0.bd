@@ -1,0 +1,328 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xEC32571F87B4429D",
+      "design_src": "D:/Code/GLITCH-Software/FPGA/Telemetry_test/Telemetry_test.srcs/sources_1/bd/I2C_Reader_NO_TX/I2C_Reader_NO_TX.bd",
+      "device": "xc7a35tcpg236-1",
+      "name": "I2C_Reader_NO_TX_inst_0",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2024.2",
+      "validated": "true",
+      "variant": "true"
+    },
+    "design_tree": {
+      "I2Cmod_0": "",
+      "Read_Sensorsmod_0": ""
+    },
+    "ports": {
+      "reset_n": {
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "strong"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "strong"
+          },
+          "PortType": {
+            "value": "undef",
+            "value_src": "ip_prop"
+          },
+          "PortType.PROP_SRC": {
+            "value": "false",
+            "value_src": "ip_prop"
+          }
+        }
+      },
+      "sda_i": {
+        "direction": "I"
+      },
+      "scl_i": {
+        "direction": "I"
+      },
+      "sysclk": {
+        "direction": "I"
+      },
+      "sda_o": {
+        "direction": "O"
+      },
+      "sda_t": {
+        "direction": "O"
+      },
+      "scl_o": {
+        "direction": "O"
+      },
+      "scl_t": {
+        "direction": "O"
+      },
+      "led2": {
+        "direction": "O"
+      },
+      "I2C_TX_byte": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      },
+      "I2C_TX_DV": {
+        "direction": "O"
+      },
+      "i_TX_Done": {
+        "direction": "I"
+      }
+    },
+    "components": {
+      "I2Cmod_0": {
+        "vlnv": "xilinx.com:module_ref:I2Cmod:1.0",
+        "ip_revision": "1",
+        "xci_name": "I2C_Reader_NO_TX_inst_0_I2Cmod_0_0",
+        "xci_path": "ip\\I2C_Reader_NO_TX_inst_0_I2Cmod_0_0\\I2C_Reader_NO_TX_inst_0_I2Cmod_0_0.xci",
+        "inst_hier_path": "I2Cmod_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "I2Cmod",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "sda_i": {
+            "direction": "I"
+          },
+          "sda_o": {
+            "direction": "O"
+          },
+          "sda_t": {
+            "direction": "O"
+          },
+          "scl_i": {
+            "direction": "I"
+          },
+          "scl_o": {
+            "direction": "O"
+          },
+          "scl_t": {
+            "direction": "O"
+          },
+          "sysclk": {
+            "direction": "I"
+          },
+          "reset_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "ena": {
+            "direction": "I"
+          },
+          "addr": {
+            "direction": "I",
+            "left": "6",
+            "right": "0"
+          },
+          "rw": {
+            "direction": "I"
+          },
+          "data_wr": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "busy": {
+            "direction": "O"
+          },
+          "data_rd": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "ack_error": {
+            "direction": "O"
+          }
+        }
+      },
+      "Read_Sensorsmod_0": {
+        "vlnv": "xilinx.com:module_ref:Read_Sensorsmod:1.0",
+        "ip_revision": "1",
+        "xci_name": "I2C_Reader_NO_TX_inst_0_Read_Sensorsmod_0_0",
+        "xci_path": "ip\\I2C_Reader_NO_TX_inst_0_Read_Sensorsmod_0_0\\I2C_Reader_NO_TX_inst_0_Read_Sensorsmod_0_0.xci",
+        "inst_hier_path": "Read_Sensorsmod_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Read_Sensorsmod",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "sysclk": {
+            "direction": "I"
+          },
+          "reset_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "i_busy": {
+            "direction": "I"
+          },
+          "i_data_read": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "i_TX_done": {
+            "direction": "I"
+          },
+          "o_i2c_ena": {
+            "direction": "O"
+          },
+          "o_i2c_address": {
+            "direction": "O",
+            "left": "6",
+            "right": "0"
+          },
+          "o_i2c_rw": {
+            "direction": "O"
+          },
+          "o_i2c_data_wr": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "o_TX_DV": {
+            "direction": "O"
+          },
+          "o_TX_data": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "led2": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "I2Cmod_0_busy": {
+        "ports": [
+          "I2Cmod_0/busy",
+          "Read_Sensorsmod_0/i_busy"
+        ]
+      },
+      "I2Cmod_0_data_rd": {
+        "ports": [
+          "I2Cmod_0/data_rd",
+          "Read_Sensorsmod_0/i_data_read"
+        ]
+      },
+      "I2Cmod_0_scl_o": {
+        "ports": [
+          "I2Cmod_0/scl_o",
+          "scl_o"
+        ]
+      },
+      "I2Cmod_0_scl_t": {
+        "ports": [
+          "I2Cmod_0/scl_t",
+          "scl_t"
+        ]
+      },
+      "I2Cmod_0_sda_o": {
+        "ports": [
+          "I2Cmod_0/sda_o",
+          "sda_o"
+        ]
+      },
+      "I2Cmod_0_sda_t": {
+        "ports": [
+          "I2Cmod_0/sda_t",
+          "sda_t"
+        ]
+      },
+      "Read_Sensorsmod_0_led2": {
+        "ports": [
+          "Read_Sensorsmod_0/led2",
+          "led2"
+        ]
+      },
+      "Read_Sensorsmod_0_o_TX_DV": {
+        "ports": [
+          "Read_Sensorsmod_0/o_TX_DV",
+          "I2C_TX_DV"
+        ]
+      },
+      "Read_Sensorsmod_0_o_TX_data": {
+        "ports": [
+          "Read_Sensorsmod_0/o_TX_data",
+          "I2C_TX_byte"
+        ]
+      },
+      "Read_Sensorsmod_0_o_i2c_address": {
+        "ports": [
+          "Read_Sensorsmod_0/o_i2c_address",
+          "I2Cmod_0/addr"
+        ]
+      },
+      "Read_Sensorsmod_0_o_i2c_data_wr": {
+        "ports": [
+          "Read_Sensorsmod_0/o_i2c_data_wr",
+          "I2Cmod_0/data_wr"
+        ]
+      },
+      "Read_Sensorsmod_0_o_i2c_ena": {
+        "ports": [
+          "Read_Sensorsmod_0/o_i2c_ena",
+          "I2Cmod_0/ena"
+        ]
+      },
+      "Read_Sensorsmod_0_o_i2c_rw": {
+        "ports": [
+          "Read_Sensorsmod_0/o_i2c_rw",
+          "I2Cmod_0/rw"
+        ]
+      },
+      "i_TX_Done_1": {
+        "ports": [
+          "i_TX_Done",
+          "Read_Sensorsmod_0/i_TX_done"
+        ]
+      },
+      "reset_n_1": {
+        "ports": [
+          "reset_n",
+          "I2Cmod_0/reset_n",
+          "Read_Sensorsmod_0/reset_n"
+        ]
+      },
+      "scl_i_1": {
+        "ports": [
+          "scl_i",
+          "I2Cmod_0/scl_i"
+        ]
+      },
+      "sda_i_1": {
+        "ports": [
+          "sda_i",
+          "I2Cmod_0/sda_i"
+        ]
+      },
+      "sysclk_1": {
+        "ports": [
+          "sysclk",
+          "I2Cmod_0/sysclk",
+          "Read_Sensorsmod_0/sysclk"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.766571",
+   "Default View_TopLeft":"-348,3",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
+#  -string -flagsOSRD
+preplace port port-id_btn0 -pg 1 -lvl 0 -x 0 -y 300 -defaultsOSRD
+preplace port port-id_sysclk -pg 1 -lvl 0 -x 0 -y 200 -defaultsOSRD
+preplace port port-id_MISO -pg 1 -lvl 0 -x 0 -y 320 -defaultsOSRD
+preplace port port-id_MOSI -pg 1 -lvl 4 -x 840 -y 600 -defaultsOSRD
+preplace port port-id_CS -pg 1 -lvl 4 -x 840 -y 280 -defaultsOSRD
+preplace port port-id_SCLK -pg 1 -lvl 4 -x 840 -y 100 -defaultsOSRD
+preplace port port-id_uart_rxd_out -pg 1 -lvl 4 -x 840 -y 440 -defaultsOSRD
+preplace inst SD_RD_0 -pg 1 -lvl 2 -x 370 -y 420 -defaultsOSRD
+preplace inst SD_WR_0 -pg 1 -lvl 1 -x 130 -y 290 -defaultsOSRD
+preplace inst UART_TXmod_0 -pg 1 -lvl 3 -x 680 -y 440 -defaultsOSRD
+preplace inst handover_2to1_0 -pg 1 -lvl 3 -x 680 -y 600 -defaultsOSRD
+preplace inst handover_2to1_1 -pg 1 -lvl 3 -x 680 -y 100 -defaultsOSRD
+preplace inst handover_2to1_2 -pg 1 -lvl 3 -x 680 -y 280 -defaultsOSRD
+preplace inst SD_init_0 -pg 1 -lvl 1 -x 130 -y 10 -defaultsOSRD
+preplace netloc MISO_1 1 0 2 20 450 NJ
+preplace netloc sysclk_1 1 0 3 20 200 260 200 530
+preplace netloc SD_WR_0_done_flag 1 1 2 250 320 500
+preplace netloc SD_RD_0_data_out 1 2 1 N 460
+preplace netloc SD_WR_0_mosi 1 1 2 N 280 490J
+preplace netloc SD_RD_0_mosi 1 2 1 480 420n
+preplace netloc handover_2to1_0_mux_out 1 3 1 NJ 600
+preplace netloc SD_WR_0_sck 1 1 2 240 120 NJ
+preplace netloc SD_RD_0_sck 1 2 1 510 140n
+preplace netloc handover_2to1_1_mux_out 1 3 1 NJ 100
+preplace netloc SD_WR_0_cs 1 1 2 N 300 NJ
+preplace netloc SD_RD_0_cs_n 1 2 1 520 320n
+preplace netloc handover_2to1_2_mux_out 1 3 1 NJ 280
+preplace netloc UART_TXmod_0_o_TX_Serial 1 3 1 NJ 440
+preplace netloc btn0_1 1 0 1 NJ 300
+preplace netloc SD_RD_0_done 1 2 1 540 100n
+levelinfo -pg 1 0 130 370 680 840
+pagesize -pg 1 -db -bbox -sgen -90 -90 970 700
+"
+}
+

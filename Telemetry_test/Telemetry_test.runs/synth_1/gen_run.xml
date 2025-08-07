@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1754417858" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/TM_Block_wrapper.dcp">
+  <File Type="REPORTS-TCL" Name="TM_Block_wrapper_reports.tcl"/>
+  <File Type="RDS-UTIL" Name="TM_Block_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="TM_Block_wrapper_utilization_synth.pb"/>
+  <File Type="PA-TCL" Name="TM_Block_wrapper.tcl"/>
+  <File Type="RDS-RDS" Name="TM_Block_wrapper.vds"/>
+  <File Type="RDS-DCP" Name="TM_Block_wrapper.dcp"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../UART/GNSS_and_UART/GNSS_and_UART.srcs/sources_1/new/MUX_2to1.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../UART/UART_Test/UART_Test.srcs/sources_1/new/UART_TXmod.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../UART/Read_GNSS/Read_GNSS.srcs/sources_1/new/Switchmod.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../UART/UART_Test/UART_Test.srcs/sources_1/new/UART_RXmod.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../I2C/I2C_Test/I2C_Test.srcs/sources_1/new/I2Cmod.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../I2C/I2C_Test/I2C_Test.srcs/sources_1/new/Read_Sensorsmod.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/TM_Block/TM_Block.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/hdl/TM_Block_wrapper.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PGENDIR/sources_1/bd/TM_Block/hdl/TM_Block_wrapper.vhd"/>
+        <Attr Name="ImportTime" Val="1754417231"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/I2C_Reader_NO_TX/I2C_Reader_NO_TX.bd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/GNSS_Reader_NO_TX/GNSS_Reader_NO_TX.bd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="TM_Block_wrapper"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/../UART/UART_Test/UART_Test.srcs/constrs_1/new/Constraints.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/TM_Block_wrapper.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="UsedInSteps" Val="synth_1_copy_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="GNSS_Reader_NO_TX_inst_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="I2C_Reader_NO_TX_inst_0_Read_Sensorsmod_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="I2C_Reader_NO_TX_inst_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="I2C_Reader_NO_TX_inst_0_I2Cmod_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="GNSS_Reader_NO_TX_inst_0_UART_TXmod_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="GNSS_Reader_NO_TX_inst_0_UART_RXmod_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="TM_Block_MUX_2to1_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="TM_Block_UART_TXmod_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="TM_Block_Switchmod_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="TM_Block_util_vector_logic_0_0"/>
+</GenRun>

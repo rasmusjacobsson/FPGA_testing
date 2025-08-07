@@ -1,0 +1,171 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xCB8C1D845A55BC90",
+      "device": "xc7a35tcpg236-1",
+      "gen_directory": "../../../../Reboot_test.gen/sources_1/bd/reboot_test_block",
+      "name": "reboot_test_block",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2024.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "fpga_rebooter_0": "",
+      "reboot_control_0": "",
+      "UART_TXmod_0": ""
+    },
+    "ports": {
+      "sysclk": {
+        "direction": "I"
+      },
+      "btn0": {
+        "direction": "I"
+      },
+      "uart_rxd_out": {
+        "direction": "O"
+      },
+      "led0": {
+        "direction": "O"
+      },
+      "led1": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "fpga_rebooter_0": {
+        "vlnv": "xilinx.com:module_ref:fpga_rebooter:1.0",
+        "ip_revision": "1",
+        "xci_name": "reboot_test_block_fpga_rebooter_0_0",
+        "xci_path": "ip\\reboot_test_block_fpga_rebooter_0_0\\reboot_test_block_fpga_rebooter_0_0.xci",
+        "inst_hier_path": "fpga_rebooter_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "fpga_rebooter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "reboot_trigger": {
+            "direction": "I"
+          },
+          "led0": {
+            "direction": "O"
+          },
+          "led1": {
+            "direction": "O"
+          }
+        }
+      },
+      "reboot_control_0": {
+        "vlnv": "xilinx.com:module_ref:reboot_control:1.0",
+        "ip_revision": "1",
+        "xci_name": "reboot_test_block_reboot_control_0_0",
+        "xci_path": "ip\\reboot_test_block_reboot_control_0_0\\reboot_test_block_reboot_control_0_0.xci",
+        "inst_hier_path": "reboot_control_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "reboot_control",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "TX_DV": {
+            "direction": "O"
+          },
+          "TX_byte": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "UART_TXmod_0": {
+        "vlnv": "xilinx.com:module_ref:UART_TXmod:1.0",
+        "ip_revision": "1",
+        "xci_name": "reboot_test_block_UART_TXmod_0_0",
+        "xci_path": "ip\\reboot_test_block_UART_TXmod_0_0\\reboot_test_block_UART_TXmod_0_0.xci",
+        "inst_hier_path": "UART_TXmod_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "UART_TXmod",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "sysclk": {
+            "direction": "I"
+          },
+          "i_TX_DV": {
+            "direction": "I"
+          },
+          "i_TX_Byte": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "o_TX_Active": {
+            "direction": "O"
+          },
+          "o_TX_Serial": {
+            "direction": "O"
+          },
+          "o_TX_Done": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "UART_TXmod_0_o_TX_Serial": {
+        "ports": [
+          "UART_TXmod_0/o_TX_Serial",
+          "uart_rxd_out"
+        ]
+      },
+      "btn0_1": {
+        "ports": [
+          "btn0",
+          "fpga_rebooter_0/reboot_trigger"
+        ]
+      },
+      "fpga_rebooter_0_led0": {
+        "ports": [
+          "fpga_rebooter_0/led0",
+          "led0"
+        ]
+      },
+      "fpga_rebooter_0_led1": {
+        "ports": [
+          "fpga_rebooter_0/led1",
+          "led1"
+        ]
+      },
+      "reboot_control_0_DV": {
+        "ports": [
+          "reboot_control_0/TX_DV",
+          "UART_TXmod_0/i_TX_DV"
+        ]
+      },
+      "reboot_control_0_byte": {
+        "ports": [
+          "reboot_control_0/TX_byte",
+          "UART_TXmod_0/i_TX_Byte"
+        ]
+      },
+      "sysclk_1": {
+        "ports": [
+          "sysclk",
+          "UART_TXmod_0/sysclk",
+          "reboot_control_0/clk",
+          "fpga_rebooter_0/clk"
+        ]
+      }
+    }
+  }
+}

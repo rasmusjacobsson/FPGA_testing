@@ -1,0 +1,144 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x1EA944EE1EA944EE",
+      "device": "xc7a35tcpg236-1",
+      "gen_directory": "../../../../UART_Test.gen/sources_1/bd/Block_Test",
+      "name": "Block_Test",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2024.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "UART_RXmod_0": "",
+      "UART_TXmod_0": ""
+    },
+    "ports": {
+      "sysclk": {
+        "direction": "I"
+      },
+      "led0": {
+        "direction": "O"
+      },
+      "led1": {
+        "direction": "O"
+      },
+      "uart_rxd_out": {
+        "direction": "O"
+      },
+      "uart_txd_in": {
+        "direction": "I"
+      }
+    },
+    "components": {
+      "UART_RXmod_0": {
+        "vlnv": "xilinx.com:module_ref:UART_RXmod:1.0",
+        "ip_revision": "1",
+        "xci_name": "Block_Test_UART_RXmod_0_0",
+        "xci_path": "ip\\Block_Test_UART_RXmod_0_0\\Block_Test_UART_RXmod_0_0.xci",
+        "inst_hier_path": "UART_RXmod_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "UART_RXmod",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "sysclk": {
+            "direction": "I"
+          },
+          "i_RX_Serial": {
+            "direction": "I"
+          },
+          "o_RX_DV": {
+            "direction": "O"
+          },
+          "o_RX_byte": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "UART_TXmod_0": {
+        "vlnv": "xilinx.com:module_ref:UART_TXmod:1.0",
+        "ip_revision": "1",
+        "xci_name": "Block_Test_UART_TXmod_0_0",
+        "xci_path": "ip\\Block_Test_UART_TXmod_0_0\\Block_Test_UART_TXmod_0_0.xci",
+        "inst_hier_path": "UART_TXmod_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "UART_TXmod",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "sysclk": {
+            "direction": "I"
+          },
+          "i_TX_DV": {
+            "direction": "I"
+          },
+          "i_TX_Byte": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "o_TX_Active": {
+            "direction": "O"
+          },
+          "o_TX_Serial": {
+            "direction": "O"
+          },
+          "o_TX_Done": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "UART_RXmod_0_o_RX_DV": {
+        "ports": [
+          "UART_RXmod_0/o_RX_DV",
+          "UART_TXmod_0/i_TX_DV"
+        ]
+      },
+      "UART_RXmod_0_o_RX_byte": {
+        "ports": [
+          "UART_RXmod_0/o_RX_byte",
+          "UART_TXmod_0/i_TX_Byte"
+        ]
+      },
+      "UART_TXmod_0_o_TX_Active": {
+        "ports": [
+          "UART_TXmod_0/o_TX_Active",
+          "led0"
+        ]
+      },
+      "UART_TXmod_0_o_TX_Done": {
+        "ports": [
+          "UART_TXmod_0/o_TX_Done",
+          "led1"
+        ]
+      },
+      "UART_TXmod_0_o_TX_Serial": {
+        "ports": [
+          "UART_TXmod_0/o_TX_Serial",
+          "uart_rxd_out"
+        ]
+      },
+      "i_RX_Serial_0_1": {
+        "ports": [
+          "uart_txd_in",
+          "UART_RXmod_0/i_RX_Serial"
+        ]
+      },
+      "sysclk_0_1": {
+        "ports": [
+          "sysclk",
+          "UART_TXmod_0/sysclk",
+          "UART_RXmod_0/sysclk"
+        ]
+      }
+    }
+  }
+}

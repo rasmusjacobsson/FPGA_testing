@@ -1,0 +1,87 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date         : Thu Aug  7 12:04:30 2025
+| Host         : DESKTOP-TTFS3R7 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file SD_init_test_wrapper_control_sets_placed.rpt
+| Design       : SD_init_test_wrapper
+| Device       : xc7a35t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |     9 |
+|    Minimum number of control sets                        |     9 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    14 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |     9 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     1 |
+| >= 6 to < 8        |     2 |
+| >= 8 to < 10       |     3 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     3 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               8 |            5 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              18 |            8 |
+| Yes          | No                    | No                     |               8 |            2 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             104 |           27 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------+-------------------------------------------------------------+----------------------------------------------------+------------------+----------------+--------------+
+|    Clock Signal   |                        Enable Signal                        |                  Set/Reset Signal                  | Slice Load Count | Bel Load Count | Bels / Slice |
++-------------------+-------------------------------------------------------------+----------------------------------------------------+------------------+----------------+--------------+
+|  sysclk_IBUF_BUFG | SD_init_test_i/SD_init_0/U0/FSM_sequential_state[3]_i_1_n_0 | btn0_IBUF                                          |                2 |              4 |         2.00 |
+|  sysclk_IBUF_BUFG | SD_init_test_i/SD_init_0/U0/cmd_bit_cnt                     | btn0_IBUF                                          |                2 |              6 |         3.00 |
+|  sysclk_IBUF_BUFG | SD_init_test_i/UART_TXmod_0/U0/r_Clk_Count_1                | SD_init_test_i/UART_TXmod_0/U0/r_Clk_Count0        |                2 |              7 |         3.50 |
+|  sysclk_IBUF_BUFG |                                                             |                                                    |                5 |              8 |         1.60 |
+|  sysclk_IBUF_BUFG | SD_init_test_i/UART_TXmod_0/U0/r_TX_Data_0                  |                                                    |                2 |              8 |         4.00 |
+|  sysclk_IBUF_BUFG | SD_init_test_i/SD_init_0/U0/response_test_byte_i            | btn0_IBUF                                          |                2 |              8 |         4.00 |
+|  sysclk_IBUF_BUFG |                                                             | btn0_IBUF                                          |                8 |             18 |         2.25 |
+|  sysclk_IBUF_BUFG | SD_init_test_i/SD_init_0/U0/CMD0_tries[31]_i_2_n_0          | SD_init_test_i/SD_init_0/U0/CMD0_tries[31]_i_1_n_0 |                8 |             31 |         3.88 |
+|  sysclk_IBUF_BUFG | SD_init_test_i/SD_init_0/U0/cmd_byte_buf_0                  | btn0_IBUF                                          |               11 |             48 |         4.36 |
++-------------------+-------------------------------------------------------------+----------------------------------------------------+------------------+----------------+--------------+
+
+

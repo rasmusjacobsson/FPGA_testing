@@ -1,0 +1,54 @@
+{
+  "schema": "xilinx.com:schema:json_instance:1.0",
+  "ip_inst": {
+    "xci_name": "Block_Test_UART_TXmod_0_0",
+    "cell_name": "UART_TXmod_0",
+    "component_reference": "xilinx.com:module_ref:UART_TXmod:1.0",
+    "ip_revision": "1",
+    "gen_directory": "../../../../../../UART_Continuation.gen/sources_1/bd/Block_Test/ip/Block_Test_UART_TXmod_0_0_1",
+    "parameters": {
+      "component_parameters": {
+        "Clockfrequency": [ { "value": "12000000", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "Baud_Rate": [ { "value": "115200", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "Component_Name": [ { "value": "Block_Test_UART_TXmod_0_0", "resolve_type": "user", "usage": "all" } ]
+      },
+      "model_parameters": {
+        "Clockfrequency": [ { "value": "12000000", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "Baud_Rate": [ { "value": "115200", "resolve_type": "generated", "format": "long", "usage": "all" } ]
+      },
+      "project_parameters": {
+        "ARCHITECTURE": [ { "value": "artix7" } ],
+        "BASE_BOARD_PART": [ { "value": "" } ],
+        "BOARD_CONNECTIONS": [ { "value": "" } ],
+        "DEVICE": [ { "value": "xc7a35t" } ],
+        "PACKAGE": [ { "value": "cpg236" } ],
+        "PREFHDL": [ { "value": "VHDL" } ],
+        "SILICON_REVISION": [ { "value": "" } ],
+        "SIMULATOR_LANGUAGE": [ { "value": "VHDL" } ],
+        "SPEEDGRADE": [ { "value": "-1" } ],
+        "STATIC_POWER": [ { "value": "" } ],
+        "TEMPERATURE_GRADE": [ { "value": "" } ]
+      },
+      "runtime_parameters": {
+        "IPCONTEXT": [ { "value": "IP_Integrator" } ],
+        "IPREVISION": [ { "value": "1" } ],
+        "MANAGED": [ { "value": "TRUE" } ],
+        "OUTPUTDIR": [ { "value": "../../../../../../UART_Continuation.gen/sources_1/bd/Block_Test/ip/Block_Test_UART_TXmod_0_0_1" } ],
+        "SELECTEDSIMMODEL": [ { "value": "" } ],
+        "SHAREDDIR": [ { "value": "../../ipshared" } ],
+        "SWVERSION": [ { "value": "2024.2" } ],
+        "SYNTHESISFLOW": [ { "value": "OOC_HIERARCHICAL" } ]
+      }
+    },
+    "boundary": {
+      "ports": {
+        "sysclk": [ { "direction": "in" } ],
+        "i_TX_DV": [ { "direction": "in" } ],
+        "i_TX_Byte": [ { "direction": "in", "size_left": "7", "size_right": "0" } ],
+        "o_TX_Active": [ { "direction": "out" } ],
+        "o_TX_Serial": [ { "direction": "out" } ],
+        "o_TX_Done": [ { "direction": "out" } ]
+      }
+    }
+  }
+}

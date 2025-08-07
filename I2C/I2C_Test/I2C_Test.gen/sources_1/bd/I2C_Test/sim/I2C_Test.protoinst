@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"I2C_Test": {
+			"proto_instances": {
+			}
+		}
+	}
+}

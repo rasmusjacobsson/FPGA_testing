@@ -1,0 +1,29 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-315,-104",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
+#  -string -flagsOSRD
+preplace port port-id_sysclk -pg 1 -lvl 0 -x 0 -y 140 -defaultsOSRD
+preplace port port-id_btn0 -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
+preplace port port-id_uart_rxd_out -pg 1 -lvl 3 -x 540 -y 200 -defaultsOSRD
+preplace port port-id_led0 -pg 1 -lvl 3 -x 540 -y 60 -defaultsOSRD
+preplace port port-id_led1 -pg 1 -lvl 3 -x 540 -y 80 -defaultsOSRD
+preplace inst fpga_rebooter_0 -pg 1 -lvl 2 -x 380 -y 70 -defaultsOSRD
+preplace inst reboot_control_0 -pg 1 -lvl 1 -x 130 -y 210 -defaultsOSRD
+preplace inst UART_TXmod_0 -pg 1 -lvl 2 -x 380 -y 200 -defaultsOSRD
+preplace netloc sysclk_1 1 0 2 20 140 240
+preplace netloc btn0_1 1 0 2 NJ 80 NJ
+preplace netloc reboot_control_0_DV 1 1 1 N 200
+preplace netloc reboot_control_0_byte 1 1 1 N 220
+preplace netloc UART_TXmod_0_o_TX_Serial 1 2 1 NJ 200
+preplace netloc fpga_rebooter_0_led0 1 2 1 NJ 60
+preplace netloc fpga_rebooter_0_led1 1 2 1 NJ 80
+levelinfo -pg 1 0 130 380 540
+pagesize -pg 1 -db -bbox -sgen -90 0 670 280
+"
+}
+{
+   "da_clkrst_cnt":"1"
+}

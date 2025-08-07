@@ -1,0 +1,203 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Tue Aug  5 17:20:26 2025
+# Process ID         : 34484
+# Current directory  : D:/Code/GLITCH-Software/FPGA/I2C/I2C_Test/I2C_Test.runs/I2C_Test_Switchmod_0_0_synth_1
+# Command line       : vivado.exe -log I2C_Test_Switchmod_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source I2C_Test_Switchmod_0_0.tcl
+# Log file           : D:/Code/GLITCH-Software/FPGA/I2C/I2C_Test/I2C_Test.runs/I2C_Test_Switchmod_0_0_synth_1/I2C_Test_Switchmod_0_0.vds
+# Journal file       : D:/Code/GLITCH-Software/FPGA/I2C/I2C_Test/I2C_Test.runs/I2C_Test_Switchmod_0_0_synth_1\vivado.jou
+# Running On         : DESKTOP-TTFS3R7
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 19045
+# Processor Detail   : Intel(R) Core(TM) i5-7600K CPU @ 3.80GHz
+# CPU Frequency      : 3792 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 4
+# Host memory        : 17142 MB
+# Swap memory        : 14547 MB
+# Total Virtual      : 31690 MB
+# Available Virtual  : 5186 MB
+#-----------------------------------------------------------
+source I2C_Test_Switchmod_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2024.2/data/ip'.
+Command: synth_design -top I2C_Test_Switchmod_0_0 -part xc7a35tcpg236-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+WARNING: [Common 17-1361] You have specified a new message control rule that is equivalent to an existing rule with attributes ' -id {17-179}  -suppress '. The existing rule will be replaced.
+INFO: [Synth 8-7075] Helper process launched with PID 33260
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 824.516 ; gain = 475.926
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'I2C_Test_Switchmod_0_0' [d:/Code/GLITCH-Software/FPGA/I2C/I2C_Test/I2C_Test.gen/sources_1/bd/I2C_Test/ip/I2C_Test_Switchmod_0_0/synth/I2C_Test_Switchmod_0_0.vhd:65]
+INFO: [Synth 8-3491] module 'Switchmod' declared at 'D:/Code/GLITCH-Software/FPGA/UART/Read_GNSS/Read_GNSS.srcs/sources_1/new/Switchmod.vhd:10' bound to instance 'U0' of component 'Switchmod' [d:/Code/GLITCH-Software/FPGA/I2C/I2C_Test/I2C_Test.gen/sources_1/bd/I2C_Test/ip/I2C_Test_Switchmod_0_0/synth/I2C_Test_Switchmod_0_0.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'Switchmod' [D:/Code/GLITCH-Software/FPGA/UART/Read_GNSS/Read_GNSS.srcs/sources_1/new/Switchmod.vhd:17]
+INFO: [Synth 8-226] default block is never used [D:/Code/GLITCH-Software/FPGA/UART/Read_GNSS/Read_GNSS.srcs/sources_1/new/Switchmod.vhd:29]
+INFO: [Synth 8-256] done synthesizing module 'Switchmod' (0#1) [D:/Code/GLITCH-Software/FPGA/UART/Read_GNSS/Read_GNSS.srcs/sources_1/new/Switchmod.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'I2C_Test_Switchmod_0_0' (0#1) [d:/Code/GLITCH-Software/FPGA/I2C/I2C_Test/I2C_Test.gen/sources_1/bd/I2C_Test/ip/I2C_Test_Switchmod_0_0/synth/I2C_Test_Switchmod_0_0.vhd:65]
+WARNING: [Synth 8-6014] Unused sequential element led0_reg was removed.  [D:/Code/GLITCH-Software/FPGA/UART/Read_GNSS/Read_GNSS.srcs/sources_1/new/Switchmod.vhd:33]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 929.973 ; gain = 581.383
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 929.973 ; gain = 581.383
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 929.973 ; gain = 581.383
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 929.973 ; gain = 581.383
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 1092.406 ; gain = 743.816
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 1107.188 ; gain = 758.598
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 1107.426 ; gain = 758.836
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 1308.840 ; gain = 960.250
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 1308.840 ; gain = 960.250
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 1308.840 ; gain = 960.250
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 1308.840 ; gain = 960.250
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 1308.840 ; gain = 960.250
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 1308.840 ; gain = 960.250
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT3 |     2|
+|2     |FDRE |     3|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------+----------+------+
+|      |Instance |Module    |Cells |
++------+---------+----------+------+
+|1     |top      |          |     5|
+|2     |  U0     |Switchmod |     5|
++------+---------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 1308.840 ; gain = 960.250
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 1308.840 ; gain = 960.250
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 1308.840 ; gain = 960.250
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1323.852 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1431.609 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 88e6eb4f
+INFO: [Common 17-83] Releasing license: Synthesis
+20 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:26 . Memory (MB): peak = 1431.609 ; gain = 1083.141
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1674.559 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/Code/GLITCH-Software/FPGA/I2C/I2C_Test/I2C_Test.runs/I2C_Test_Switchmod_0_0_synth_1/I2C_Test_Switchmod_0_0.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1674.648 ; gain = 243.039
+INFO: [Vivado 12-24828] Executing command : report_utilization -file I2C_Test_Switchmod_0_0_utilization_synth.rpt -pb I2C_Test_Switchmod_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Aug  5 17:21:07 2025...

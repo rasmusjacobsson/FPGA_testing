@@ -1,0 +1,6 @@
+Time resolution is 1 ps
+Note: Test Passed - Correct Byte Received
+Time: 173805570 ps  Iteration: 0  Process: /UART_TB/line__99  File: C:/Users/Sebastian Magnusson/UART_Test/UART_Test.srcs/sim_1/new/UART_TB.vhd
+Failure: Tests Complete
+Time: 173805570 ps  Iteration: 0  Process: /UART_TB/line__99  File: C:/Users/Sebastian Magnusson/UART_Test/UART_Test.srcs/sim_1/new/UART_TB.vhd
+$finish called at time : 173805570 ps : File "C:/Users/Sebastian Magnusson/UART_Test/UART_Test.srcs/sim_1/new/UART_TB.vhd" Line 124

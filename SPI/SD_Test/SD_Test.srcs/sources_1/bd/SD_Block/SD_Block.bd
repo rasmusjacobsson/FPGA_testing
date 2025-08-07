@@ -1,0 +1,383 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x9EC3EB28F0FE85C1",
+      "device": "xc7a35tcpg236-1",
+      "gen_directory": "../../../../SD_Test.gen/sources_1/bd/SD_Block",
+      "name": "SD_Block",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2024.2"
+    },
+    "design_tree": {
+      "SD_RD_0": "",
+      "SD_WR_0": "",
+      "UART_TXmod_0": "",
+      "handover_2to1_0": "",
+      "handover_2to1_1": "",
+      "handover_2to1_2": ""
+    },
+    "ports": {
+      "btn0": {
+        "direction": "I"
+      },
+      "sysclk": {
+        "direction": "I"
+      },
+      "MISO": {
+        "direction": "I"
+      },
+      "MOSI": {
+        "direction": "O"
+      },
+      "CS": {
+        "direction": "O"
+      },
+      "SCLK": {
+        "direction": "O"
+      },
+      "uart_rxd_out": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "SD_RD_0": {
+        "vlnv": "xilinx.com:module_ref:SD_RD:1.0",
+        "ip_revision": "1",
+        "xci_name": "SD_Block_SD_RD_0_0",
+        "xci_path": "ip\\SD_Block_SD_RD_0_0\\SD_Block_SD_RD_0_0.xci",
+        "inst_hier_path": "SD_RD_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "SD_RD",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "start": {
+            "direction": "I"
+          },
+          "cs_n": {
+            "direction": "O"
+          },
+          "sck": {
+            "direction": "O"
+          },
+          "mosi": {
+            "direction": "O"
+          },
+          "miso": {
+            "direction": "I"
+          },
+          "done": {
+            "direction": "O"
+          },
+          "data_out": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "SD_WR_0": {
+        "vlnv": "xilinx.com:module_ref:SD_WR:1.0",
+        "ip_revision": "1",
+        "xci_name": "SD_Block_SD_WR_0_0",
+        "xci_path": "ip\\SD_Block_SD_WR_0_0\\SD_Block_SD_WR_0_0.xci",
+        "inst_hier_path": "SD_WR_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "SD_WR",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "start": {
+            "direction": "I"
+          },
+          "sck": {
+            "direction": "O"
+          },
+          "mosi": {
+            "direction": "O"
+          },
+          "miso": {
+            "direction": "I"
+          },
+          "cs": {
+            "direction": "O"
+          },
+          "done_flag": {
+            "direction": "O"
+          }
+        }
+      },
+      "UART_TXmod_0": {
+        "vlnv": "xilinx.com:module_ref:UART_TXmod:1.0",
+        "ip_revision": "1",
+        "xci_name": "SD_Block_UART_TXmod_0_0",
+        "xci_path": "ip\\SD_Block_UART_TXmod_0_0\\SD_Block_UART_TXmod_0_0.xci",
+        "inst_hier_path": "UART_TXmod_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "UART_TXmod",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "sysclk": {
+            "direction": "I"
+          },
+          "i_TX_DV": {
+            "direction": "I"
+          },
+          "i_TX_Byte": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "o_TX_Active": {
+            "direction": "O"
+          },
+          "o_TX_Serial": {
+            "direction": "O"
+          },
+          "o_TX_Done": {
+            "direction": "O"
+          }
+        }
+      },
+      "handover_2to1_0": {
+        "vlnv": "xilinx.com:module_ref:handover_2to1:1.0",
+        "ip_revision": "1",
+        "xci_name": "SD_Block_handover_2to1_0_0",
+        "xci_path": "ip\\SD_Block_handover_2to1_0_0\\SD_Block_handover_2to1_0_0.xci",
+        "inst_hier_path": "handover_2to1_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "handover_2to1",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "sysclk": {
+            "direction": "I"
+          },
+          "done0": {
+            "direction": "I"
+          },
+          "done1": {
+            "direction": "I"
+          },
+          "in0": {
+            "direction": "I"
+          },
+          "in1": {
+            "direction": "I"
+          },
+          "mux_out": {
+            "direction": "O"
+          }
+        }
+      },
+      "handover_2to1_1": {
+        "vlnv": "xilinx.com:module_ref:handover_2to1:1.0",
+        "ip_revision": "1",
+        "xci_name": "SD_Block_handover_2to1_1_0",
+        "xci_path": "ip\\SD_Block_handover_2to1_1_0\\SD_Block_handover_2to1_1_0.xci",
+        "inst_hier_path": "handover_2to1_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "handover_2to1",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "sysclk": {
+            "direction": "I"
+          },
+          "done0": {
+            "direction": "I"
+          },
+          "done1": {
+            "direction": "I"
+          },
+          "in0": {
+            "direction": "I"
+          },
+          "in1": {
+            "direction": "I"
+          },
+          "mux_out": {
+            "direction": "O"
+          }
+        }
+      },
+      "handover_2to1_2": {
+        "vlnv": "xilinx.com:module_ref:handover_2to1:1.0",
+        "ip_revision": "1",
+        "xci_name": "SD_Block_handover_2to1_2_0",
+        "xci_path": "ip\\SD_Block_handover_2to1_2_0\\SD_Block_handover_2to1_2_0.xci",
+        "inst_hier_path": "handover_2to1_2",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "handover_2to1",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "sysclk": {
+            "direction": "I"
+          },
+          "done0": {
+            "direction": "I"
+          },
+          "done1": {
+            "direction": "I"
+          },
+          "in0": {
+            "direction": "I"
+          },
+          "in1": {
+            "direction": "I"
+          },
+          "mux_out": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "MISO_1": {
+        "ports": [
+          "MISO",
+          "SD_WR_0/miso",
+          "SD_RD_0/miso"
+        ]
+      },
+      "SD_RD_0_cs_n": {
+        "ports": [
+          "SD_RD_0/cs_n",
+          "handover_2to1_2/in1"
+        ]
+      },
+      "SD_RD_0_data_out": {
+        "ports": [
+          "SD_RD_0/data_out",
+          "UART_TXmod_0/i_TX_Byte"
+        ]
+      },
+      "SD_RD_0_done": {
+        "ports": [
+          "SD_RD_0/done",
+          "handover_2to1_2/done1",
+          "handover_2to1_0/done1",
+          "UART_TXmod_0/i_TX_DV",
+          "handover_2to1_1/done1"
+        ]
+      },
+      "SD_RD_0_mosi": {
+        "ports": [
+          "SD_RD_0/mosi",
+          "handover_2to1_0/in1"
+        ]
+      },
+      "SD_RD_0_sck": {
+        "ports": [
+          "SD_RD_0/sck",
+          "handover_2to1_1/in1"
+        ]
+      },
+      "SD_WR_0_cs": {
+        "ports": [
+          "SD_WR_0/cs",
+          "handover_2to1_2/in0"
+        ]
+      },
+      "SD_WR_0_done_flag": {
+        "ports": [
+          "SD_WR_0/done_flag",
+          "SD_RD_0/start",
+          "handover_2to1_0/done0",
+          "handover_2to1_1/done0",
+          "handover_2to1_2/done0"
+        ]
+      },
+      "SD_WR_0_mosi": {
+        "ports": [
+          "SD_WR_0/mosi",
+          "handover_2to1_0/in0"
+        ]
+      },
+      "SD_WR_0_sck": {
+        "ports": [
+          "SD_WR_0/sck",
+          "handover_2to1_1/in0"
+        ]
+      },
+      "UART_TXmod_0_o_TX_Serial": {
+        "ports": [
+          "UART_TXmod_0/o_TX_Serial",
+          "uart_rxd_out"
+        ]
+      },
+      "btn0_1": {
+        "ports": [
+          "btn0",
+          "SD_WR_0/start"
+        ]
+      },
+      "handover_2to1_0_mux_out": {
+        "ports": [
+          "handover_2to1_0/mux_out",
+          "MOSI"
+        ]
+      },
+      "handover_2to1_1_mux_out": {
+        "ports": [
+          "handover_2to1_1/mux_out",
+          "SCLK"
+        ]
+      },
+      "handover_2to1_2_mux_out": {
+        "ports": [
+          "handover_2to1_2/mux_out",
+          "CS"
+        ]
+      },
+      "sysclk_1": {
+        "ports": [
+          "sysclk",
+          "SD_RD_0/clk",
+          "SD_WR_0/clk",
+          "UART_TXmod_0/sysclk",
+          "handover_2to1_0/sysclk",
+          "handover_2to1_1/sysclk",
+          "handover_2to1_2/sysclk"
+        ]
+      }
+    }
+  }
+}

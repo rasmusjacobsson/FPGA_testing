@@ -1,0 +1,22 @@
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot SD_init_test_wrapper_behav xil_defaultlib.SD_init_test_wrapper -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package unisim.vcomponents
+Compiling architecture rtl of entity xil_defaultlib.SD_init [sd_init_default]
+Compiling architecture sd_init_test_sd_init_0_1_arch of entity xil_defaultlib.SD_init_test_SD_init_0_1 [sd_init_test_sd_init_0_1_default]
+Compiling architecture rtl of entity xil_defaultlib.UART_TXmod [uart_txmod_default]
+Compiling architecture sd_init_test_uart_txmod_0_0_arch of entity xil_defaultlib.SD_init_test_UART_TXmod_0_0 [sd_init_test_uart_txmod_0_0_defa...]
+Compiling architecture structure of entity xil_defaultlib.SD_init_test [sd_init_test_default]
+Compiling architecture structure of entity xil_defaultlib.sd_init_test_wrapper
+Built simulation snapshot SD_init_test_wrapper_behav

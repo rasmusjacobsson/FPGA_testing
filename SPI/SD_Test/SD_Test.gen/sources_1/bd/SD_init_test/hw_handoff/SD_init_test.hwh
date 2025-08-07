@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Aug  7 12:02:01 2025" VIVADOVERSION="2024.2">
+
+  <SYSTEMINFO ARCH="artix7" DEVICE="7a35t" NAME="SD_init_test" PACKAGE="cpg236" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="O" NAME="CS" SIGIS="undef" SIGNAME="SD_init_0_cs">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="SD_init_0" PORT="cs"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="MISO" SIGIS="undef" SIGNAME="External_Ports_MISO">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="SD_init_0" PORT="miso"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="MOSI" SIGIS="undef" SIGNAME="SD_init_0_mosi">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="SD_init_0" PORT="mosi"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="SCLK" SIGIS="undef" SIGNAME="SD_init_0_sck">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="SD_init_0" PORT="sck"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="btn0" SIGIS="undef" SIGNAME="External_Ports_btn0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="SD_init_0" PORT="rst"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="sysclk" SIGIS="undef" SIGNAME="External_Ports_sysclk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="UART_TXmod_0" PORT="sysclk"/>
+        <CONNECTION INSTANCE="SD_init_0" PORT="clk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="uart_rxd_out" SIGIS="undef" SIGNAME="UART_TXmod_0_o_TX_Serial">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="UART_TXmod_0" PORT="o_TX_Serial"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/SD_init_0" HWVERSION="1.0" INSTANCE="SD_init_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="SD_init" VLNV="xilinx.com:module_ref:SD_init:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Baud_Rate" VALUE="400000"/>
+        <PARAMETER NAME="Clockfrequency" VALUE="12000000"/>
+        <PARAMETER NAME="Component_Name" VALUE="SD_init_test_SD_init_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_sysclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sysclk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="cs" SIGIS="undef" SIGNAME="SD_init_0_cs">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="CS"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="done" SIGIS="undef"/>
+        <PORT DIR="I" NAME="miso" SIGIS="undef" SIGNAME="External_Ports_MISO">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="MISO"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="mosi" SIGIS="undef" SIGNAME="SD_init_0_mosi">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="MOSI"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_btn0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="btn0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="sck" SIGIS="undef" SIGNAME="SD_init_0_sck">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="SCLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="test_DV" SIGIS="undef" SIGNAME="SD_init_0_test_DV">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="UART_TXmod_0" PORT="i_TX_DV"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="test_byte" RIGHT="0" SIGIS="undef" SIGNAME="SD_init_0_test_byte">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="UART_TXmod_0" PORT="i_TX_Byte"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="test_give_response" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/UART_TXmod_0" HWVERSION="1.0" INSTANCE="UART_TXmod_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="UART_TXmod" VLNV="xilinx.com:module_ref:UART_TXmod:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Baud_Rate" VALUE="115200"/>
+        <PARAMETER NAME="Clockfrequency" VALUE="12000000"/>
+        <PARAMETER NAME="Component_Name" VALUE="SD_init_test_UART_TXmod_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="7" NAME="i_TX_Byte" RIGHT="0" SIGIS="undef" SIGNAME="SD_init_0_test_byte">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SD_init_0" PORT="test_byte"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_TX_DV" SIGIS="undef" SIGNAME="SD_init_0_test_DV">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SD_init_0" PORT="test_DV"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_TX_Active" SIGIS="undef"/>
+        <PORT DIR="O" NAME="o_TX_Done" SIGIS="undef"/>
+        <PORT DIR="O" NAME="o_TX_Serial" SIGIS="undef" SIGNAME="UART_TXmod_0_o_TX_Serial">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="uart_rxd_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="sysclk" SIGIS="undef" SIGNAME="External_Ports_sysclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sysclk"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

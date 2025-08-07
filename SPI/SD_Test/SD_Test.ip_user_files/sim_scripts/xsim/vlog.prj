@@ -1,0 +1,7 @@
+verilog xil_defaultlib  \
+"../../../../../Telemetry_test/Telemetry_test.gen/sources_1/bd/TM_Block/ip/TM_Block_util_vector_logic_0_0/sim/TM_Block_util_vector_logic_0_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

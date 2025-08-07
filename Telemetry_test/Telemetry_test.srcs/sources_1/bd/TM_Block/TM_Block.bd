@@ -1,0 +1,512 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xB4A9BB2CFFF8F606",
+      "device": "xc7a35tcpg236-1",
+      "gen_directory": "../../../../Telemetry_test.gen/sources_1/bd/TM_Block",
+      "name": "TM_Block",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2024.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "MUX_2to1_0": "",
+      "UART_TXmod_0": "",
+      "Switchmod_0": "",
+      "util_vector_logic_0": "",
+      "GNSS_Reader_NO_TX_0": "",
+      "I2C_Reader_NO_TX_0": ""
+    },
+    "ports": {
+      "sda_i": {
+        "direction": "I"
+      },
+      "scl_i": {
+        "direction": "I"
+      },
+      "sysclk": {
+        "direction": "I"
+      },
+      "GNSS_TX": {
+        "direction": "I"
+      },
+      "btn0": {
+        "direction": "I",
+        "parameters": {
+          "PortType": {
+            "value": "undef",
+            "value_src": "ip_prop"
+          },
+          "PortType.PROP_SRC": {
+            "value": "false",
+            "value_src": "ip_prop"
+          }
+        }
+      },
+      "GNSS_RX": {
+        "direction": "O"
+      },
+      "GNSS_EN": {
+        "direction": "O"
+      },
+      "led0": {
+        "direction": "O"
+      },
+      "uart_rxd_out": {
+        "direction": "O"
+      },
+      "sda_o": {
+        "direction": "O"
+      },
+      "sda_t": {
+        "direction": "O"
+      },
+      "scl_o": {
+        "direction": "O"
+      },
+      "scl_t": {
+        "direction": "O"
+      },
+      "led1": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "MUX_2to1_0": {
+        "vlnv": "xilinx.com:module_ref:MUX_2to1:1.0",
+        "ip_revision": "1",
+        "xci_name": "TM_Block_MUX_2to1_0_0",
+        "xci_path": "ip\\TM_Block_MUX_2to1_0_0\\TM_Block_MUX_2to1_0_0.xci",
+        "inst_hier_path": "MUX_2to1_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "MUX_2to1",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "sysclk": {
+            "direction": "I"
+          },
+          "sel": {
+            "direction": "I",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "i_TX_DV_0": {
+            "direction": "I"
+          },
+          "i_TX_DV_1": {
+            "direction": "I"
+          },
+          "i_TX_Byte_0": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "i_TX_Byte_1": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "mux_TX_DV_out": {
+            "direction": "O"
+          },
+          "mux_TX_out": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "UART_TXmod_0": {
+        "vlnv": "xilinx.com:module_ref:UART_TXmod:1.0",
+        "ip_revision": "1",
+        "xci_name": "TM_Block_UART_TXmod_0_0",
+        "xci_path": "ip\\TM_Block_UART_TXmod_0_0\\TM_Block_UART_TXmod_0_0.xci",
+        "inst_hier_path": "UART_TXmod_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "UART_TXmod",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "sysclk": {
+            "direction": "I"
+          },
+          "i_TX_DV": {
+            "direction": "I"
+          },
+          "i_TX_Byte": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "o_TX_Active": {
+            "direction": "O"
+          },
+          "o_TX_Serial": {
+            "direction": "O"
+          },
+          "o_TX_Done": {
+            "direction": "O"
+          }
+        }
+      },
+      "Switchmod_0": {
+        "vlnv": "xilinx.com:module_ref:Switchmod:1.0",
+        "ip_revision": "1",
+        "xci_name": "TM_Block_Switchmod_0_0",
+        "xci_path": "ip\\TM_Block_Switchmod_0_0\\TM_Block_Switchmod_0_0.xci",
+        "inst_hier_path": "Switchmod_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Switchmod",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "sysclk": {
+            "direction": "I"
+          },
+          "i_signal": {
+            "direction": "I",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "o_signal": {
+            "direction": "O"
+          },
+          "led0": {
+            "direction": "O"
+          }
+        }
+      },
+      "util_vector_logic_0": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "ip_revision": "4",
+        "xci_name": "TM_Block_util_vector_logic_0_0",
+        "xci_path": "ip\\TM_Block_util_vector_logic_0_0\\TM_Block_util_vector_logic_0_0.xci",
+        "inst_hier_path": "util_vector_logic_0",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "not"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "GNSS_Reader_NO_TX_0": {
+        "parameters": {
+          "ACTIVE_SIM_BD": {
+            "value": "GNSS_Reader_NO_TX.bd"
+          },
+          "ACTIVE_SYNTH_BD": {
+            "value": "GNSS_Reader_NO_TX.bd"
+          },
+          "ENABLE_DFX": {
+            "value": "0"
+          },
+          "LIST_SIM_BD": {
+            "value": "GNSS_Reader_NO_TX.bd"
+          },
+          "LIST_SYNTH_BD": {
+            "value": "GNSS_Reader_NO_TX.bd"
+          },
+          "LOCK_PROPAGATE": {
+            "value": "0"
+          },
+          "TRAINING_MODULE": {
+            "value": "GNSS_Reader_NO_TX.bd",
+            "value_src": "auto"
+          }
+        },
+        "ports": {
+          "sysclk": {
+            "direction": "I"
+          },
+          "GNSS_TX": {
+            "direction": "I"
+          },
+          "GNSS_RX": {
+            "direction": "O"
+          },
+          "o_GNSS_RX_DV": {
+            "direction": "O"
+          },
+          "o_GNSS_RX_BYTE": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        },
+        "post_compiled_compname": "GNSS_Reader_NO_TX_inst_0",
+        "architecture": "artix7",
+        "variant_info": {
+          "GNSS_Reader_NO_TX.bd": {
+            "scoped_diagram": "GNSS_Reader_NO_TX_inst_0.bd",
+            "design_checksum": "0xEA47B10AA42004B9",
+            "ref_name": "GNSS_Reader_NO_TX",
+            "ref_subinst_path": "TM_Block_GNSS_Reader_NO_TX_0",
+            "ref_type": "Block Design",
+            "source_type": "all",
+            "active": "all"
+          }
+        }
+      },
+      "I2C_Reader_NO_TX_0": {
+        "parameters": {
+          "ACTIVE_SIM_BD": {
+            "value": "I2C_Reader_NO_TX.bd"
+          },
+          "ACTIVE_SYNTH_BD": {
+            "value": "I2C_Reader_NO_TX.bd"
+          },
+          "ENABLE_DFX": {
+            "value": "0"
+          },
+          "LIST_SIM_BD": {
+            "value": "I2C_Reader_NO_TX.bd"
+          },
+          "LIST_SYNTH_BD": {
+            "value": "I2C_Reader_NO_TX.bd"
+          },
+          "LOCK_PROPAGATE": {
+            "value": "0"
+          },
+          "TRAINING_MODULE": {
+            "value": "I2C_Reader_NO_TX.bd",
+            "value_src": "auto"
+          }
+        },
+        "ports": {
+          "reset_n": {
+            "direction": "I",
+            "parameters": {
+              "INSERT_VIP": {
+                "value": "0",
+                "value_src": "strong"
+              },
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "strong"
+              },
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "sda_i": {
+            "direction": "I"
+          },
+          "scl_i": {
+            "direction": "I"
+          },
+          "sysclk": {
+            "direction": "I"
+          },
+          "sda_o": {
+            "direction": "O"
+          },
+          "sda_t": {
+            "direction": "O"
+          },
+          "scl_o": {
+            "direction": "O"
+          },
+          "scl_t": {
+            "direction": "O"
+          },
+          "led2": {
+            "direction": "O"
+          },
+          "I2C_TX_byte": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "I2C_TX_DV": {
+            "direction": "O"
+          },
+          "i_TX_Done": {
+            "direction": "I"
+          }
+        },
+        "post_compiled_compname": "I2C_Reader_NO_TX_inst_0",
+        "architecture": "artix7",
+        "variant_info": {
+          "I2C_Reader_NO_TX.bd": {
+            "scoped_diagram": "I2C_Reader_NO_TX_inst_0.bd",
+            "design_checksum": "0x3F033F14EC32571F",
+            "ref_name": "I2C_Reader_NO_TX",
+            "ref_subinst_path": "TM_Block_I2C_Reader_NO_TX_0",
+            "ref_type": "Block Design",
+            "source_type": "all",
+            "active": "all"
+          }
+        }
+      }
+    },
+    "nets": {
+      "GNSS_Reader_NO_TX_0_GNSS_RX": {
+        "ports": [
+          "GNSS_Reader_NO_TX_0/GNSS_RX",
+          "GNSS_RX"
+        ]
+      },
+      "GNSS_Reader_NO_TX_0_o_GNSS_RX_BYTE": {
+        "ports": [
+          "GNSS_Reader_NO_TX_0/o_GNSS_RX_BYTE",
+          "MUX_2to1_0/i_TX_Byte_1"
+        ]
+      },
+      "GNSS_Reader_NO_TX_0_o_GNSS_RX_DV": {
+        "ports": [
+          "GNSS_Reader_NO_TX_0/o_GNSS_RX_DV",
+          "MUX_2to1_0/i_TX_DV_1"
+        ]
+      },
+      "GNSS_TX_1": {
+        "ports": [
+          "GNSS_TX",
+          "GNSS_Reader_NO_TX_0/GNSS_TX"
+        ]
+      },
+      "I2C_Reader_NO_TX_0_I2C_TX_DV": {
+        "ports": [
+          "I2C_Reader_NO_TX_0/I2C_TX_DV",
+          "MUX_2to1_0/i_TX_DV_0"
+        ]
+      },
+      "I2C_Reader_NO_TX_0_I2C_TX_byte": {
+        "ports": [
+          "I2C_Reader_NO_TX_0/I2C_TX_byte",
+          "MUX_2to1_0/i_TX_Byte_0"
+        ]
+      },
+      "I2C_Reader_NO_TX_0_led2": {
+        "ports": [
+          "I2C_Reader_NO_TX_0/led2",
+          "led1"
+        ]
+      },
+      "I2C_Reader_NO_TX_0_scl_o": {
+        "ports": [
+          "I2C_Reader_NO_TX_0/scl_o",
+          "scl_o"
+        ]
+      },
+      "I2C_Reader_NO_TX_0_scl_t": {
+        "ports": [
+          "I2C_Reader_NO_TX_0/scl_t",
+          "scl_t"
+        ]
+      },
+      "I2C_Reader_NO_TX_0_sda_o": {
+        "ports": [
+          "I2C_Reader_NO_TX_0/sda_o",
+          "sda_o"
+        ]
+      },
+      "I2C_Reader_NO_TX_0_sda_t": {
+        "ports": [
+          "I2C_Reader_NO_TX_0/sda_t",
+          "sda_t"
+        ]
+      },
+      "MUX_2to1_0_mux_TX_DV_out": {
+        "ports": [
+          "MUX_2to1_0/mux_TX_DV_out",
+          "UART_TXmod_0/i_TX_DV"
+        ]
+      },
+      "MUX_2to1_0_mux_TX_out": {
+        "ports": [
+          "MUX_2to1_0/mux_TX_out",
+          "UART_TXmod_0/i_TX_Byte"
+        ]
+      },
+      "Switchmod_0_led0": {
+        "ports": [
+          "Switchmod_0/led0",
+          "led0"
+        ]
+      },
+      "Switchmod_0_o_signal": {
+        "ports": [
+          "Switchmod_0/o_signal",
+          "GNSS_EN"
+        ]
+      },
+      "UART_TXmod_0_o_TX_Serial": {
+        "ports": [
+          "UART_TXmod_0/o_TX_Serial",
+          "uart_rxd_out"
+        ]
+      },
+      "btn0_1": {
+        "ports": [
+          "btn0",
+          "MUX_2to1_0/sel",
+          "Switchmod_0/i_signal",
+          "util_vector_logic_0/Op1"
+        ]
+      },
+      "i_TX_Done_1": {
+        "ports": [
+          "UART_TXmod_0/o_TX_Done",
+          "I2C_Reader_NO_TX_0/i_TX_Done"
+        ]
+      },
+      "reset_n_1": {
+        "ports": [
+          "util_vector_logic_0/Res",
+          "I2C_Reader_NO_TX_0/reset_n"
+        ]
+      },
+      "scl_i_1": {
+        "ports": [
+          "scl_i",
+          "I2C_Reader_NO_TX_0/scl_i"
+        ]
+      },
+      "sda_i_1": {
+        "ports": [
+          "sda_i",
+          "I2C_Reader_NO_TX_0/sda_i"
+        ]
+      },
+      "sysclk_1": {
+        "ports": [
+          "sysclk",
+          "MUX_2to1_0/sysclk",
+          "UART_TXmod_0/sysclk",
+          "Switchmod_0/sysclk",
+          "GNSS_Reader_NO_TX_0/sysclk",
+          "I2C_Reader_NO_TX_0/sysclk"
+        ]
+      }
+    }
+  }
+}

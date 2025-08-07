@@ -1,0 +1,272 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Tue Apr  1 08:39:54 2025
+# Process ID         : 25180
+# Current directory  : C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Test
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent28376 C:\Users\Sebastian Magnusson\Documents\GitHub\GLITCH-Software\FPGA\UART\UART_Test\UART_Test.xpr
+# Log file           : C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Test/vivado.log
+# Journal file       : C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Test\vivado.jou
+# Running On         : LAPTOP-1SQM85NC
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : 11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz
+# CPU Frequency      : 2419 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 16861 MB
+# Swap memory        : 24526 MB
+# Total Virtual      : 41387 MB
+# Available Virtual  : 11126 MB
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Test/UART_Test.xpr}
+update_compile_order -fileset sources_1
+create_bd_design "Block_Test"
+update_compile_order -fileset sources_1
+create_bd_cell -type module -reference UART_RXmod UART_RXmod_0
+create_bd_cell -type module -reference UART_TXmod UART_TXmod_0
+connect_bd_net [get_bd_pins UART_RXmod_0/o_RX_DV] [get_bd_pins UART_TXmod_0/i_TX_DV]
+connect_bd_net [get_bd_pins UART_RXmod_0/o_RX_DV] [get_bd_pins UART_TXmod_0/i_TX_Byte]
+undo
+connect_bd_net [get_bd_pins UART_RXmod_0/o_RX_byte] [get_bd_pins UART_TXmod_0/i_TX_Byte]
+startgroup
+make_bd_pins_external  [get_bd_pins UART_TXmod_0/sysclk]
+endgroup
+set_property name sysclk [get_bd_ports sysclk_0]
+connect_bd_net [get_bd_ports sysclk] [get_bd_pins UART_RXmod_0/sysclk]
+file mkdir C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Test/UART_Test.srcs/constrs_1
+file mkdir C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Test/UART_Test.srcs/constrs_1
+file mkdir C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Test/UART_Test.srcs/constrs_1/new
+file mkdir C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Test/UART_Test.srcs/constrs_1/new
+file mkdir C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Test/UART_Test.srcs/constrs_1/new
+file mkdir C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Test/UART_Test.srcs/constrs_1/new
+file mkdir C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Test/UART_Test.srcs/constrs_1
+file mkdir {C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Test/UART_Test.srcs/constrs_1/new}
+close [ open {C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Test/UART_Test.srcs/constrs_1/new/Constraints.xdc} w ]
+add_files -fileset constrs_1 {{C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Test/UART_Test.srcs/constrs_1/new/Constraints.xdc}}
+startgroup
+make_bd_pins_external  [get_bd_pins UART_TXmod_0/o_TX_Active]
+endgroup
+set_property name led0 [get_bd_ports o_TX_Active_0]
+startgroup
+make_bd_pins_external  [get_bd_pins UART_TXmod_0/o_TX_Done]
+endgroup
+set_property name led1 [get_bd_ports o_TX_Done_0]
+startgroup
+make_bd_pins_external  [get_bd_pins UART_TXmod_0/o_TX_Serial]
+endgroup
+set_property name uart_rxd_out [get_bd_ports o_TX_Serial_0]
+startgroup
+make_bd_pins_external  [get_bd_pins UART_RXmod_0/i_RX_Serial]
+endgroup
+set_property name uart_txd_in [get_bd_ports i_RX_Serial_0]
+regenerate_bd_layout
+save_bd_design
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+open_run synth_1 -name synth_1
+place_ports {o_RX_byte[7]} {o_RX_byte[6]} {o_RX_byte[5]} {o_RX_byte[4]} {o_RX_byte[3]} {o_RX_byte[2]} {o_RX_byte[1]} {o_RX_byte[0]} i_RX_Serial o_RX_DV
+reset_run impl_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+close_design
+validate_bd_design
+close [ open {C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Test/UART_Test.srcs/sources_1/new/TOP_UART.vhd} w ]
+add_files {{C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Test/UART_Test.srcs/sources_1/new/TOP_UART.vhd}}
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Test/UART_Test.srcs/sources_1/bd/Block_Test/Block_Test.bd}
+save_bd_design
+make_wrapper -files [get_files {{C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Test/UART_Test.srcs/sources_1/bd/Block_Test/Block_Test.bd}}] -top
+add_files -norecurse {{c:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Test/UART_Test.gen/sources_1/bd/Block_Test/hdl/Block_Test_wrapper.vhd}}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+set_property is_enabled false [get_files  {{C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Test/UART_Test.srcs/sources_1/new/TOP_UART.vhd}}]
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+open_run synth_1 -name synth_1
+open_bd_design {C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Test/UART_Test.srcs/sources_1/bd/Block_Test/Block_Test.bd}
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+open_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Test/UART_Test.runs/impl_1/Block_Test_wrapper.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Test/UART_Test.runs/impl_1/Block_Test_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+open_bd_design {C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Test/UART_Test.srcs/sources_1/bd/Block_Test/Block_Test.bd}
+delete_bd_objs [get_bd_nets UART_RXmod_0_o_RX_DV]
+startgroup
+make_bd_pins_external  [get_bd_pins UART_TXmod_0/i_TX_DV]
+endgroup
+set_property name btn0 [get_bd_ports i_TX_DV_0]
+save_bd_design
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Test/UART_Test.runs/impl_1/Block_Test_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+open_bd_design {C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Test/UART_Test.srcs/sources_1/bd/Block_Test/Block_Test.bd}
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Test/UART_Test.runs/impl_1/Block_Test_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+open_bd_design {C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Test/UART_Test.srcs/sources_1/bd/Block_Test/Block_Test.bd}
+delete_bd_objs [get_bd_nets i_TX_DV_0_1] [get_bd_ports btn0]
+connect_bd_net [get_bd_pins UART_TXmod_0/i_TX_DV] [get_bd_pins UART_RXmod_0/o_RX_DV]
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Test/UART_Test.runs/impl_1/Block_Test_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+update_module_reference Block_Test_UART_RXmod_0_0
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Test/UART_Test.runs/impl_1/Block_Test_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Test/UART_Test.runs/impl_1/Block_Test_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Test/UART_Test.runs/impl_1/Block_Test_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+update_module_reference Block_Test_UART_RXmod_0_0
+reset_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Test/UART_Test.runs/impl_1/Block_Test_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Test/UART_Test.runs/impl_1/Block_Test_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+open_bd_design {C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Test/UART_Test.srcs/sources_1/bd/Block_Test/Block_Test.bd}
+regenerate_bd_layout
+create_project UART_Continuation {C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Continuation} -part xc7a35tcpg236-1
+set_property target_language VHDL [current_project]
+set_property simulator_language VHDL [current_project]
+add_files -norecurse {{C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Test/UART_Test.srcs/sources_1/new/UART_RXmod.vhd} {C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Test/UART_Test.srcs/sources_1/new/UART_TXmod.vhd}}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+import_files -force -norecurse {{C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Test/UART_Test.srcs/sources_1/bd/Block_Test/Block_Test.bd}}
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Continuation/UART_Continuation.srcs/sources_1/bd/Block_Test/Block_Test.bd}
+current_project UART_Test
+current_project UART_Continuation
+make_wrapper -files [get_files {{C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Continuation/UART_Continuation.srcs/sources_1/bd/Block_Test/Block_Test.bd}}] -top
+add_files -norecurse {{C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Continuation/UART_Continuation.gen/sources_1/bd/Block_Test/hdl/Block_Test_wrapper.vhd}}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+file mkdir C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Continuation/UART_Continuation.srcs/constrs_1
+file mkdir C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Continuation/UART_Continuation.srcs/constrs_1
+file mkdir C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Continuation/UART_Continuation.srcs/constrs_1/new
+file mkdir C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Continuation/UART_Continuation.srcs/constrs_1/new
+file mkdir C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Continuation/UART_Continuation.srcs/constrs_1/new
+file mkdir C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Continuation/UART_Continuation.srcs/constrs_1/new
+file mkdir C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Continuation/UART_Continuation.srcs/constrs_1
+file mkdir {C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Continuation/UART_Continuation.srcs/constrs_1/new}
+close [ open {C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Continuation/UART_Continuation.srcs/constrs_1/new/Constraints.xdc} w ]
+add_files -fileset constrs_1 {{C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Continuation/UART_Continuation.srcs/constrs_1/new/Constraints.xdc}}
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+current_project UART_Test
+close_bd_design [get_bd_designs Block_Test]
+close_hw_manager
+current_project UART_Continuation
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Continuation/UART_Continuation.runs/impl_1/Block_Test_wrapper.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Continuation/UART_Continuation.runs/impl_1/Block_Test_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+file mkdir C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Continuation/UART_Continuation.srcs/sources_1/new
+file mkdir C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Continuation/UART_Continuation.srcs/sources_1/new
+file mkdir C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Continuation/UART_Continuation.srcs/sources_1/new
+file mkdir C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Continuation/UART_Continuation.srcs/sources_1/new
+file mkdir C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Continuation/UART_Continuation.srcs/sources_1/new
+file mkdir C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Continuation/UART_Continuation.srcs/sources_1/new
+file mkdir {C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Continuation/UART_Continuation.srcs/sources_1/new}
+close [ open {C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Continuation/UART_Continuation.srcs/sources_1/new/Pulsemod.vhd} w ]
+add_files {{C:/Users/Sebastian Magnusson/Documents/GitHub/GLITCH-Software/FPGA/UART/UART_Continuation/UART_Continuation.srcs/sources_1/new/Pulsemod.vhd}}
+update_compile_order -fileset sources_1
+current_project UART_Test
+close_project
+create_bd_cell -type module -reference Pulsemod Pulsemod_0
+connect_bd_net [get_bd_ports sysclk] [get_bd_pins Pulsemod_0/sysclk]
+startgroup
+make_bd_pins_external  [get_bd_pins Pulsemod_0/i_signal]
+endgroup
+set_property name btn0 [get_bd_ports i_signal_0]
+delete_bd_objs [get_bd_nets UART_RXmod_0_o_RX_DV]
+connect_bd_net [get_bd_pins Pulsemod_0/o_pulse] [get_bd_pins UART_TXmod_0/i_TX_DV]
+regenerate_bd_layout
+regenerate_bd_layout
+validate_bd_design
+save_bd_design
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+open_run impl_1

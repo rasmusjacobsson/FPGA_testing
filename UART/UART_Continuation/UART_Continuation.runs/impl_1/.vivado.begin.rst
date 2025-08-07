@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="Sebastian Magnusson" Host="LAPTOP-1SQM85NC" Pid="28116" HostCore="8" HostMemory="016861405184">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="Sebastian Magnusson" Host="LAPTOP-1SQM85NC" Pid="24940" HostCore="8" HostMemory="016861405184">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="Sebastian Magnusson" Host="LAPTOP-1SQM85NC" Pid="3408" HostCore="8" HostMemory="016861405184">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="Sebastian Magnusson" Host="LAPTOP-1SQM85NC" Pid="26824" HostCore="8" HostMemory="016861405184">
+    </Process>
+</ProcessHandle>

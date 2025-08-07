@@ -1,0 +1,345 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x65CEE18065CEE180",
+      "device": "xc7a35tcpg236-1",
+      "gen_directory": "../../../../GNSS_and_UART.gen/sources_1/bd/Block_Test",
+      "name": "Block_Test",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2024.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "UART_RXmod_0": "",
+      "UART_TXmod_0": "",
+      "Switchmod_0": "",
+      "UART_TXmod_1": "",
+      "UART_RXmod_1": "",
+      "MUX_2to1_0": ""
+    },
+    "ports": {
+      "led0": {
+        "direction": "O"
+      },
+      "led1": {
+        "direction": "O"
+      },
+      "sysclk": {
+        "direction": "I"
+      },
+      "uart_txd_in": {
+        "direction": "I"
+      },
+      "btn0": {
+        "direction": "I"
+      },
+      "GNSS_EN": {
+        "direction": "O"
+      },
+      "GNSS_RX": {
+        "direction": "O"
+      },
+      "GNSS_TX": {
+        "direction": "I"
+      },
+      "uart_rxd_out": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "UART_RXmod_0": {
+        "vlnv": "xilinx.com:module_ref:UART_RXmod:1.0",
+        "ip_revision": "1",
+        "xci_name": "Block_Test_UART_RXmod_0_0",
+        "xci_path": "ip\\Block_Test_UART_RXmod_0_0\\Block_Test_UART_RXmod_0_0.xci",
+        "inst_hier_path": "UART_RXmod_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "UART_RXmod",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "sysclk": {
+            "direction": "I"
+          },
+          "i_RX_Serial": {
+            "direction": "I"
+          },
+          "o_RX_DV": {
+            "direction": "O"
+          },
+          "o_RX_byte": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "UART_TXmod_0": {
+        "vlnv": "xilinx.com:module_ref:UART_TXmod:1.0",
+        "ip_revision": "1",
+        "xci_name": "Block_Test_UART_TXmod_0_0",
+        "xci_path": "ip\\Block_Test_UART_TXmod_0_0\\Block_Test_UART_TXmod_0_0.xci",
+        "inst_hier_path": "UART_TXmod_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "UART_TXmod",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "sysclk": {
+            "direction": "I"
+          },
+          "i_TX_DV": {
+            "direction": "I"
+          },
+          "i_TX_Byte": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "o_TX_Active": {
+            "direction": "O"
+          },
+          "o_TX_Serial": {
+            "direction": "O"
+          },
+          "o_TX_Done": {
+            "direction": "O"
+          }
+        }
+      },
+      "Switchmod_0": {
+        "vlnv": "xilinx.com:module_ref:Switchmod:1.0",
+        "ip_revision": "1",
+        "xci_name": "Block_Test_Switchmod_0_0",
+        "xci_path": "ip\\Block_Test_Switchmod_0_0\\Block_Test_Switchmod_0_0.xci",
+        "inst_hier_path": "Switchmod_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Switchmod",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "sysclk": {
+            "direction": "I"
+          },
+          "i_signal": {
+            "direction": "I"
+          },
+          "o_signal": {
+            "direction": "O"
+          },
+          "led0": {
+            "direction": "O"
+          }
+        }
+      },
+      "UART_TXmod_1": {
+        "vlnv": "xilinx.com:module_ref:UART_TXmod:1.0",
+        "ip_revision": "1",
+        "xci_name": "Block_Test_UART_TXmod_1_0",
+        "xci_path": "ip\\Block_Test_UART_TXmod_1_0\\Block_Test_UART_TXmod_1_0.xci",
+        "inst_hier_path": "UART_TXmod_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "UART_TXmod",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "sysclk": {
+            "direction": "I"
+          },
+          "i_TX_DV": {
+            "direction": "I"
+          },
+          "i_TX_Byte": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "o_TX_Active": {
+            "direction": "O"
+          },
+          "o_TX_Serial": {
+            "direction": "O"
+          },
+          "o_TX_Done": {
+            "direction": "O"
+          }
+        }
+      },
+      "UART_RXmod_1": {
+        "vlnv": "xilinx.com:module_ref:UART_RXmod:1.0",
+        "ip_revision": "1",
+        "xci_name": "Block_Test_UART_RXmod_1_0",
+        "xci_path": "ip\\Block_Test_UART_RXmod_1_0\\Block_Test_UART_RXmod_1_0.xci",
+        "inst_hier_path": "UART_RXmod_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "UART_RXmod",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "sysclk": {
+            "direction": "I"
+          },
+          "i_RX_Serial": {
+            "direction": "I"
+          },
+          "o_RX_DV": {
+            "direction": "O"
+          },
+          "o_RX_byte": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "MUX_2to1_0": {
+        "vlnv": "xilinx.com:module_ref:MUX_2to1:1.0",
+        "ip_revision": "1",
+        "xci_name": "Block_Test_MUX_2to1_0_4",
+        "xci_path": "ip\\Block_Test_MUX_2to1_0_4\\Block_Test_MUX_2to1_0_4.xci",
+        "inst_hier_path": "MUX_2to1_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "MUX_2to1",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "sysclk": {
+            "direction": "I"
+          },
+          "sel": {
+            "direction": "I"
+          },
+          "i_TX_DV_0": {
+            "direction": "I"
+          },
+          "i_TX_DV_1": {
+            "direction": "I"
+          },
+          "i_TX_Byte_0": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "i_TX_Byte_1": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "mux_TX_DV_out": {
+            "direction": "O"
+          },
+          "mux_TX_out": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "GNSS_TX_1": {
+        "ports": [
+          "GNSS_TX",
+          "UART_RXmod_1/i_RX_Serial"
+        ]
+      },
+      "MUX_2to1_0_mux_TX_DV_out": {
+        "ports": [
+          "MUX_2to1_0/mux_TX_DV_out",
+          "UART_TXmod_0/i_TX_DV"
+        ]
+      },
+      "MUX_2to1_0_mux_TX_signal_out": {
+        "ports": [
+          "MUX_2to1_0/mux_TX_out",
+          "UART_TXmod_0/i_TX_Byte"
+        ]
+      },
+      "Switchmod_0_led0": {
+        "ports": [
+          "Switchmod_0/led0",
+          "led1"
+        ]
+      },
+      "Switchmod_0_o_signal": {
+        "ports": [
+          "Switchmod_0/o_signal",
+          "GNSS_EN"
+        ]
+      },
+      "UART_RXmod_0_o_RX_DV": {
+        "ports": [
+          "UART_RXmod_0/o_RX_DV",
+          "MUX_2to1_0/i_TX_DV_0"
+        ]
+      },
+      "UART_RXmod_0_o_RX_byte": {
+        "ports": [
+          "UART_RXmod_0/o_RX_byte",
+          "MUX_2to1_0/i_TX_Byte_0"
+        ]
+      },
+      "UART_RXmod_1_o_RX_DV": {
+        "ports": [
+          "UART_RXmod_1/o_RX_DV",
+          "MUX_2to1_0/i_TX_DV_1"
+        ]
+      },
+      "UART_RXmod_1_o_RX_byte": {
+        "ports": [
+          "UART_RXmod_1/o_RX_byte",
+          "MUX_2to1_0/i_TX_Byte_1"
+        ]
+      },
+      "UART_TXmod_0_o_TX_Active": {
+        "ports": [
+          "UART_TXmod_0/o_TX_Active",
+          "led0"
+        ]
+      },
+      "UART_TXmod_0_o_TX_Serial": {
+        "ports": [
+          "UART_TXmod_0/o_TX_Serial",
+          "uart_rxd_out"
+        ]
+      },
+      "UART_TXmod_1_o_TX_Serial": {
+        "ports": [
+          "UART_TXmod_1/o_TX_Serial",
+          "GNSS_RX"
+        ]
+      },
+      "btn0_1": {
+        "ports": [
+          "btn0",
+          "Switchmod_0/i_signal",
+          "MUX_2to1_0/sel"
+        ]
+      },
+      "sysclk_1": {
+        "ports": [
+          "sysclk",
+          "UART_RXmod_0/sysclk",
+          "UART_TXmod_0/sysclk",
+          "UART_RXmod_1/sysclk",
+          "Switchmod_0/sysclk",
+          "UART_TXmod_1/sysclk",
+          "MUX_2to1_0/sysclk"
+        ]
+      },
+      "uart_txd_in_1": {
+        "ports": [
+          "uart_txd_in",
+          "UART_RXmod_0/i_RX_Serial"
+        ]
+      }
+    }
+  }
+}

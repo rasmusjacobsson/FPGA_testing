@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Aug  7 19:05:43 2025" VIVADOVERSION="2024.2">
+
+  <SYSTEMINFO ARCH="artix7" DEVICE="7a35t" NAME="reboot_test_block" PACKAGE="cpg236" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="I" NAME="btn0" SIGIS="undef" SIGNAME="External_Ports_btn0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="fpga_rebooter_0" PORT="reboot_trigger"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="led0" SIGIS="undef" SIGNAME="fpga_rebooter_0_led0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="fpga_rebooter_0" PORT="led0"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="led1" SIGIS="undef" SIGNAME="fpga_rebooter_0_led1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="fpga_rebooter_0" PORT="led1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="sysclk" SIGIS="undef" SIGNAME="External_Ports_sysclk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="UART_TXmod_0" PORT="sysclk"/>
+        <CONNECTION INSTANCE="reboot_control_0" PORT="clk"/>
+        <CONNECTION INSTANCE="fpga_rebooter_0" PORT="clk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="uart_rxd_out" SIGIS="undef" SIGNAME="UART_TXmod_0_o_TX_Serial">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="UART_TXmod_0" PORT="o_TX_Serial"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/UART_TXmod_0" HWVERSION="1.0" INSTANCE="UART_TXmod_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="UART_TXmod" VLNV="xilinx.com:module_ref:UART_TXmod:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Baud_Rate" VALUE="115200"/>
+        <PARAMETER NAME="Clockfrequency" VALUE="12000000"/>
+        <PARAMETER NAME="Component_Name" VALUE="reboot_test_block_UART_TXmod_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="7" NAME="i_TX_Byte" RIGHT="0" SIGIS="undef" SIGNAME="reboot_control_0_TX_byte">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="reboot_control_0" PORT="TX_byte"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_TX_DV" SIGIS="undef" SIGNAME="reboot_control_0_TX_DV">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="reboot_control_0" PORT="TX_DV"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_TX_Active" SIGIS="undef"/>
+        <PORT DIR="O" NAME="o_TX_Done" SIGIS="undef"/>
+        <PORT DIR="O" NAME="o_TX_Serial" SIGIS="undef" SIGNAME="UART_TXmod_0_o_TX_Serial">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="uart_rxd_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="sysclk" SIGIS="undef" SIGNAME="External_Ports_sysclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sysclk"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/fpga_rebooter_0" HWVERSION="1.0" INSTANCE="fpga_rebooter_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="fpga_rebooter" VLNV="xilinx.com:module_ref:fpga_rebooter:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="reboot_test_block_fpga_rebooter_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_sysclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sysclk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="led0" SIGIS="undef" SIGNAME="fpga_rebooter_0_led0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="led0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="led1" SIGIS="undef" SIGNAME="fpga_rebooter_0_led1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="led1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="reboot_trigger" SIGIS="undef" SIGNAME="External_Ports_btn0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="btn0"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/reboot_control_0" HWVERSION="1.0" INSTANCE="reboot_control_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="reboot_control" VLNV="xilinx.com:module_ref:reboot_control:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="reboot_test_block_reboot_control_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" NAME="TX_DV" SIGIS="undef" SIGNAME="reboot_control_0_TX_DV">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="UART_TXmod_0" PORT="i_TX_DV"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="TX_byte" RIGHT="0" SIGIS="undef" SIGNAME="reboot_control_0_TX_byte">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="UART_TXmod_0" PORT="i_TX_Byte"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_sysclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sysclk"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>
