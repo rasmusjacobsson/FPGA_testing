@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x9EC3EB28F0FE85C1",
+      "boundary_crc": "0x9EC3EB289EC3EB28",
       "device": "xc7a35tcpg236-1",
       "gen_directory": "../../../../SD_Test.gen/sources_1/bd/SD_Block",
       "name": "SD_Block",
@@ -292,10 +292,10 @@
       "SD_RD_0_done": {
         "ports": [
           "SD_RD_0/done",
-          "handover_2to1_2/done1",
-          "handover_2to1_0/done1",
           "UART_TXmod_0/i_TX_DV",
-          "handover_2to1_1/done1"
+          "handover_2to1_0/done1",
+          "handover_2to1_1/done1",
+          "handover_2to1_2/done1"
         ]
       },
       "SD_RD_0_mosi": {

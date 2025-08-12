@@ -8,7 +8,7 @@
   **** SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
   **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
   **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-  **** Start of session at: Thu Aug  7 12:02:54 2025
+  **** Start of session at: Tue Aug 12 19:06:32 2025
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -16,8 +16,8 @@ source SD_init_test_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2024.2/data/ip'.
-Command: read_checkpoint -auto_incremental -incremental D:/Code/GLITCH-Software/FPGA/SPI/SD_Test/SD_Test.srcs/utils_1/imports/synth_1/SD_Block_wrapper.dcp
-INFO: [Vivado 12-5825] Read reference checkpoint from D:/Code/GLITCH-Software/FPGA/SPI/SD_Test/SD_Test.srcs/utils_1/imports/synth_1/SD_Block_wrapper.dcp for incremental synthesis
+Command: read_checkpoint -auto_incremental -incremental C:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/SPI/SD_Test/SD_Test.srcs/utils_1/imports/synth_1/SD_Block_wrapper.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/SPI/SD_Test/SD_Test.srcs/utils_1/imports/synth_1/SD_Block_wrapper.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
 Command: synth_design -top SD_init_test_wrapper -part xc7a35tcpg236-1
 Starting synth_design
@@ -29,68 +29,68 @@ INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
 WARNING: [Common 17-1361] You have specified a new message control rule that is equivalent to an existing rule with attributes ' -id {17-179}  -suppress '. The existing rule will be replaced.
-INFO: [Synth 8-7075] Helper process launched with PID 44292
+INFO: [Synth 8-7075] Helper process launched with PID 13276
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1002.461 ; gain = 468.051
+Starting RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1002.023 ; gain = 467.852
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'SD_init_test_wrapper' [d:/Code/GLITCH-Software/FPGA/SPI/SD_Test/SD_Test.gen/sources_1/bd/SD_init_test/hdl/SD_init_test_wrapper.vhd:27]
-INFO: [Synth 8-3491] module 'SD_init_test' declared at 'd:/Code/GLITCH-Software/FPGA/SPI/SD_Test/SD_Test.gen/sources_1/bd/SD_init_test/synth/SD_init_test.vhd:15' bound to instance 'SD_init_test_i' of component 'SD_init_test' [d:/Code/GLITCH-Software/FPGA/SPI/SD_Test/SD_Test.gen/sources_1/bd/SD_init_test/hdl/SD_init_test_wrapper.vhd:40]
-INFO: [Synth 8-638] synthesizing module 'SD_init_test' [d:/Code/GLITCH-Software/FPGA/SPI/SD_Test/SD_Test.gen/sources_1/bd/SD_init_test/synth/SD_init_test.vhd:31]
-INFO: [Synth 8-3491] module 'SD_init_test_SD_init_0_1' declared at 'D:/Code/GLITCH-Software/FPGA/SPI/SD_Test/SD_Test.runs/synth_1/.Xil/Vivado-58812-DESKTOP-TTFS3R7/realtime/SD_init_test_SD_init_0_1_stub.vhdl:6' bound to instance 'SD_init_0' of component 'SD_init_test_SD_init_0_1' [d:/Code/GLITCH-Software/FPGA/SPI/SD_Test/SD_Test.gen/sources_1/bd/SD_init_test/synth/SD_init_test.vhd:63]
-INFO: [Synth 8-638] synthesizing module 'SD_init_test_SD_init_0_1' [D:/Code/GLITCH-Software/FPGA/SPI/SD_Test/SD_Test.runs/synth_1/.Xil/Vivado-58812-DESKTOP-TTFS3R7/realtime/SD_init_test_SD_init_0_1_stub.vhdl:30]
-INFO: [Synth 8-3491] module 'SD_init_test_UART_TXmod_0_0' declared at 'D:/Code/GLITCH-Software/FPGA/SPI/SD_Test/SD_Test.runs/synth_1/.Xil/Vivado-58812-DESKTOP-TTFS3R7/realtime/SD_init_test_UART_TXmod_0_0_stub.vhdl:6' bound to instance 'UART_TXmod_0' of component 'SD_init_test_UART_TXmod_0_0' [d:/Code/GLITCH-Software/FPGA/SPI/SD_Test/SD_Test.gen/sources_1/bd/SD_init_test/synth/SD_init_test.vhd:76]
-INFO: [Synth 8-638] synthesizing module 'SD_init_test_UART_TXmod_0_0' [D:/Code/GLITCH-Software/FPGA/SPI/SD_Test/SD_Test.runs/synth_1/.Xil/Vivado-58812-DESKTOP-TTFS3R7/realtime/SD_init_test_UART_TXmod_0_0_stub.vhdl:26]
-INFO: [Synth 8-256] done synthesizing module 'SD_init_test' (0#1) [d:/Code/GLITCH-Software/FPGA/SPI/SD_Test/SD_Test.gen/sources_1/bd/SD_init_test/synth/SD_init_test.vhd:31]
-INFO: [Synth 8-256] done synthesizing module 'SD_init_test_wrapper' (0#1) [d:/Code/GLITCH-Software/FPGA/SPI/SD_Test/SD_Test.gen/sources_1/bd/SD_init_test/hdl/SD_init_test_wrapper.vhd:27]
+INFO: [Synth 8-638] synthesizing module 'SD_init_test_wrapper' [C:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/SPI/SD_Test/SD_Test.gen/sources_1/bd/SD_init_test/hdl/SD_init_test_wrapper.vhd:27]
+INFO: [Synth 8-3491] module 'SD_init_test' declared at 'c:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/SPI/SD_Test/SD_Test.gen/sources_1/bd/SD_init_test/synth/SD_init_test.vhd:15' bound to instance 'SD_init_test_i' of component 'SD_init_test' [C:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/SPI/SD_Test/SD_Test.gen/sources_1/bd/SD_init_test/hdl/SD_init_test_wrapper.vhd:40]
+INFO: [Synth 8-638] synthesizing module 'SD_init_test' [c:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/SPI/SD_Test/SD_Test.gen/sources_1/bd/SD_init_test/synth/SD_init_test.vhd:31]
+INFO: [Synth 8-3491] module 'SD_init_test_SD_init_0_1' declared at 'C:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/SPI/SD_Test/SD_Test.runs/synth_1/.Xil/Vivado-9496-LAPTOP-FQ2KK7JS/realtime/SD_init_test_SD_init_0_1_stub.vhdl:6' bound to instance 'SD_init_0' of component 'SD_init_test_SD_init_0_1' [c:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/SPI/SD_Test/SD_Test.gen/sources_1/bd/SD_init_test/synth/SD_init_test.vhd:63]
+INFO: [Synth 8-638] synthesizing module 'SD_init_test_SD_init_0_1' [C:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/SPI/SD_Test/SD_Test.runs/synth_1/.Xil/Vivado-9496-LAPTOP-FQ2KK7JS/realtime/SD_init_test_SD_init_0_1_stub.vhdl:30]
+INFO: [Synth 8-3491] module 'SD_init_test_UART_TXmod_0_0' declared at 'C:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/SPI/SD_Test/SD_Test.runs/synth_1/.Xil/Vivado-9496-LAPTOP-FQ2KK7JS/realtime/SD_init_test_UART_TXmod_0_0_stub.vhdl:6' bound to instance 'UART_TXmod_0' of component 'SD_init_test_UART_TXmod_0_0' [c:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/SPI/SD_Test/SD_Test.gen/sources_1/bd/SD_init_test/synth/SD_init_test.vhd:76]
+INFO: [Synth 8-638] synthesizing module 'SD_init_test_UART_TXmod_0_0' [C:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/SPI/SD_Test/SD_Test.runs/synth_1/.Xil/Vivado-9496-LAPTOP-FQ2KK7JS/realtime/SD_init_test_UART_TXmod_0_0_stub.vhdl:26]
+INFO: [Synth 8-256] done synthesizing module 'SD_init_test' (0#1) [c:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/SPI/SD_Test/SD_Test.gen/sources_1/bd/SD_init_test/synth/SD_init_test.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'SD_init_test_wrapper' (0#1) [C:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/SPI/SD_Test/SD_Test.gen/sources_1/bd/SD_init_test/hdl/SD_init_test_wrapper.vhd:27]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1107.309 ; gain = 572.898
+Finished RTL Elaboration : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1106.141 ; gain = 571.969
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1107.309 ; gain = 572.898
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1106.141 ; gain = 571.969
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1107.309 ; gain = 572.898
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1106.141 ; gain = 571.969
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1107.309 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1106.141 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [d:/Code/GLITCH-Software/FPGA/SPI/SD_Test/SD_Test.gen/sources_1/bd/SD_init_test/ip/SD_init_test_UART_TXmod_0_0/SD_init_test_UART_TXmod_0_0/SD_init_test_UART_TXmod_0_0_in_context.xdc] for cell 'SD_init_test_i/UART_TXmod_0'
-Finished Parsing XDC File [d:/Code/GLITCH-Software/FPGA/SPI/SD_Test/SD_Test.gen/sources_1/bd/SD_init_test/ip/SD_init_test_UART_TXmod_0_0/SD_init_test_UART_TXmod_0_0/SD_init_test_UART_TXmod_0_0_in_context.xdc] for cell 'SD_init_test_i/UART_TXmod_0'
-Parsing XDC File [d:/Code/GLITCH-Software/FPGA/SPI/SD_Test/SD_Test.gen/sources_1/bd/SD_init_test/ip/SD_init_test_SD_init_0_1/SD_init_test_SD_init_0_1/SD_init_test_SD_init_0_1_in_context.xdc] for cell 'SD_init_test_i/SD_init_0'
-Finished Parsing XDC File [d:/Code/GLITCH-Software/FPGA/SPI/SD_Test/SD_Test.gen/sources_1/bd/SD_init_test/ip/SD_init_test_SD_init_0_1/SD_init_test_SD_init_0_1/SD_init_test_SD_init_0_1_in_context.xdc] for cell 'SD_init_test_i/SD_init_0'
-Parsing XDC File [D:/Code/GLITCH-Software/FPGA/SPI/SPI_Test/SPI_Test.srcs/constrs_1/new/constraints.xdc]
-WARNING: [Vivado 12-584] No ports matched 'led0'. [D:/Code/GLITCH-Software/FPGA/SPI/SPI_Test/SPI_Test.srcs/constrs_1/new/constraints.xdc:11]
-WARNING: [Vivado 12-584] No ports matched 'led1'. [D:/Code/GLITCH-Software/FPGA/SPI/SPI_Test/SPI_Test.srcs/constrs_1/new/constraints.xdc:12]
-WARNING: [Vivado 12-584] No ports matched 'uart_txd_in'. [D:/Code/GLITCH-Software/FPGA/SPI/SPI_Test/SPI_Test.srcs/constrs_1/new/constraints.xdc:89]
-Finished Parsing XDC File [D:/Code/GLITCH-Software/FPGA/SPI/SPI_Test/SPI_Test.srcs/constrs_1/new/constraints.xdc]
-WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [D:/Code/GLITCH-Software/FPGA/SPI/SPI_Test/SPI_Test.srcs/constrs_1/new/constraints.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/SD_init_test_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Code/GLITCH-Software/FPGA/SPI/SPI_Test/SPI_Test.srcs/constrs_1/new/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/SD_init_test_wrapper_propImpl.xdc].
+Parsing XDC File [c:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/SPI/SD_Test/SD_Test.gen/sources_1/bd/SD_init_test/ip/SD_init_test_UART_TXmod_0_0/SD_init_test_UART_TXmod_0_0/SD_init_test_UART_TXmod_0_0_in_context.xdc] for cell 'SD_init_test_i/UART_TXmod_0'
+Finished Parsing XDC File [c:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/SPI/SD_Test/SD_Test.gen/sources_1/bd/SD_init_test/ip/SD_init_test_UART_TXmod_0_0/SD_init_test_UART_TXmod_0_0/SD_init_test_UART_TXmod_0_0_in_context.xdc] for cell 'SD_init_test_i/UART_TXmod_0'
+Parsing XDC File [c:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/SPI/SD_Test/SD_Test.gen/sources_1/bd/SD_init_test/ip/SD_init_test_SD_init_0_1/SD_init_test_SD_init_0_1/SD_init_test_SD_init_0_1_in_context.xdc] for cell 'SD_init_test_i/SD_init_0'
+Finished Parsing XDC File [c:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/SPI/SD_Test/SD_Test.gen/sources_1/bd/SD_init_test/ip/SD_init_test_SD_init_0_1/SD_init_test_SD_init_0_1/SD_init_test_SD_init_0_1_in_context.xdc] for cell 'SD_init_test_i/SD_init_0'
+Parsing XDC File [C:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/SPI/SPI_Test/SPI_Test.srcs/constrs_1/new/constraints.xdc]
+WARNING: [Vivado 12-584] No ports matched 'led0'. [C:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/SPI/SPI_Test/SPI_Test.srcs/constrs_1/new/constraints.xdc:11]
+WARNING: [Vivado 12-584] No ports matched 'led1'. [C:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/SPI/SPI_Test/SPI_Test.srcs/constrs_1/new/constraints.xdc:12]
+WARNING: [Vivado 12-584] No ports matched 'uart_txd_in'. [C:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/SPI/SPI_Test/SPI_Test.srcs/constrs_1/new/constraints.xdc:89]
+Finished Parsing XDC File [C:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/SPI/SPI_Test/SPI_Test.srcs/constrs_1/new/constraints.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/SPI/SPI_Test/SPI_Test.srcs/constrs_1/new/constraints.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/SD_init_test_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/SPI/SPI_Test/SPI_Test.srcs/constrs_1/new/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/SD_init_test_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/SD_init_test_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [D:/Code/GLITCH-Software/FPGA/SPI/SD_Test/SD_Test.runs/synth_1/dont_touch.xdc]
-Finished Parsing XDC File [D:/Code/GLITCH-Software/FPGA/SPI/SD_Test/SD_Test.runs/synth_1/dont_touch.xdc]
+Parsing XDC File [C:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/SPI/SD_Test/SD_Test.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/SPI/SD_Test/SD_Test.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1114.676 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1115.297 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1114.676 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1115.297 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1114.676 ; gain = 580.266
+Finished Constraint Validation : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1115.297 ; gain = 581.125
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1114.676 ; gain = 580.266
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1115.297 ; gain = 581.125
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -99,10 +99,10 @@ Applied set_property KEEP_HIERARCHY = SOFT for SD_init_test_i. (constraint file 
 Applied set_property KEEP_HIERARCHY = SOFT for SD_init_test_i/UART_TXmod_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for SD_init_test_i/SD_init_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1114.676 ; gain = 580.266
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1115.297 ; gain = 581.125
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1114.676 ; gain = 580.266
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1115.297 ; gain = 581.125
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -125,25 +125,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1114.676 ; gain = 580.266
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 1115.297 ; gain = 581.125
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1280.930 ; gain = 746.520
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:56 ; elapsed = 00:00:58 . Memory (MB): peak = 1271.555 ; gain = 737.383
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1280.930 ; gain = 746.520
+Finished Timing Optimization : Time (s): cpu = 00:00:56 ; elapsed = 00:00:58 . Memory (MB): peak = 1271.555 ; gain = 737.383
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1290.516 ; gain = 756.105
+Finished Technology Mapping : Time (s): cpu = 00:00:56 ; elapsed = 00:00:58 . Memory (MB): peak = 1281.137 ; gain = 746.965
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -161,37 +161,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1507.086 ; gain = 972.676
+Finished IO Insertion : Time (s): cpu = 00:01:07 ; elapsed = 00:01:09 . Memory (MB): peak = 1497.898 ; gain = 963.727
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1507.086 ; gain = 972.676
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:07 ; elapsed = 00:01:09 . Memory (MB): peak = 1497.898 ; gain = 963.727
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1507.086 ; gain = 972.676
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:07 ; elapsed = 00:01:09 . Memory (MB): peak = 1497.898 ; gain = 963.727
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1507.086 ; gain = 972.676
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:07 ; elapsed = 00:01:09 . Memory (MB): peak = 1497.898 ; gain = 963.727
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1507.086 ; gain = 972.676
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:07 ; elapsed = 00:01:09 . Memory (MB): peak = 1497.898 ; gain = 963.727
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1507.086 ; gain = 972.676
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:07 ; elapsed = 00:01:09 . Memory (MB): peak = 1497.898 ; gain = 963.727
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -215,16 +215,16 @@ Report Cell Usage:
 |4     |OBUF                             |     4|
 +------+---------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1507.086 ; gain = 972.676
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:07 ; elapsed = 00:01:09 . Memory (MB): peak = 1497.898 ; gain = 963.727
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:29 . Memory (MB): peak = 1507.086 ; gain = 965.309
-Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1507.086 ; gain = 972.676
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:44 ; elapsed = 00:01:05 . Memory (MB): peak = 1497.898 ; gain = 954.570
+Synthesis Optimization Complete : Time (s): cpu = 00:01:07 ; elapsed = 00:01:09 . Memory (MB): peak = 1497.898 ; gain = 963.727
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1507.086 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1497.898 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1507.086 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1497.898 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
@@ -232,8 +232,8 @@ Synth Design complete | Checksum: 27c43db6
 INFO: [Common 17-83] Releasing license: Synthesis
 31 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:41 . Memory (MB): peak = 1507.086 ; gain = 1164.160
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1507.086 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'D:/Code/GLITCH-Software/FPGA/SPI/SD_Test/SD_Test.runs/synth_1/SD_init_test_wrapper.dcp' has been generated.
+synth_design: Time (s): cpu = 00:01:16 ; elapsed = 00:01:32 . Memory (MB): peak = 1497.898 ; gain = 1155.172
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1497.898 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/SPI/SD_Test/SD_Test.runs/synth_1/SD_init_test_wrapper.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file SD_init_test_wrapper_utilization_synth.rpt -pb SD_init_test_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Aug  7 12:03:41 2025...
+INFO: [Common 17-206] Exiting Vivado at Tue Aug 12 19:08:18 2025...

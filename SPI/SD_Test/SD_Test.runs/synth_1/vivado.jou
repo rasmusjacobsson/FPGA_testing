@@ -3,22 +3,22 @@
 # SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Thu Aug  7 12:02:54 2025
-# Process ID         : 58812
-# Current directory  : D:/Code/GLITCH-Software/FPGA/SPI/SD_Test/SD_Test.runs/synth_1
+# Start of session at: Tue Aug 12 19:06:32 2025
+# Process ID         : 9496
+# Current directory  : C:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/SPI/SD_Test/SD_Test.runs/synth_1
 # Command line       : vivado.exe -log SD_init_test_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source SD_init_test_wrapper.tcl
-# Log file           : D:/Code/GLITCH-Software/FPGA/SPI/SD_Test/SD_Test.runs/synth_1/SD_init_test_wrapper.vds
-# Journal file       : D:/Code/GLITCH-Software/FPGA/SPI/SD_Test/SD_Test.runs/synth_1\vivado.jou
-# Running On         : DESKTOP-TTFS3R7
+# Log file           : C:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/SPI/SD_Test/SD_Test.runs/synth_1/SD_init_test_wrapper.vds
+# Journal file       : C:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/SPI/SD_Test/SD_Test.runs/synth_1\vivado.jou
+# Running On         : LAPTOP-FQ2KK7JS
 # Platform           : Windows Server 2016 or Windows 10
 # Operating System   : 19045
-# Processor Detail   : Intel(R) Core(TM) i5-7600K CPU @ 3.80GHz
-# CPU Frequency      : 3792 MHz
-# CPU Physical cores : 4
+# Processor Detail   : Intel(R) Core(TM) i3-5005U CPU @ 2.00GHz
+# CPU Frequency      : 1995 MHz
+# CPU Physical cores : 2
 # CPU Logical cores  : 4
-# Host memory        : 17142 MB
-# Swap memory        : 17021 MB
-# Total Virtual      : 34164 MB
-# Available Virtual  : 6690 MB
+# Host memory        : 8499 MB
+# Swap memory        : 5816 MB
+# Total Virtual      : 14316 MB
+# Available Virtual  : 4284 MB
 #-----------------------------------------------------------
 source SD_init_test_wrapper.tcl -notrace

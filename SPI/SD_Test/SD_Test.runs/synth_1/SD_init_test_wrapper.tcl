@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "D:/Code/GLITCH-Software/FPGA/SPI/SD_Test/SD_Test.runs/synth_1/SD_init_test_wrapper.tcl"
+  variable script "C:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/SPI/SD_Test/SD_Test.runs/synth_1/SD_init_test_wrapper.tcl"
   variable category "vivado_synth"
 }
 
@@ -66,17 +66,17 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir D:/Code/GLITCH-Software/FPGA/SPI/SD_Test/SD_Test.cache/wt [current_project]
-set_property parent.project_path D:/Code/GLITCH-Software/FPGA/SPI/SD_Test/SD_Test.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/SPI/SD_Test/SD_Test.cache/wt [current_project]
+set_property parent.project_path C:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/SPI/SD_Test/SD_Test.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
-set_property ip_output_repo d:/Code/GLITCH-Software/FPGA/SPI/SD_Test/SD_Test.cache/ip [current_project]
+set_property ip_output_repo c:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/SPI/SD_Test/SD_Test.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_vhdl -library xil_defaultlib d:/Code/GLITCH-Software/FPGA/SPI/SD_Test/SD_Test.gen/sources_1/bd/SD_init_test/hdl/SD_init_test_wrapper.vhd
-add_files D:/Code/GLITCH-Software/FPGA/SPI/SD_Test/SD_Test.srcs/sources_1/bd/SD_init_test/SD_init_test.bd
-set_property used_in_implementation false [get_files -all d:/Code/GLITCH-Software/FPGA/SPI/SD_Test/SD_Test.gen/sources_1/bd/SD_init_test/SD_init_test_ooc.xdc]
+read_vhdl -library xil_defaultlib C:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/SPI/SD_Test/SD_Test.gen/sources_1/bd/SD_init_test/hdl/SD_init_test_wrapper.vhd
+add_files C:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/SPI/SD_Test/SD_Test.srcs/sources_1/bd/SD_init_test/SD_init_test.bd
+set_property used_in_implementation false [get_files -all c:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/SPI/SD_Test/SD_Test.gen/sources_1/bd/SD_init_test/SD_init_test_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -87,14 +87,14 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc D:/Code/GLITCH-Software/FPGA/SPI/SPI_Test/SPI_Test.srcs/constrs_1/new/constraints.xdc
-set_property used_in_implementation false [get_files D:/Code/GLITCH-Software/FPGA/SPI/SPI_Test/SPI_Test.srcs/constrs_1/new/constraints.xdc]
+read_xdc C:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/SPI/SPI_Test/SPI_Test.srcs/constrs_1/new/constraints.xdc
+set_property used_in_implementation false [get_files C:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/SPI/SPI_Test/SPI_Test.srcs/constrs_1/new/constraints.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental D:/Code/GLITCH-Software/FPGA/SPI/SD_Test/SD_Test.srcs/utils_1/imports/synth_1/SD_Block_wrapper.dcp
+read_checkpoint -auto_incremental -incremental C:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/SPI/SD_Test/SD_Test.srcs/utils_1/imports/synth_1/SD_Block_wrapper.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

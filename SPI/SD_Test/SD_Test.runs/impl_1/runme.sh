@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/Code/GLITCH-Software/FPGA/SPI/SD_Test/SD_Test.runs/impl_1'
+HD_PWD='C:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/SPI/SD_Test/SD_Test.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

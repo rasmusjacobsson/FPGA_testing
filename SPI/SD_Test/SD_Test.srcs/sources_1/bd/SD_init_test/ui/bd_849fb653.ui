@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"1.0",
-   "Default View_TopLeft":"-295,-123",
+   "Default View_ScaleFactor":"0.800977",
+   "Default View_TopLeft":"-100,-7",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
 #  -string -flagsOSRD
@@ -14,17 +14,17 @@ preplace port port-id_CS -pg 1 -lvl 3 -x 590 -y 110 -defaultsOSRD
 preplace port port-id_uart_rxd_out -pg 1 -lvl 3 -x 590 -y 190 -defaultsOSRD
 preplace inst UART_TXmod_0 -pg 1 -lvl 2 -x 430 -y 190 -defaultsOSRD
 preplace inst SD_init_0 -pg 1 -lvl 1 -x 140 -y 120 -defaultsOSRD
-preplace netloc sysclk_1 1 0 2 10 240 290
 preplace netloc MISO_1 1 0 1 NJ 140
-preplace netloc btn0_1 1 0 1 NJ 120
-preplace netloc SD_init_0_sck 1 1 2 NJ 60 570J
-preplace netloc SD_init_0_mosi 1 1 2 NJ 80 570J
 preplace netloc SD_init_0_cs 1 1 2 NJ 100 570J
-preplace netloc SD_init_0_test_byte 1 1 1 280 140n
+preplace netloc SD_init_0_mosi 1 1 2 NJ 80 570J
+preplace netloc SD_init_0_sck 1 1 2 NJ 60 570J
 preplace netloc SD_init_0_test_DV 1 1 1 270 160n
+preplace netloc SD_init_0_test_byte 1 1 1 280 140n
 preplace netloc UART_TXmod_0_o_TX_Serial 1 2 1 NJ 190
+preplace netloc btn0_1 1 0 1 NJ 120
+preplace netloc sysclk_1 1 0 2 10 240 290
 levelinfo -pg 1 -10 140 430 590
-pagesize -pg 1 -db -bbox -sgen -100 0 720 270
+pagesize -pg 1 -db -bbox -sgen -110 0 730 270
 "
 }
-
+0

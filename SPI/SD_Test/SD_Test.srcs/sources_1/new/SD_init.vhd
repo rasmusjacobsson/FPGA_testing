@@ -2,8 +2,12 @@
 -- Company: GLITCH
 -- Engineer: Rasmus
 
+-- TODO: fix cmd8 response to r7 (6 bytes)
+-- Maybe make the clock slower? the response only goes down to ~1V.
+-- Probably add real cleanup after each response too? response for following command gets weird otherwise maybe? (setting cs mostly)
+-- Right now it only resets cs for correct response.
+
 -- Reads on falling edge, writes on rising (spi-clock)
--- Only responding 0xFF right now, could be a clock issue
 -- goes to next command after CMD0_allowed_tries (100) tries of CMD0 with no good response
 -- resets cs after each command and response
 
@@ -34,7 +38,7 @@ entity SD_init is
 end SD_init;
 
 architecture rtl of SD_init is
-    type state_type is (s_idle, s_cmd0, s_cmd0_confirmation, s_cmd8, s_cmd8_confirmation, s_cmd55, s_cmd55_confirmation, s_acmd41, s_acmd41_confirmation, s_cmd59, s_cmd59_confirmation, s_done);
+    type state_type is (s_idle, s_cmd0, s_cmd0_clean, s_cmd0_confirmation, s_cmd0_confirmation_clean, s_cmd8, s_cmd8_confirmation, s_cmd55, s_cmd55_confirmation, s_acmd41, s_acmd41_confirmation, s_cmd59, s_cmd59_confirmation, s_done);
     signal state : state_type := s_cmd0;
     
     signal sck_i    : std_logic := '0';
@@ -95,6 +99,7 @@ begin
                 cmd_byte_buf <= CMD0;
                 response_test_byte_i <= (others => '0');
                 response_test_DV_i <= '0';
+                CMD0_tries <= 0;
                 clk_count <= 0;
             else
                 case state is 
@@ -120,10 +125,10 @@ begin
                         
                         if clk_count = (CLKS_PER_BIT-1)/2 then
                             clk_count <= 0; 
-                            if sck_i = '0' then
-                                sck_i <= '1';
-                            else
+                            if sck_i = '1' then
                                 sck_i <= '0';
+                            else
+                                sck_i <= '1';
                                 cmd_byte_buf <= cmd_byte_buf(46 downto 0) & '0';
                                 cmd_bit_cnt <= cmd_bit_cnt + 1;
                                 if cmd_bit_cnt = 47 then
@@ -131,7 +136,7 @@ begin
                                     bit_cnt <= 7; -- set to 7 to read next byte from miso
                                     cmd_bit_cnt <= 0; -- cmd bit set to 0 to ensure it is set
                                     response_test_byte_i <= (others => '0');
-                                    state <= s_cmd0_confirmation;
+                                    state <= s_cmd0_clean;
                                     test_give_response <= '1';
                                 else 
                                     state <= state;
@@ -142,18 +147,23 @@ begin
                         end if;
                         
                         
+                    when s_cmd0_clean =>
+                        cs_i <= '1';    
+                        cmd_bit_cnt <= 0;
+                        state <= s_cmd0_confirmation;
+                        
                     when s_cmd0_confirmation =>
                         cs_i <= '0';
                         test_give_response <= '0';
                         mosi_i <= '0';
                         -- check return
-                        byte_buf(bit_cnt) <= miso;
+                        byte_buf(bit_cnt) <= not miso; -- Invert the response, sd card default is high
                         if clk_count = (CLKS_PER_BIT-1)/2 then 
                             clk_count <= 0; 
-                            if sck_i = '1' then
-                                sck_i <= '0';
-                            else 
+                            if sck_i = '0' then
                                 sck_i <= '1';
+                            else 
+                                sck_i <= '0';
                                 bit_cnt <= bit_cnt - 1;
                                 if bit_cnt = 0 then 
                                     bit_cnt <= 7;
@@ -161,7 +171,9 @@ begin
                                     if byte_buf = response_cmd0 or CMD0_tries = CMD0_allowed_tries then
                                         cs_i <= '1';
                                         cmd_byte_buf <= CMD8;
-                                        state <= s_cmd8;                                                                       
+                                        -- cmd_byte_buf <= CMD8;
+                                        state <= s_cmd8;
+                                        -- state <= s_cmd8;                                                                       
                                     else 
                                         CMD0_tries <= CMD0_tries + 1;
                                         cmd_byte_buf <= CMD0;
@@ -177,16 +189,21 @@ begin
                             clk_count <= clk_count + 1;                        
                         end if;
                         
+                    when s_cmd0_confirmation_clean =>
+                        cs_i <= '1';
+                        cmd_byte_buf <= CMD8;
+                        state <= s_cmd8;
+                        
                     when s_cmd8 => 
                         cs_i <= '0';
                         response_test_DV_i <= '0';
                         mosi_i <= cmd_byte_buf(47);
                         if clk_count = (CLKS_PER_BIT-1)/2 then
                             clk_count <= 0;
-                            if sck_i = '0' then
-                                sck_i <= '1';
-                            else
+                            if sck_i = '1' then
                                 sck_i <= '0';
+                            else
+                                sck_i <= '1';
                                 cmd_byte_buf <= cmd_byte_buf(46 downto 0) & '0';
                                 cmd_bit_cnt <= cmd_bit_cnt + 1;
                                 if cmd_bit_cnt = 47 then
@@ -209,13 +226,13 @@ begin
                         test_give_response <= '0';
                         mosi_i <= '0';
                         -- check return
-                        byte_buf(bit_cnt) <= miso;
+                        byte_buf(bit_cnt) <= not miso;
                         if clk_count = (CLKS_PER_BIT-1)/2 then
                             clk_count <= 0; 
-                            if sck_i = '1' then
-                                sck_i <= '0';
-                            else 
+                            if sck_i = '0' then
                                 sck_i <= '1';
+                            else 
+                                sck_i <= '0';
                                 bit_cnt <= bit_cnt - 1;
                                 if bit_cnt = 0 then 
                                     bit_cnt <= 7;
@@ -244,10 +261,10 @@ begin
                         mosi_i <= cmd_byte_buf(47);
                         if clk_count = (CLKS_PER_BIT-1)/2 then
                             clk_count <= 0; 
-                            if sck_i = '0' then
-                                sck_i <= '1';
-                            else
+                            if sck_i = '1' then
                                 sck_i <= '0';
+                            else
+                                sck_i <= '1';
                                 cmd_byte_buf <= cmd_byte_buf(46 downto 0) & '0';
                                 cmd_bit_cnt <= cmd_bit_cnt + 1;
                                 if cmd_bit_cnt = 47 then
@@ -269,13 +286,13 @@ begin
                         test_give_response <= '0';
                         mosi_i <= '0';
                         -- check return
-                        byte_buf(bit_cnt) <= miso;
+                        byte_buf(bit_cnt) <= not miso;
                         if clk_count = (CLKS_PER_BIT-1)/2 then 
                             clk_count <= 0;
-                            if sck_i = '1' then
-                                sck_i <= '0';
-                            else 
+                            if sck_i = '0' then
                                 sck_i <= '1';
+                            else 
+                                sck_i <= '0';
                                 bit_cnt <= bit_cnt - 1;
                                 if bit_cnt = 0 then 
                                     cs_i <= '1';
@@ -304,10 +321,10 @@ begin
                         mosi_i <= cmd_byte_buf(47);
                         if clk_count = (CLKS_PER_BIT-1)/2 then
                             clk_count <= 0;
-                            if sck_i = '0' then
-                                sck_i <= '1';
-                            else
+                            if sck_i = '1' then
                                 sck_i <= '0';
+                            else
+                                sck_i <= '1';
                                 cmd_byte_buf <= cmd_byte_buf(46 downto 0) & '0';
                                 cmd_bit_cnt <= cmd_bit_cnt + 1;
                                 if cmd_bit_cnt = 47 then
@@ -329,13 +346,13 @@ begin
                         test_give_response <= '0';
                         mosi_i <= '0';
                         -- check return
-                        byte_buf(bit_cnt) <= miso;
+                        byte_buf(bit_cnt) <= not miso;
                         if clk_count = (CLKS_PER_BIT-1)/2 then 
                             clk_count <= 0;
-                            if sck_i = '1' then
-                                sck_i <= '0';
-                            else 
+                            if sck_i = '0' then
                                 sck_i <= '1';
+                            else 
+                                sck_i <= '0';
                                 bit_cnt <= bit_cnt - 1;
                                 if bit_cnt = 0 then 
                                     bit_cnt <= 7;
@@ -364,10 +381,10 @@ begin
                         mosi_i <= cmd_byte_buf(47);
                         if clk_count = (CLKS_PER_BIT-1)/2 then
                             clk_count <= 0; 
-                            if sck_i = '0' then
-                                sck_i <= '1';
-                            else
+                            if sck_i = '1' then
                                 sck_i <= '0';
+                            else
+                                sck_i <= '1';
                                 cmd_byte_buf <= cmd_byte_buf(46 downto 0) & '0';
                                 cmd_bit_cnt <= cmd_bit_cnt + 1;
                                 if cmd_bit_cnt = 47 then
@@ -389,13 +406,13 @@ begin
                         test_give_response <= '0';
                         mosi_i <= '0';
                         -- check return
-                        byte_buf(bit_cnt) <= miso;
+                        byte_buf(bit_cnt) <= not miso;
                         if clk_count = (CLKS_PER_BIT-1)/2 then 
                             clk_count <= 0;
-                            if sck_i = '1' then
-                                sck_i <= '0';
-                            else 
+                            if sck_i = '0' then
                                 sck_i <= '1';
+                            else 
+                                sck_i <= '0';
                                 bit_cnt <= bit_cnt - 1;
                                 if bit_cnt = 0 then 
                                     cs_i <= '1';
