@@ -38,10 +38,10 @@ entity SD_init is
 end SD_init;
 
 architecture rtl of SD_init is
-    type state_type is (s_idle, s_start, s_cmd0, s_cmd0_clean, s_cmd0_confirmation, s_cmd0_confirmation_clean, s_cmd8, s_cmd8_clean, s_cmd8_confirmation, 
+    type state_type is (s_idle, s_wait, s_start, s_cmd0, s_cmd0_clean, s_cmd0_confirmation, s_cmd0_confirmation_clean, s_cmd8, s_cmd8_clean, s_cmd8_confirmation, 
 						s_cmd8_confirmation_clean, s_cmd55, s_cmd55_clean, s_cmd55_confirmation, s_cmd55_confirmation_clean, s_acmd41, s_acmd41_clean, 
 						s_acmd41_confirmation, s_acmd41_confirmation_clean, s_cmd59, s_cmd59_clean, s_cmd59_confirmation, s_cmd59_confirmation_clean, s_done);
-    signal state : state_type := s_start;
+    signal state : state_type := s_wait;
     
     signal sck_i    : std_logic := '0';
     signal mosi_i   : std_logic := '0';
@@ -64,6 +64,8 @@ architecture rtl of SD_init is
     
     signal done_i : std_logic := '0';
 	signal done_cnt : integer range 0 to 7 := 0;
+	
+	signal wait_cnt : integer range 0 to 0.002*Clockfrequency := 0;
     
     -- Commands used for init process
     constant CMD0 : std_logic_vector(47 downto 0) := x"400000000095"; -- GO_IDLE_STATE, resets the card
@@ -71,7 +73,8 @@ architecture rtl of SD_init is
     constant CMD55 : std_logic_vector(47 downto 0) := x"770000000065"; -- APP_CMD, defines that the next command is application specific
     constant ACMD41 : std_logic_vector(47 downto 0) := x"694000000077"; -- SD_SEND_OP_COND, sends host capacity support info. activates card init process
     constant CMD59 : std_logic_vector(47 downto 0) :=  x"7B0000000091"; -- CRC_ON_OFF, turns crc on or off (this case off)
-    signal CMD0_tries : integer := 0;
+    
+	signal CMD0_tries : integer := 0;
     constant CMD0_allowed_tries : integer := 100;
     
     -- Responses that indicate that the command was received correctly
@@ -95,7 +98,7 @@ begin
     
         if rising_edge(clk) then
             if rst = '1' then
-                state <= s_cmd0;
+                state <= s_wait;
                 bit_cnt <= 0;
                 byte_buf <= (others => '0');
                 cs_i <= '1';
@@ -106,6 +109,7 @@ begin
                 response_test_byte_i <= (others => '0');
                 response_test_DV_i <= '0';
                 clk_count <= 0;
+				wait_cnt <= 0;
             else
                 case state is 
                 
@@ -122,10 +126,20 @@ begin
                         response_test_DV_i <= '0';
                         test_give_response <= '0';
                         clk_count <= 0;
+						wait_cnt <= 0;
 						
-					-- waits for 74 sck cycles to let the SD card stabilize.
+					-- wait for 2 ms before doing anything
+					when s_wait =>
+						if wait_cnt = 0.002*Clockfrequency then
+							state => s_start;
+						else
+							wait_cnt <= wait_cnt + 1;
+						end if;
+						
+					-- waits for 74 sck cycles to let the SD card stabilize, while sending high mosi
 					when s_start =>
 						if clk_count = (CLKS_PER_BIT-1)/2 then
+							mosi_i <= '1'; -- send high bit for all 74 sck.
                             clk_count <= 0; 
                             if sck_i = '1' then
                                 sck_i <= '0';
@@ -477,6 +491,7 @@ begin
 					-- Lets the sck run for 8 cycles before sending done signal and shutting down.
                     when s_done =>
 						if clk_count = (CLKS_PER_BIT-1)/2 then
+							mosi_i <= '1';
 							if sck_i = '0' then
 								sck_i <= '1';
 							else 

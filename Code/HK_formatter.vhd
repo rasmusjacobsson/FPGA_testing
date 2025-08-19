@@ -2,10 +2,6 @@
 -- Company: GLITCH
 -- Engineer: Rasmus
 
--- TODO: lägg till en extra input som tar in en "done" signal från modulen man skickar packetet till
--- Ig någon liten skitgrej innan UART som tar in alla packet och delar upp de för att skickas på UART.
--- Också lägga till typ samma sak för RTCn så att inte paketen frågar om RTC samtidigt och på så sätt inte får något.
-
 -- Takes GNSS data and drive and requests RTC, ALT and TEMP when they are needed. 
 -- Puts everything together into a packet with ID and padding.
 ----------------------------------------------------------------------------------
@@ -20,16 +16,17 @@ entity HK_formatter is
     Port ( 
         clk : in std_logic;
         rst : in std_logic;
+		HK_packet_got : in std_logic;
 		GNSS_data_DV : in std_logic;
 		GNSS_data : in std_logic_vector(7 downto 0);
 		RTC_data_DV : in std_logic;
-		RTC_data : in std_logic_vector(7 downto 0);
+		RTC_data : in std_logic_vector(16 downto 0);
 		RTC_request : out std_logic;
 		ALT_data_DV : in std_logic;
-		ALT_data : in std_logic_vector(7 downto 0);
+		ALT_data : in std_logic_vector(23 downto 0);
 		ALT_request : out std_logic;
 		TEMP_data_DV : in std_logic;
-		TEMP_data : in std_logic_vector(7 downto 0);
+		TEMP_data : in std_logic_vector(95 downto 0);
 		TEMP_request : out std_logic;
 		I2C_read_done : out std_logic;
 		HK_packet_DV : out std_logic;
@@ -196,23 +193,25 @@ begin
 						end if;								
 						
 					when s_cleanup =>									
-						
-						GNSS_bit_cnt <= 54;
-						GNSS_data_i <= (others => '0');	
-						RTC_bit_cnt <= 16;
-						RTC_data_i <= (others => '0');	
-						RTC_request <= '0';
-						ALT_bit_cnt <= 23;
-						ALT_data_i <= (others => '0');	
-						ALT_request <= '0';
-						TEMP_bit_cnt <= 95;
-						TEMP_data_i <= (others => '0');		
-						TEMP_request <= '0';
-						I2C_read_done <= '0';
-						HK_packet_DV <= '0';
-						HK_packet <= (others => '0');
-						state <= s_GNSS_idle;					
-										
+						if HK_packet_got = '1' then
+							GNSS_bit_cnt <= 54;
+							GNSS_data_i <= (others => '0');	
+							RTC_bit_cnt <= 16;
+							RTC_data_i <= (others => '0');	
+							RTC_request <= '0';
+							ALT_bit_cnt <= 23;
+							ALT_data_i <= (others => '0');	
+							ALT_request <= '0';
+							TEMP_bit_cnt <= 95;
+							TEMP_data_i <= (others => '0');		
+							TEMP_request <= '0';
+							I2C_read_done <= '0';
+							HK_packet_DV <= '0';
+							HK_packet <= (others => '0');
+							state <= s_GNSS_idle;					
+						else 
+							state <= s_cleanup;
+						end if;
 					
 				end case;
             end if;

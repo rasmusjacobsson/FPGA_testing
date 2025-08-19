@@ -2,10 +2,6 @@
 -- Company: GLITCH
 -- Engineer: Rasmus
 
--- TODO: lägg till en extra input som tar in en "done" signal från modulen man skickar packetet till
--- Ig någon liten skitgrej innan UART som tar in alla packet och delar upp de för att skickas på UART.
--- Också lägga till typ samma sak för RTCn så att inte paketen frågar om RTC samtidigt och på så sätt inte får något.
-
 -- Takes the radiation data, radiation drive, RTC data and RTC drive.
 -- Sends out an RTC request signal to get an RTC module to gather data from the RTC and send it over.
 -- Returns the RAD packet with the data in the right order and ID at the start, padded to byte size.
@@ -23,14 +19,15 @@ entity RAD_formatter is
     Port ( 
         clk : in std_logic;
         rst : in std_logic;
+		RAD_packet_got : in std_logic;
 		RAD_data_DV : in std_logic;
 		RAD_data : in std_logic_vector(7 downto 0);
 		RTC_data_DV : in std_logic;
 		RTC_data : in std_logic_vector(16 downto 0);
-		RTC_request : out std_logic
+		RTC_request : out std_logic;
 		I2C_read_done : out std_logic;
 		RAD_packet_DV : out std_logic;
-		RAD_packet : out std_logic_vector(10008 downto 0);
+		RAD_packet : out std_logic_vector(10007 downto 0)
     );
 end RAD_formatter;
 
@@ -120,17 +117,20 @@ begin
 						end if;
 						
 					when s_cleanup =>				
-						
-						RAD_bit_cnt <= 9981;
-						RAD_data_i <= (others => '0');
-						RTC_bit_cnt <= 16;
-						RTC_data_i <= (others => '0');
-						RTC_request <= '0';
-						I2C_read_done <= '0';
-						RAD_packet_DV <= '0';
-						RAD_packet <= (others => '0');
-						
-						state <= s_RAD_idle;					
+						if RAD_packet_got = '1' then
+							RAD_bit_cnt <= 9981;
+							RAD_data_i <= (others => '0');
+							RTC_bit_cnt <= 16;
+							RTC_data_i <= (others => '0');
+							RTC_request <= '0';
+							I2C_read_done <= '0';
+							RAD_packet_DV <= '0';
+							RAD_packet <= (others => '0');
+							
+							state <= s_RAD_idle;	
+						else 
+							state <= s_idle;
+						end if;
 					
 				end case;
             end if;

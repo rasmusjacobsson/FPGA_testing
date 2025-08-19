@@ -2,10 +2,6 @@
 -- Company: GLITCH
 -- Engineer: Rasmus
 
--- TODO: lägg till en extra input som tar in en "done" signal från modulen man skickar packetet till
--- Ig någon liten skitgrej innan UART som tar in alla packet och delar upp de för att skickas på UART.
--- Också lägga till typ samma sak för RTCn så att inte paketen frågar om RTC samtidigt och på så sätt inte får något.
-
 -- Takes the SRAM data and an SRAM drive, along with RTC stuff and formats it for sending
 -- OBS: Right now the SRAM data is done bytewise (can be changed easily if the bit-flip algorithm gives the entire thing at once)
 ----------------------------------------------------------------------------------
@@ -20,6 +16,7 @@ entity BITFLIP_formatter is
     Port ( 
         clk : in std_logic;
         rst : in std_logic;
+		BF_packet_got : in std_logic;
 		SRAM_data_DV : in std_logic;
 		SRAM_data : in std_logic_vector(7 downto 0);
 		RTC_data_DV : in std_logic;
@@ -117,18 +114,21 @@ begin
 						end if;
 						
 					when s_cleanup =>				
+						if BF_packet_got = '1' then						
+							SRAM_bit_cnt <= 171;
+							SRAM_data_i <= (others => '0');
+							RTC_bit_cnt <= 16;
+							RTC_data_i <= (others => '0');
+							RTC_request <= '0';
+							I2C_read_done <= '0';
+							BITFLIP_packet_DV <= '0';
+							BITFLIP_packet <= (others => '0');
+							
+							state <= s_SRAM_idle;					
+						else 
+							state <= s_cleanup;
+						end if;
 						
-						SRAM_bit_cnt <= 171;
-						SRAM_data_i <= (others => '0');
-						RTC_bit_cnt <= 16;
-						RTC_data_i <= (others => '0');
-						RTC_request <= '0';
-						I2C_read_done <= '0';
-						BITFLIP_packet_DV <= '0';
-						BITFLIP_packet <= (others => '0');
-						
-						state <= s_SRAM_idle;					
-					
 				end case;
             end if;
         else
