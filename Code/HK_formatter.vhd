@@ -35,23 +35,20 @@ entity HK_formatter is
 end HK_formatter;
 
 architecture rtl of HK_formatter is
-    type state_type is (s_GNSS_idle, s_GNSS_end_check, s_RTC_idle, s_RTC_end_check, s_ALT_idle, s_ALT_end_check, s_TEMP_idle, s_TEMP_end_check, s_cleanup); -- idle is idle but kinda not, but there is not much else to do here
-    signal state : state_type := s_idle;
+    type state_type is (s_GNSS_idle, s_GNSS_end_check, s_RTC_idle, s_ALT_idle, s_TEMP_idle, s_HK_send, s_cleanup); -- idle is idle but kinda not, but there is not much else to do here
+    signal state : state_type := s_GNSS_idle;
 	
 	signal GNSS_bit_cnt : integer range 0 to 54 := 54; -- index for the GNSS data (signal below)
-	signal GNSS_data_i : std_logic_vector(54 downto 0) : (others => '0');
+	signal GNSS_data_i : std_logic_vector(54 downto 0) := (others => '0');
 	
 	signal RTC_bit_cnt : integer range 0 to 16 := 16; -- index for the RTC data (signal below)
-	signal RTC_data_i : std_logic_vector(16 downto 0) : (others => '0');
-	signal RTC_request : std_logic := '0';
+	signal RTC_data_i : std_logic_vector(16 downto 0) := (others => '0');
 	
 	signal ALT_bit_cnt : integer range 0 to 23 := 23; -- index for the ALT data (signal below)
-	signal ALT_data_i : std_logic_vector(23 downto 0) : (others => '0');
-	signal ALT_request : std_logic := '0';
+	signal ALT_data_i : std_logic_vector(23 downto 0) := (others => '0');
 
 	signal TEMP_bit_cnt : integer range 0 to 95 := 95; -- index for the TEMP data (signal below)
-	signal TEMP_data_i : std_logic_vector(95 downto 0) : (others => '0');
-	signal TEMP_request : std_logic := '0';
+	signal TEMP_data_i : std_logic_vector(95 downto 0) := (others => '0');
 	
 	constant ID : std_logic_vector(1 downto 0) := b"00";
 	constant padding : std_logic_vector(5 downto 0) := b"000000";
@@ -106,112 +103,69 @@ begin
 												
 					when s_RTC_idle =>
 													
-						I2C_read_done <= '0';
+						I2C_read_done <= '0';							
 						if RTC_data_DV = '1' then
-							RTC_request <= '0'; -- Thought here is to keep the request high until it gets a response, allows for "queueing" in the module which this is sent to (I2C_sensor_data_fetcher)
-							if (RTC_bit_cnt-7) >= 0 then
-								RTC_data_i(RTC_bit_cnt downto (RTC_bit_cnt-7)) <= RTC_data;
-								state <= s_RTC_end_check;
-							else 
-								RTC_data_i(RTC_bit_cnt downto 0) <= RTC_data(7 downto (7-RTC_bit_cnt));
-								state <= s_RTC_end_check;								
-							end if;
-						else 				
-							HK_packet_DV <= '0';
-							state <= s_RTC_idle;
-						end if;	
-						
-					when s_RTC_end_check =>	
-
-						if (RTC_bit_cnt-7) >= 0 then
-							RTC_bit_cnt <= RTC_bit_cnt-8;							
-							I2C_read_done <= '1';
-							state <= s_RTC_idle;
+                            RTC_request <= '0';
+                            I2C_read_done <= '1';
+                            RTC_data_i <= RTC_data;
+                            ALT_request <= '1';
+                            state <= s_ALT_idle;              
 						else
-							ALT_request <= '1';							
-							I2C_read_done <= '1';
-							state <= s_RTC_idle;
-						end if;
+						    state <= s_RTC_idle;
+						end if;				
 						
 					when s_ALT_idle =>					
 													
-						I2C_read_done <= '0';
+						I2C_read_done <= '0';							
 						if ALT_data_DV = '1' then
-							ALT_request <= '0'; -- Thought here is to keep the request high until it gets a response, allows for "queueing" in the module which this is sent to (I2C_sensor_data_fetcher)						
-							if (ALT_bit_cnt-7) >= 0 then
-								ALT_data_i(ALT_bit_cnt downto (ALT_bit_cnt-7)) <= ALT_data;
-								state <= s_ALT_end_check;
-							else 
-								ALT_data_i(ALT_bit_cnt downto 0) <= ALT_data(7 downto (7-ALT_bit_cnt));
-								state <= s_ALT_end_check;								
-							end if;
-						else 				
-							HK_packet_DV <= '0';
-							state <= s_ALT_idle;
-						end if;	
-						
-					when s_ALT_end_check =>	
-
-						if (ALT_bit_cnt-7) >= 0 then
-							ALT_bit_cnt <= ALT_bit_cnt-8;							
-							I2C_read_done <= '0';
-							state <= s_ALT_idle;
+                            ALT_request <= '0';
+                            I2C_read_done <= '1';
+                            ALT_data_i <= ALT_data;                            
+                            TEMP_request <= '1';
+                            state <= s_TEMP_idle;              
 						else
-							TEMP_request <= '1';							
-							I2C_read_done <= '0';
-							state <= s_ALT_idle;
-						end if;
-						
-					when s_TEMP_idle =>
+						    state <= s_ALT_idle;
+						end if;		
 													
-						I2C_read_done <= '0';
+					when s_TEMP_idle =>
+											
+						I2C_read_done <= '0';							
 						if TEMP_data_DV = '1' then
-							TEMP_request <= '0'; -- Thought here is to keep the request high until it gets a response, allows for "queueing" in the module which this is sent to (I2C_sensor_data_fetcher)
-							if (TEMP_bit_cnt-7) >= 0 then
-								TEMP_data_i(TEMP_bit_cnt downto (TEMP_bit_cnt-7)) <= TEMP_data;
-								state <= s_TEMP_end_check;
-							else 
-								TEMP_data_i(TEMP_bit_cnt downto 0) <= TEMP_data(7 downto (7-TEMP_bit_cnt));
-								state <= s_TEMP_end_check;								
-							end if;
-						else 				
-							HK_packet_DV <= '0';
-							state <= s_TEMP_idle;
-						end if;	
-						
-					when s_TEMP_end_check =>	
-
-						if (TEMP_bit_cnt-7) >= 0 then
-							TEMP_bit_cnt <= TEMP_bit_cnt-8;							
-							I2C_read_done <= '0';
-							state <= s_TEMP_idle;
+                            TEMP_request <= '0';
+                            I2C_read_done <= '1';
+                            TEMP_data_i <= TEMP_data;
+                            state <= s_HK_send;              
 						else
-							HK_packet <= ID & RTC_data_i & GNSS_data_i & TEMP_data_i & ALT_data_i & padding;
-							HK_packet_DV <= '1';							
-							I2C_read_done <= '0';
-							state <= s_cleanup;
-						end if;								
-						
-					when s_cleanup =>									
-						if HK_packet_got = '1' then
-							GNSS_bit_cnt <= 54;
-							GNSS_data_i <= (others => '0');	
-							RTC_bit_cnt <= 16;
-							RTC_data_i <= (others => '0');	
-							RTC_request <= '0';
-							ALT_bit_cnt <= 23;
-							ALT_data_i <= (others => '0');	
-							ALT_request <= '0';
-							TEMP_bit_cnt <= 95;
-							TEMP_data_i <= (others => '0');		
-							TEMP_request <= '0';
-							I2C_read_done <= '0';
-							HK_packet_DV <= '0';
-							HK_packet <= (others => '0');
-							state <= s_GNSS_idle;					
-						else 
-							state <= s_cleanup;
-						end if;
+						    state <= s_TEMP_idle;
+						end if;		
+									
+                    when s_HK_send =>
+                        
+                        I2C_read_done <= '0';
+                        HK_packet <= ID & RTC_data_i & GNSS_data_i & TEMP_data_i & ALT_data_i & padding;
+                        HK_packet_DV <= '1';	                        
+                        if HK_packet_got = '1' then
+                            state <= s_cleanup;	
+                        else 
+                            state <= s_HK_send;
+                        end if;        
+                                                               
+					when s_cleanup =>		
+                        GNSS_bit_cnt <= 54;
+                        GNSS_data_i <= (others => '0');	
+                        RTC_bit_cnt <= 16;
+                        RTC_data_i <= (others => '0');	
+                        RTC_request <= '0';
+                        ALT_bit_cnt <= 23;
+                        ALT_data_i <= (others => '0');	
+                        ALT_request <= '0';
+                        TEMP_bit_cnt <= 95;
+                        TEMP_data_i <= (others => '0');		
+                        TEMP_request <= '0';
+                        I2C_read_done <= '0';
+                        HK_packet_DV <= '0';
+                        HK_packet <= (others => '0');
+                        state <= s_GNSS_idle;		
 					
 				end case;
             end if;

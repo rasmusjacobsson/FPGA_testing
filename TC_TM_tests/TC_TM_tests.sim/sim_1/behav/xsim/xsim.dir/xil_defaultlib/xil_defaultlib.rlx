@@ -1,0 +1,10 @@
+0.7
+2020.2
+Nov  8 2024
+22:36:57
+D:/Code/FPGA_testing/Code/I2C_RTC.vhd,1755862154,vhdl,,,,i2c_rtc,,,,,,,,
+D:/Code/FPGA_testing/Code/I2C_full_sensor_data_fetcher.vhd,1755798458,vhdl,D:/Code/FPGA_testing/Code/tb_I2C_full_sensor_data_fetcher.vhd,,,i2c_full_sensor_data_fetcher,,,,,,,,
+D:/Code/FPGA_testing/Code/RAD_formatter.vhd,1755778683,vhdl2008,D:/Code/FPGA_testing/Code/tb_RAD_formatter.vhd,,,rad_formatter,,,,,,,,
+D:/Code/FPGA_testing/Code/tb_I2C_RTC.vhd,1755861356,vhdl,,,,tb_i2c_rtc,,,,,,,,
+D:/Code/FPGA_testing/Code/tb_I2C_full_sensor_data_fetcher.vhd,1755799804,vhdl,,,,tb_i2c_full_sensor_data_fetcher,,,,,,,,
+D:/Code/FPGA_testing/Code/tb_RAD_formatter.vhd,1755779712,vhdl2008,,,,tb_rad_formatter,,,,,,,,

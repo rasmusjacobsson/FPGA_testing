@@ -32,7 +32,7 @@ entity RAD_formatter is
 end RAD_formatter;
 
 architecture rtl of RAD_formatter is
-    type state_type is (s_RAD_idle, s_RAD_end_check, s_RTC_idle, s_RTC_end_check, s_cleanup); -- idle is idle but kinda not, but there is not much else to do here
+    type state_type is (s_RAD_idle, s_RAD_end_check, s_RTC_idle, s_RAD_send, s_cleanup); -- idle is idle but kinda not, but there is not much else to do here
     signal state : state_type := s_RAD_idle;
 	
 	signal RAD_bit_cnt : integer range 0 to 9981 := 9981; -- index for the radiation data (signal below)
@@ -53,7 +53,7 @@ begin
 				RAD_bit_cnt <= 9981;
 				RAD_data_i <= (others => '0');
 				RTC_bit_cnt <= 16;
-				RTC_data <= (others => '0');
+				RTC_data_i <= (others => '0');
 				RTC_request <= '0';
 				I2C_read_done <= '0';
 				RAD_packet_DV <= '0';
@@ -88,50 +88,40 @@ begin
 						
 					when s_RTC_idle =>
 					
-						I2C_read_done <= '0';
+					    I2C_read_done <= '0';							
 						if RTC_data_DV = '1' then
-							RTC_request <= '0'; -- Thought here is to keep the request high until it gets a response, allows for "queueing" in the module which this is sent to (I2C_sensor_data_fetcher)
-							if (RTC_bit_cnt-7) >= 0 then
-								RTC_data_i(RTC_bit_cnt downto (RTC_bit_cnt-7)) <= RTC_data;
-								state <= s_RTC_end_check;
-							else 
-								RTC_data_i((RTC_bit_cnt) downto 0) <= RTC_data(7 downto (7-RTC_bit_cnt));
-								state <= s_RTC_end_check;
-							end if;
-						else 				
-							RAD_packet_DV <= '0';
-							state <= s_RTC_idle;
+                            RTC_request <= '0';
+                            I2C_read_done <= '1';
+                            RTC_data_i <= RTC_data;
+                            state <= s_RAD_send;              
+						else
+						    state <= s_RTC_idle;
 						end if;	
 						
-					when s_RTC_end_check =>
-						
-						if (RTC_bit_cnt-7) >= 0 then
-							RTC_bit_cnt <= RTC_bit_cnt-8;
-							I2C_read_done <= '1';
-							state <= s_RTC_idle;
-						else
-							RAD_packet <= ID & RTC_data_i & RAD_data_i & padding;
-							RAD_packet_DV <= '1';
-							I2C_read_done <= '1';
-							state <= s_cleanup;
-						end if;
-						
-					when s_cleanup =>				
-						if RAD_packet_got = '1' then
-							RAD_bit_cnt <= 9981;
-							RAD_data_i <= (others => '0');
-							RTC_bit_cnt <= 16;
-							RTC_data_i <= (others => '0');
-							RTC_request <= '0';
-							I2C_read_done <= '0';
-							RAD_packet_DV <= '0';
-							RAD_packet <= (others => '0');
+                    when s_RAD_send => 
+                        
+                        RAD_packet <= ID & RTC_data_i & RAD_data_i & padding;
+                        RAD_packet_DV <= '1';
+                        I2C_read_done <= '1';
+                        if RAD_packet_got = '1' then
+                            state <= s_cleanup;
+                        else 
+                            state <= s_RAD_send;
+                        end if;
+                        
+					when s_cleanup =>		
 							
-							state <= s_RAD_idle;	
-						else 
-							state <= s_idle;
-						end if;
-					
+                        RAD_bit_cnt <= 9981;
+                        RAD_data_i <= (others => '0');
+                        RTC_bit_cnt <= 16;
+                        RTC_data_i <= (others => '0');
+                        RTC_request <= '0';
+                        I2C_read_done <= '0';
+                        RAD_packet_DV <= '0';
+                        RAD_packet <= (others => '0');
+                        
+                        state <= s_RAD_idle;	
+                
 				end case;
             end if;
         else

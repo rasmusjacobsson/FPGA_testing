@@ -1,0 +1,326 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x9D6C392B34BEBCAA",
+      "device": "xc7a35tcpg236-1",
+      "gen_directory": "../../../../TC_TM_tests.gen/sources_1/bd/I2C_RTC_test",
+      "name": "I2C_RTC_test",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2024.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "I2C_RTC_0": "",
+      "UART_TXmod_0": "",
+      "I2Cmod_0": ""
+    },
+    "ports": {
+      "sda_i": {
+        "direction": "I"
+      },
+      "scl_i": {
+        "direction": "I"
+      },
+      "sda_o": {
+        "direction": "O"
+      },
+      "sda_t": {
+        "direction": "O"
+      },
+      "scl_o": {
+        "direction": "O"
+      },
+      "scl_t": {
+        "direction": "O"
+      },
+      "sysclk": {
+        "direction": "I"
+      },
+      "btn0": {
+        "direction": "I"
+      },
+      "uart_rxd_out": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "I2C_RTC_0": {
+        "vlnv": "xilinx.com:module_ref:I2C_RTC:1.0",
+        "ip_revision": "1",
+        "xci_name": "I2C_RTC_test_I2C_RTC_0_0",
+        "xci_path": "ip\\I2C_RTC_test_I2C_RTC_0_0\\I2C_RTC_test_I2C_RTC_0_0.xci",
+        "inst_hier_path": "I2C_RTC_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "I2C_RTC",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "i_busy": {
+            "direction": "I"
+          },
+          "i_data_read": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "TX_done": {
+            "direction": "I"
+          },
+          "o_i2c_ena": {
+            "direction": "O"
+          },
+          "o_i2c_address": {
+            "direction": "O",
+            "left": "6",
+            "right": "0"
+          },
+          "o_i2c_rw": {
+            "direction": "O"
+          },
+          "o_i2c_data_wr": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "RTC_DV": {
+            "direction": "O"
+          },
+          "RTC_data": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "UART_TXmod_0": {
+        "vlnv": "xilinx.com:module_ref:UART_TXmod:1.0",
+        "ip_revision": "1",
+        "xci_name": "I2C_RTC_test_UART_TXmod_0_0",
+        "xci_path": "ip\\I2C_RTC_test_UART_TXmod_0_0\\I2C_RTC_test_UART_TXmod_0_0.xci",
+        "inst_hier_path": "UART_TXmod_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "UART_TXmod",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "sysclk": {
+            "direction": "I"
+          },
+          "i_TX_DV": {
+            "direction": "I"
+          },
+          "i_TX_Byte": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "o_TX_Active": {
+            "direction": "O"
+          },
+          "o_TX_Serial": {
+            "direction": "O"
+          },
+          "o_TX_Done": {
+            "direction": "O"
+          }
+        }
+      },
+      "I2Cmod_0": {
+        "vlnv": "xilinx.com:module_ref:I2Cmod:1.0",
+        "ip_revision": "1",
+        "xci_name": "I2C_RTC_test_I2Cmod_0_0",
+        "xci_path": "ip\\I2C_RTC_test_I2Cmod_0_0\\I2C_RTC_test_I2Cmod_0_0.xci",
+        "inst_hier_path": "I2Cmod_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "I2Cmod",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "sda_i": {
+            "direction": "I"
+          },
+          "sda_o": {
+            "direction": "O"
+          },
+          "sda_t": {
+            "direction": "O"
+          },
+          "scl_i": {
+            "direction": "I"
+          },
+          "scl_o": {
+            "direction": "O"
+          },
+          "scl_t": {
+            "direction": "O"
+          },
+          "sysclk": {
+            "direction": "I"
+          },
+          "reset_n": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "ena": {
+            "direction": "I"
+          },
+          "addr": {
+            "direction": "I",
+            "left": "6",
+            "right": "0"
+          },
+          "rw": {
+            "direction": "I"
+          },
+          "data_wr": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "busy": {
+            "direction": "O"
+          },
+          "data_rd": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "ack_error": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "I2C_RTC_0_RTC_DV": {
+        "ports": [
+          "I2C_RTC_0/RTC_DV",
+          "UART_TXmod_0/i_TX_DV"
+        ]
+      },
+      "I2C_RTC_0_RTC_data": {
+        "ports": [
+          "I2C_RTC_0/RTC_data",
+          "UART_TXmod_0/i_TX_Byte"
+        ]
+      },
+      "I2C_RTC_0_o_i2c_address": {
+        "ports": [
+          "I2C_RTC_0/o_i2c_address",
+          "I2Cmod_0/addr"
+        ]
+      },
+      "I2C_RTC_0_o_i2c_data_wr": {
+        "ports": [
+          "I2C_RTC_0/o_i2c_data_wr",
+          "I2Cmod_0/data_wr"
+        ]
+      },
+      "I2C_RTC_0_o_i2c_ena": {
+        "ports": [
+          "I2C_RTC_0/o_i2c_ena",
+          "I2Cmod_0/ena"
+        ]
+      },
+      "I2C_RTC_0_o_i2c_rw": {
+        "ports": [
+          "I2C_RTC_0/o_i2c_rw",
+          "I2Cmod_0/rw"
+        ]
+      },
+      "I2Cmod_0_busy": {
+        "ports": [
+          "I2Cmod_0/busy",
+          "I2C_RTC_0/i_busy"
+        ]
+      },
+      "I2Cmod_0_data_rd": {
+        "ports": [
+          "I2Cmod_0/data_rd",
+          "I2C_RTC_0/i_data_read"
+        ]
+      },
+      "I2Cmod_0_scl_o": {
+        "ports": [
+          "I2Cmod_0/scl_o",
+          "scl_o"
+        ]
+      },
+      "I2Cmod_0_scl_t": {
+        "ports": [
+          "I2Cmod_0/scl_t",
+          "scl_t"
+        ]
+      },
+      "I2Cmod_0_sda_o": {
+        "ports": [
+          "I2Cmod_0/sda_o",
+          "sda_o"
+        ]
+      },
+      "I2Cmod_0_sda_t": {
+        "ports": [
+          "I2Cmod_0/sda_t",
+          "sda_t"
+        ]
+      },
+      "UART_TXmod_0_o_TX_Done": {
+        "ports": [
+          "UART_TXmod_0/o_TX_Done",
+          "I2C_RTC_0/TX_done"
+        ]
+      },
+      "UART_TXmod_0_o_TX_Serial": {
+        "ports": [
+          "UART_TXmod_0/o_TX_Serial",
+          "uart_rxd_out"
+        ]
+      },
+      "btn0_1": {
+        "ports": [
+          "btn0",
+          "I2C_RTC_0/rst",
+          "I2Cmod_0/reset_n"
+        ]
+      },
+      "scl_i_1": {
+        "ports": [
+          "scl_i",
+          "I2Cmod_0/scl_i"
+        ]
+      },
+      "sda_i_1": {
+        "ports": [
+          "sda_i",
+          "I2Cmod_0/sda_i"
+        ]
+      },
+      "sysclk_1": {
+        "ports": [
+          "sysclk",
+          "I2C_RTC_0/clk",
+          "UART_TXmod_0/sysclk",
+          "I2Cmod_0/sysclk"
+        ]
+      }
+    }
+  }
+}

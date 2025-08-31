@@ -10,7 +10,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
-entity BITFLIP_formatter is
+entity BF_formatter is
     generic (Clockfrequency : integer := 12*1000000; -- 12 MHz
               Baud_Rate      : integer := 400000); -- spi clock frequency
     Port ( 
@@ -23,17 +23,17 @@ entity BITFLIP_formatter is
 		RTC_data : in std_logic_vector(16 downto 0);
 		RTC_request : out std_logic;
 		I2C_read_done : out std_logic;
-		BITFLIP_packet_DV : out std_logic;
-		BITFLIP_packet : out std_logic_vector(191 downto 0)
+		BF_packet_DV : out std_logic;
+		BF_packet : out std_logic_vector(191 downto 0)
     );
-end BITFLIP_formatter;
+end BF_formatter;
 
-architecture rtl of BITFLIP_formatter is
-    type state_type is (s_SRAM_idle, s_SRAM_end_check, s_RTC_idle, s_RTC_end_check, s_cleanup); -- idle is idle but kinda not, but there is not much else to do here
+architecture rtl of BF_formatter is
+    type state_type is (s_SRAM_idle, s_SRAM_end_check, s_RTC_idle, s_BF_send, s_cleanup); -- idle is idle but kinda not, but there is not much else to do here
     signal state : state_type := s_SRAM_idle;
 	
 	signal SRAM_bit_cnt : integer range 0 to 171 := 171; -- index for the radiation data (signal below)
-	signal SRAM_data_i : std_logic_vector(171 downto 0) : (others => '0');
+	signal SRAM_data_i : std_logic_vector(171 downto 0) := (others => '0');
 	
 	signal RTC_bit_cnt : integer range 0 to 16 := 16; -- index for the RTC data
 	signal RTC_data_i : std_logic_vector(16 downto 0) := (others => '0');
@@ -53,9 +53,9 @@ begin
 				RTC_data_i <= (others => '0');
 				RTC_request <= '0';
 				I2C_read_done <= '0';
-				BITFLIP_packet_DV <= '0';
-				BITFLIP_packet <= (others => '0');
-				state <= s_idle;
+				BF_packet_DV <= '0';
+				BF_packet <= (others => '0');
+				state <= s_SRAM_idle;
             else
 				case state is
 					when s_SRAM_idle =>
@@ -69,7 +69,7 @@ begin
 								state <= s_SRAM_end_check;								
 							end if;
 						else 				
-							BITFLIP_packet_DV <= '0';
+							BF_packet_DV <= '0';
 							state <= s_SRAM_idle;
 						end if;	
 						
@@ -84,50 +84,40 @@ begin
 						end if;
 					
 					when s_RTC_idle =>
-						
-						I2C_read_done <= '0';
+					
+						I2C_read_done <= '0';							
 						if RTC_data_DV = '1' then
-							RTC_request <= '0'; -- Thought here is to keep the request high until it gets a response, allows for "queueing" in the module which this is sent to (I2C_sensor_data_fetcher)
-							if (RTC_bit_cnt-7) >= 0 then
-								RTC_data_i(RTC_bit_cnt downto (RTC_bit_cnt-7)) <= RTC_data;
-								state <= s_RTC_end_check;
-							else 
-								RTC_data_i((RTC_bit_cnt) downto 0) <= RTC_data(7 downto (7-RTC_bit_cnt));
-								state <= s_RTC_end_check;
-							end if;
-						else 				
-							BITFLIP_packet_DV <= '0';
-							state <= s_RTC_idle;
-						end if;	
-						
-					when s_RTC_end_check =>
-						
-						if (RTC_bit_cnt-7) >= 0 then
-							RTC_bit_cnt <= RTC_bit_cnt-8;
-							I2C_read_done <= '1';
-							state <= s_RTC_idle;
+                            RTC_request <= '0';
+                            I2C_read_done <= '1';
+                            RTC_data_i <= RTC_data;
+                            state <= s_BF_send;              
 						else
-							BITFLIP_packet <= ID & RTC_data_i & SRAM_data_i & padding;
-							BITFLIP_packet_DV <= '1';
-							I2C_read_done <= '1';
-							state <= s_cleanup;
-						end if;
-						
-					when s_cleanup =>				
-						if BF_packet_got = '1' then						
-							SRAM_bit_cnt <= 171;
-							SRAM_data_i <= (others => '0');
-							RTC_bit_cnt <= 16;
-							RTC_data_i <= (others => '0');
-							RTC_request <= '0';
-							I2C_read_done <= '0';
-							BITFLIP_packet_DV <= '0';
-							BITFLIP_packet <= (others => '0');
-							
-							state <= s_SRAM_idle;					
+						    state <= s_RTC_idle;
+						end if;	
+                    
+                    when s_BF_send =>               
+                        
+                        BF_packet <= ID & RTC_data_i & SRAM_data_i & padding;
+                        BF_packet_DV <= '1';
+                        I2C_read_done <= '1';
+                        if BF_packet_got = '1' then                        
+                            state <= s_cleanup;
 						else 
-							state <= s_cleanup;
-						end if;
+						    state <= s_BF_send;
+                        end if;
+                                      
+					when s_cleanup =>	
+													
+                        SRAM_bit_cnt <= 171;
+                        SRAM_data_i <= (others => '0');
+                        RTC_bit_cnt <= 16;
+                        RTC_data_i <= (others => '0');
+                        RTC_request <= '0';
+                        I2C_read_done <= '0';
+                        BF_packet_DV <= '0';
+                        BF_packet <= (others => '0');
+                        
+                        state <= s_SRAM_idle;		
 						
 				end case;
             end if;
