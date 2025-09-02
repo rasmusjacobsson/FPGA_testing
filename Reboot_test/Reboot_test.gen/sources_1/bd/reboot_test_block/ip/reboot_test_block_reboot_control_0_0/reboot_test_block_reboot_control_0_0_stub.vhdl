@@ -2,10 +2,10 @@
 -- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
--- Date        : Thu Aug  7 18:36:39 2025
--- Host        : DESKTOP-TTFS3R7 running 64-bit major release  (build 9200)
+-- Date        : Tue Sep  2 15:03:41 2025
+-- Host        : LAPTOP-FQ2KK7JS running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
---               d:/Code/GLITCH-Software/FPGA/Reboot_test/Reboot_test.gen/sources_1/bd/reboot_test_block/ip/reboot_test_block_reboot_control_0_0/reboot_test_block_reboot_control_0_0_stub.vhdl
+--               c:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/Reboot_test/Reboot_test.gen/sources_1/bd/reboot_test_block/ip/reboot_test_block_reboot_control_0_0/reboot_test_block_reboot_control_0_0_stub.vhdl
 -- Design      : reboot_test_block_reboot_control_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a35tcpg236-1

@@ -15,4 +15,4 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==reboot_test
 # IP: bd/reboot_test_block/ip/reboot_test_block_UART_TXmod_0_0/reboot_test_block_UART_TXmod_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==reboot_test_block_UART_TXmod_0_0 || ORIG_REF_NAME==reboot_test_block_UART_TXmod_0_0} -quiet] -quiet
 
-# XDC: d:/Code/GLITCH-Software/FPGA/Reboot_test/Reboot_test.gen/sources_1/bd/reboot_test_block/reboot_test_block_ooc.xdc
+# XDC: c:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/Reboot_test/Reboot_test.gen/sources_1/bd/reboot_test_block/reboot_test_block_ooc.xdc

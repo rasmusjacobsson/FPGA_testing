@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1754384962" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/GNSS_Reader_wrapper.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1756815844" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/GNSS_Reader_wrapper.dcp">
+  <File Type="PA-TCL" Name="GNSS_Reader_wrapper.tcl"/>
   <File Type="REPORTS-TCL" Name="GNSS_Reader_wrapper_reports.tcl"/>
+  <File Type="RDS-RDS" Name="GNSS_Reader_wrapper.vds"/>
+  <File Type="RDS-PROPCONSTRS" Name="GNSS_Reader_wrapper_drc_synth.rpt"/>
   <File Type="RDS-UTIL" Name="GNSS_Reader_wrapper_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="GNSS_Reader_wrapper_utilization_synth.pb"/>
-  <File Type="PA-TCL" Name="GNSS_Reader_wrapper.tcl"/>
-  <File Type="RDS-RDS" Name="GNSS_Reader_wrapper.vds"/>
   <File Type="RDS-DCP" Name="GNSS_Reader_wrapper.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="GNSS_Reader_wrapper_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="GNSS_Reader_wrapper_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../UART_Test/UART_Test.srcs/sources_1/new/UART_TXmod.vhd">

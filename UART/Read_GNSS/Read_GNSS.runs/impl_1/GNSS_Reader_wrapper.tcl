@@ -1,5 +1,5 @@
 namespace eval ::optrace {
-  variable script "D:/Code/GLITCH-Software/FPGA/UART/Read_GNSS/Read_GNSS.runs/impl_1/GNSS_Reader_wrapper.tcl"
+  variable script "C:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/UART/Read_GNSS/Read_GNSS.runs/impl_1/GNSS_Reader_wrapper.tcl"
   variable category "vivado_impl"
 }
 
@@ -97,6 +97,7 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
+set_msg_config  -id {17-179}  -suppress 
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Write Bitstream" START { ROLLUP_AUTO }
@@ -109,7 +110,7 @@ set rc [catch {
   set_param xicom.use_bs_reader 1
   set_param runs.launchOptions { -jobs 2  }
   open_checkpoint GNSS_Reader_wrapper_routed.dcp
-  set_property webtalk.parent_dir D:/Code/GLITCH-Software/FPGA/UART/Read_GNSS/Read_GNSS.cache/wt [current_project]
+  set_property webtalk.parent_dir C:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/UART/Read_GNSS/Read_GNSS.cache/wt [current_project]
 set_property TOP GNSS_Reader_wrapper [current_fileset]
 OPTRACE "read constraints: write_bitstream" START { }
 OPTRACE "read constraints: write_bitstream" END { }

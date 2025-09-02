@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="43">
   <CompositeFile CompositeFileTopName="reboot_test_block" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1754586344"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1754586344"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1754586344"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1754586344"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1756817992"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1756817992"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1756817992"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1756817992"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="synth\reboot_test_block.vhd" Type="VHDL">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>

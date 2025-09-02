@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Tue Aug  5 11:13:28 2025
-| Host         : DESKTOP-TTFS3R7 running 64-bit major release  (build 9200)
+| Date         : Tue Sep  2 14:28:47 2025
+| Host         : LAPTOP-FQ2KK7JS running 64-bit major release  (build 9200)
 | Command      : report_utilization -file GNSS_Reader_wrapper_utilization_placed.rpt -pb GNSS_Reader_wrapper_utilization_placed.pb
 | Design       : GNSS_Reader_wrapper
 | Device       : xc7a35tcpg236-1

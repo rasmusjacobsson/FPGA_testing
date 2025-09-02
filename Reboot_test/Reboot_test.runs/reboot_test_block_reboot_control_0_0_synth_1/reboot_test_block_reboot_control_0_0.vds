@@ -3,25 +3,26 @@
 # SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Thu Aug  7 18:36:01 2025
-# Process ID         : 68972
-# Current directory  : D:/Code/GLITCH-Software/FPGA/Reboot_test/Reboot_test.runs/reboot_test_block_reboot_control_0_0_synth_1
+# Start of session at: Tue Sep  2 15:01:52 2025
+# Process ID         : 14988
+# Current directory  : C:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/Reboot_test/Reboot_test.runs/reboot_test_block_reboot_control_0_0_synth_1
 # Command line       : vivado.exe -log reboot_test_block_reboot_control_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source reboot_test_block_reboot_control_0_0.tcl
-# Log file           : D:/Code/GLITCH-Software/FPGA/Reboot_test/Reboot_test.runs/reboot_test_block_reboot_control_0_0_synth_1/reboot_test_block_reboot_control_0_0.vds
-# Journal file       : D:/Code/GLITCH-Software/FPGA/Reboot_test/Reboot_test.runs/reboot_test_block_reboot_control_0_0_synth_1\vivado.jou
-# Running On         : DESKTOP-TTFS3R7
+# Log file           : C:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/Reboot_test/Reboot_test.runs/reboot_test_block_reboot_control_0_0_synth_1/reboot_test_block_reboot_control_0_0.vds
+# Journal file       : C:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/Reboot_test/Reboot_test.runs/reboot_test_block_reboot_control_0_0_synth_1\vivado.jou
+# Running On         : LAPTOP-FQ2KK7JS
 # Platform           : Windows Server 2016 or Windows 10
 # Operating System   : 19045
-# Processor Detail   : Intel(R) Core(TM) i5-7600K CPU @ 3.80GHz
-# CPU Frequency      : 3792 MHz
-# CPU Physical cores : 4
+# Processor Detail   : Intel(R) Core(TM) i3-5005U CPU @ 2.00GHz
+# CPU Frequency      : 1995 MHz
+# CPU Physical cores : 2
 # CPU Logical cores  : 4
-# Host memory        : 17142 MB
-# Swap memory        : 19197 MB
-# Total Virtual      : 36340 MB
-# Available Virtual  : 7213 MB
+# Host memory        : 8499 MB
+# Swap memory        : 10580 MB
+# Total Virtual      : 19080 MB
+# Available Virtual  : 1886 MB
 #-----------------------------------------------------------
 source reboot_test_block_reboot_control_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 329.164 ; gain = 46.828
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2024.2/data/ip'.
@@ -33,31 +34,31 @@ INFO: [Designutils 20-5008] Incremental synthesis strategy off
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
 WARNING: [Common 17-1361] You have specified a new message control rule that is equivalent to an existing rule with attributes ' -id {17-179}  -suppress '. The existing rule will be replaced.
-INFO: [Synth 8-7075] Helper process launched with PID 67112
+INFO: [Synth 8-7075] Helper process launched with PID 11384
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 823.363 ; gain = 475.176
+Starting Synthesize : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 822.957 ; gain = 475.480
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'reboot_test_block_reboot_control_0_0' [d:/Code/GLITCH-Software/FPGA/Reboot_test/Reboot_test.gen/sources_1/bd/reboot_test_block/ip/reboot_test_block_reboot_control_0_0/synth/reboot_test_block_reboot_control_0_0.vhd:64]
-INFO: [Synth 8-3491] module 'reboot_control' declared at 'D:/Code/GLITCH-Software/FPGA/Reboot_test/Reboot_test.srcs/sources_1/new/reboot_control.vhd:25' bound to instance 'U0' of component 'reboot_control' [d:/Code/GLITCH-Software/FPGA/Reboot_test/Reboot_test.gen/sources_1/bd/reboot_test_block/ip/reboot_test_block_reboot_control_0_0/synth/reboot_test_block_reboot_control_0_0.vhd:89]
-INFO: [Synth 8-638] synthesizing module 'reboot_control' [D:/Code/GLITCH-Software/FPGA/Reboot_test/Reboot_test.srcs/sources_1/new/reboot_control.vhd:33]
-INFO: [Synth 8-256] done synthesizing module 'reboot_control' (0#1) [D:/Code/GLITCH-Software/FPGA/Reboot_test/Reboot_test.srcs/sources_1/new/reboot_control.vhd:33]
-INFO: [Synth 8-256] done synthesizing module 'reboot_test_block_reboot_control_0_0' (0#1) [d:/Code/GLITCH-Software/FPGA/Reboot_test/Reboot_test.gen/sources_1/bd/reboot_test_block/ip/reboot_test_block_reboot_control_0_0/synth/reboot_test_block_reboot_control_0_0.vhd:64]
+INFO: [Synth 8-638] synthesizing module 'reboot_test_block_reboot_control_0_0' [c:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/Reboot_test/Reboot_test.gen/sources_1/bd/reboot_test_block/ip/reboot_test_block_reboot_control_0_0/synth/reboot_test_block_reboot_control_0_0.vhd:64]
+INFO: [Synth 8-3491] module 'reboot_control' declared at 'C:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/Reboot_test/Reboot_test.srcs/sources_1/new/reboot_control.vhd:25' bound to instance 'U0' of component 'reboot_control' [c:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/Reboot_test/Reboot_test.gen/sources_1/bd/reboot_test_block/ip/reboot_test_block_reboot_control_0_0/synth/reboot_test_block_reboot_control_0_0.vhd:89]
+INFO: [Synth 8-638] synthesizing module 'reboot_control' [C:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/Reboot_test/Reboot_test.srcs/sources_1/new/reboot_control.vhd:33]
+INFO: [Synth 8-256] done synthesizing module 'reboot_control' (0#1) [C:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/Reboot_test/Reboot_test.srcs/sources_1/new/reboot_control.vhd:33]
+INFO: [Synth 8-256] done synthesizing module 'reboot_test_block_reboot_control_0_0' (0#1) [c:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/Reboot_test/Reboot_test.gen/sources_1/bd/reboot_test_block/ip/reboot_test_block_reboot_control_0_0/synth/reboot_test_block_reboot_control_0_0.vhd:64]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 928.645 ; gain = 580.457
+Finished Synthesize : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 927.266 ; gain = 579.789
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 928.645 ; gain = 580.457
+Finished Constraint Validation : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 927.266 ; gain = 579.789
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 928.645 ; gain = 580.457
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 927.266 ; gain = 579.789
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 928.645 ; gain = 580.457
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 927.266 ; gain = 579.789
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
@@ -88,20 +89,20 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1091.121 ; gain = 742.934
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:49 . Memory (MB): peak = 1088.410 ; gain = 740.934
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1105.922 ; gain = 757.734
+Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:49 . Memory (MB): peak = 1104.168 ; gain = 756.691
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1105.922 ; gain = 757.734
+Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:49 . Memory (MB): peak = 1104.168 ; gain = 756.691
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -119,37 +120,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1308.441 ; gain = 960.254
+Finished IO Insertion : Time (s): cpu = 00:00:46 ; elapsed = 00:01:01 . Memory (MB): peak = 1305.191 ; gain = 957.715
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1308.441 ; gain = 960.254
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:46 ; elapsed = 00:01:01 . Memory (MB): peak = 1305.191 ; gain = 957.715
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1308.441 ; gain = 960.254
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:46 ; elapsed = 00:01:01 . Memory (MB): peak = 1305.191 ; gain = 957.715
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1308.441 ; gain = 960.254
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:46 ; elapsed = 00:01:01 . Memory (MB): peak = 1305.191 ; gain = 957.715
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1308.441 ; gain = 960.254
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:46 ; elapsed = 00:01:01 . Memory (MB): peak = 1305.191 ; gain = 957.715
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1308.441 ; gain = 960.254
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:46 ; elapsed = 00:01:01 . Memory (MB): peak = 1305.191 ; gain = 957.715
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -177,16 +178,16 @@ Report Instance Areas:
 |2     |  U0     |reboot_control |     3|
 +------+---------+---------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1308.441 ; gain = 960.254
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:46 ; elapsed = 00:01:01 . Memory (MB): peak = 1305.191 ; gain = 957.715
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1308.441 ; gain = 960.254
-Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1308.441 ; gain = 960.254
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:46 ; elapsed = 00:01:01 . Memory (MB): peak = 1305.191 ; gain = 957.715
+Synthesis Optimization Complete : Time (s): cpu = 00:00:46 ; elapsed = 00:01:01 . Memory (MB): peak = 1305.191 ; gain = 957.715
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1323.531 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1320.246 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1429.383 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1427.445 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
@@ -194,9 +195,9 @@ Synth Design complete | Checksum: 2a3f68d4
 INFO: [Common 17-83] Releasing license: Synthesis
 19 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1429.383 ; gain = 1081.305
+synth_design: Time (s): cpu = 00:00:50 ; elapsed = 00:01:12 . Memory (MB): peak = 1427.445 ; gain = 1079.969
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-INFO: [Common 17-1381] The checkpoint 'D:/Code/GLITCH-Software/FPGA/Reboot_test/Reboot_test.runs/reboot_test_block_reboot_control_0_0_synth_1/reboot_test_block_reboot_control_0_0.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1658.305 ; gain = 228.922
+INFO: [Common 17-1381] The checkpoint 'C:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/Reboot_test/Reboot_test.runs/reboot_test_block_reboot_control_0_0_synth_1/reboot_test_block_reboot_control_0_0.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1660.328 ; gain = 232.883
 INFO: [Vivado 12-24828] Executing command : report_utilization -file reboot_test_block_reboot_control_0_0_utilization_synth.rpt -pb reboot_test_block_reboot_control_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Aug  7 18:36:39 2025...
+INFO: [Common 17-206] Exiting Vivado at Tue Sep  2 15:03:41 2025...

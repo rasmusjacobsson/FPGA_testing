@@ -1,5 +1,5 @@
 namespace eval ::optrace {
-  variable script "D:/Code/GLITCH-Software/FPGA/Reboot_test/Reboot_test.runs/impl_1/reboot_test_block_wrapper.tcl"
+  variable script "C:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/Reboot_test/Reboot_test.runs/impl_1/reboot_test_block_wrapper.tcl"
   variable category "vivado_impl"
 }
 
@@ -110,7 +110,7 @@ set rc [catch {
   set_param xicom.use_bs_reader 1
   set_param runs.launchOptions { -jobs 2  }
   open_checkpoint reboot_test_block_wrapper_routed.dcp
-  set_property webtalk.parent_dir D:/Code/GLITCH-Software/FPGA/Reboot_test/Reboot_test.cache/wt [current_project]
+  set_property webtalk.parent_dir C:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/Reboot_test/Reboot_test.cache/wt [current_project]
 set_property TOP reboot_test_block_wrapper [current_fileset]
 OPTRACE "read constraints: write_bitstream" START { }
 OPTRACE "read constraints: write_bitstream" END { }
