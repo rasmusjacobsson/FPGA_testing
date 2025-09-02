@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"reboot_test_block": {
+			"proto_instances": {
+			}
+		}
+	}
+}

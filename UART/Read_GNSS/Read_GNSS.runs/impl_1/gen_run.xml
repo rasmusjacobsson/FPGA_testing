@@ -1,64 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1754385172">
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1756816029">
+  <File Type="PA-TCL" Name="GNSS_Reader_wrapper.tcl"/>
   <File Type="REPORTS-TCL" Name="GNSS_Reader_wrapper_reports.tcl"/>
-  <File Type="ROUTE-PWR-SUM" Name="GNSS_Reader_wrapper_power_summary_routed.pb"/>
-  <File Type="BITSTR-MMI" Name="GNSS_Reader_wrapper.mmi"/>
+  <File Type="INIT-TIMING" Name="GNSS_Reader_wrapper_timing_summary_init.rpt"/>
+  <File Type="OPT-DCP" Name="GNSS_Reader_wrapper_opt.dcp"/>
   <File Type="OPT-DRC" Name="GNSS_Reader_wrapper_drc_opted.rpt"/>
-  <File Type="BG-DRC" Name="GNSS_Reader_wrapper.drc"/>
-  <File Type="ROUTE-STATUS-PB" Name="GNSS_Reader_wrapper_route_status.pb"/>
-  <File Type="BG-BGN" Name="GNSS_Reader_wrapper.bgn"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="GNSS_Reader_wrapper_methodology_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="GNSS_Reader_wrapper.hwdef"/>
+  <File Type="OPT-TIMING" Name="GNSS_Reader_wrapper_timing_summary_opted.rpt"/>
+  <File Type="OPT-RQA-PB" Name="GNSS_Reader_wrapper_rqa_opted.pb"/>
+  <File Type="PWROPT-DCP" Name="GNSS_Reader_wrapper_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="GNSS_Reader_wrapper_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="GNSS_Reader_wrapper_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="GNSS_Reader_wrapper_placed.dcp"/>
+  <File Type="PLACE-IO" Name="GNSS_Reader_wrapper_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="GNSS_Reader_wrapper_clock_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL" Name="GNSS_Reader_wrapper_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL-PB" Name="GNSS_Reader_wrapper_utilization_placed.pb"/>
-  <File Type="PLACE-IO" Name="GNSS_Reader_wrapper_io_placed.rpt"/>
-  <File Type="BG-BIN" Name="GNSS_Reader_wrapper.bin"/>
   <File Type="PLACE-CTRL" Name="GNSS_Reader_wrapper_control_sets_placed.rpt"/>
-  <File Type="ROUTE-PWR-RPX" Name="GNSS_Reader_wrapper_power_routed.rpx"/>
-  <File Type="BITSTR-MSK" Name="GNSS_Reader_wrapper.msk"/>
-  <File Type="BITSTR-RBT" Name="GNSS_Reader_wrapper.rbt"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="GNSS_Reader_wrapper_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-TIMING-RPX" Name="GNSS_Reader_wrapper_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="GNSS_Reader_wrapper_route_status.rpt"/>
-  <File Type="PA-TCL" Name="GNSS_Reader_wrapper.tcl"/>
-  <File Type="ROUTE-PWR" Name="GNSS_Reader_wrapper_power_routed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="GNSS_Reader_wrapper_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="GNSS_Reader_wrapper_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="GNSS_Reader_wrapper_timing_summary_placed.rpt"/>
+  <File Type="PLACE-RQA-PB" Name="GNSS_Reader_wrapper_rqa_placed.pb"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="GNSS_Reader_wrapper_postplace_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="GNSS_Reader_wrapper_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="GNSS_Reader_wrapper_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="GNSS_Reader_wrapper_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-TIMING" Name="GNSS_Reader_wrapper_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="GNSS_Reader_wrapper_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="GNSS_Reader_wrapper_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="GNSS_Reader_wrapper_routed_bb.dcp"/>
   <File Type="ROUTE-DRC" Name="GNSS_Reader_wrapper_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-RPX" Name="GNSS_Reader_wrapper_drc_routed.rpx"/>
   <File Type="ROUTE-DRC-PB" Name="GNSS_Reader_wrapper_drc_routed.pb"/>
-  <File Type="BITSTR-SYSDEF" Name="GNSS_Reader_wrapper.sysdef"/>
+  <File Type="ROUTE-DRC-RPX" Name="GNSS_Reader_wrapper_drc_routed.rpx"/>
   <File Type="ROUTE-METHODOLOGY-DRC" Name="GNSS_Reader_wrapper_methodology_drc_routed.rpt"/>
   <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="GNSS_Reader_wrapper_methodology_drc_routed.rpx"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="GNSS_Reader_wrapper.ltx"/>
   <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="GNSS_Reader_wrapper_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-SIMILARITY" Name="GNSS_Reader_wrapper_incremental_reuse_routed.rpt"/>
-  <File Type="RDI-RDI" Name="GNSS_Reader_wrapper.vdi"/>
-  <File Type="ROUTE-CLK" Name="GNSS_Reader_wrapper_clock_utilization_routed.rpt"/>
-  <File Type="PA-DCP" Name="GNSS_Reader_wrapper.dcp"/>
-  <File Type="ROUTE-BUS-SKEW" Name="GNSS_Reader_wrapper_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="GNSS_Reader_wrapper_bus_skew_routed.rpx"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="GNSS_Reader_wrapper_bus_skew_routed.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="GNSS_Reader_wrapper_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="GNSS_Reader_wrapper_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="GNSS_Reader_wrapper_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="GNSS_Reader_wrapper_bus_skew_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="GNSS_Reader_wrapper_bus_skew_postroute_physopted.rpx"/>
-  <File Type="BG-BIT" Name="GNSS_Reader_wrapper.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="GNSS_Reader_wrapper_bus_skew_postroute_physopted.pb"/>
-  <File Type="BITSTR-NKY" Name="GNSS_Reader_wrapper.nky"/>
-  <File Type="BITSTR-BMM" Name="GNSS_Reader_wrapper_bd.bmm"/>
-  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="OPT-HWDEF" Name="GNSS_Reader_wrapper.hwdef"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="GNSS_Reader_wrapper_incremental_reuse_pre_placed.rpt"/>
-  <File Type="ROUTE-DCP" Name="GNSS_Reader_wrapper_routed.dcp"/>
-  <File Type="ROUTE-ERROR-DCP" Name="GNSS_Reader_wrapper_routed_error.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="GNSS_Reader_wrapper_routed_bb.dcp"/>
+  <File Type="ROUTE-PWR" Name="GNSS_Reader_wrapper_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="GNSS_Reader_wrapper_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="GNSS_Reader_wrapper_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="GNSS_Reader_wrapper_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="GNSS_Reader_wrapper_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="GNSS_Reader_wrapper_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="GNSS_Reader_wrapper_timing_summary_routed.pb"/>
-  <File Type="OPT-DCP" Name="GNSS_Reader_wrapper_opt.dcp"/>
-  <File Type="PLACE-DCP" Name="GNSS_Reader_wrapper_placed.dcp"/>
-  <File Type="PWROPT-DCP" Name="GNSS_Reader_wrapper_pwropt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="GNSS_Reader_wrapper_postplace_pwropt.dcp"/>
-  <File Type="PHYSOPT-DCP" Name="GNSS_Reader_wrapper_physopt.dcp"/>
+  <File Type="ROUTE-TIMING-RPX" Name="GNSS_Reader_wrapper_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="GNSS_Reader_wrapper_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="GNSS_Reader_wrapper_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="GNSS_Reader_wrapper_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="GNSS_Reader_wrapper_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="GNSS_Reader_wrapper_bus_skew_routed.rpx"/>
+  <File Type="ROUTE-RQS-PB" Name="GNSS_Reader_wrapper_rqs_routed.pb"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="GNSS_Reader_wrapper_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="GNSS_Reader_wrapper_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="GNSS_Reader_wrapper_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="GNSS_Reader_wrapper_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="GNSS_Reader_wrapper_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="GNSS_Reader_wrapper_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="GNSS_Reader_wrapper_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="GNSS_Reader_wrapper_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BG-BIT" Name="GNSS_Reader_wrapper.bit"/>
+  <File Type="BG-BIN" Name="GNSS_Reader_wrapper.bin"/>
+  <File Type="BITSTR-MSK" Name="GNSS_Reader_wrapper.msk"/>
+  <File Type="BITSTR-RBT" Name="GNSS_Reader_wrapper.rbt"/>
+  <File Type="BITSTR-NKY" Name="GNSS_Reader_wrapper.nky"/>
+  <File Type="BITSTR-BMM" Name="GNSS_Reader_wrapper_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="GNSS_Reader_wrapper.mmi"/>
   <File Type="PDI-FILE" Name="GNSS_Reader_wrapper.pdi"/>
   <File Type="BOOT-PDI-FILE" Name="GNSS_Reader_wrapper_boot.pdi"/>
   <File Type="PL-PDI-FILE" Name="GNSS_Reader_wrapper_pld.pdi"/>
@@ -67,6 +73,13 @@
   <File Type="RNPI_FILE" Name="GNSS_Reader_wrapper.rnpi"/>
   <File Type="NPI_FILE" Name="GNSS_Reader_wrapper.npi"/>
   <File Type="RBD_FILE" Name="GNSS_Reader_wrapper.rbd"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="GNSS_Reader_wrapper.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="GNSS_Reader_wrapper.sysdef"/>
+  <File Type="BG-BGN" Name="GNSS_Reader_wrapper.bgn"/>
+  <File Type="BG-DRC" Name="GNSS_Reader_wrapper.drc"/>
+  <File Type="RDI-RDI" Name="GNSS_Reader_wrapper.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="ROUTE-RQS" Name="GNSS_Reader_wrapper_routed.rqs"/>
   <File Type="POSTROUTE-PHYSOPT-RQS" Name="GNSS_Reader_wrapper_postroute_physopted.rqs"/>
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
@@ -154,7 +167,6 @@
     <Step Id="route_design"/>
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
-    <Step Id="write_device_image"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="GNSS_Reader_UART_TXmod_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="GNSS_Reader_Switchmod_0_0"/>

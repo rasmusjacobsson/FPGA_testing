@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Tue Sep  2 15:10:53 2025
+# Process ID         : 18548
+# Current directory  : C:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/Reboot_test/Reboot_test.runs/impl_1
+# Command line       : vivado.exe -log reboot_test_block_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source reboot_test_block_wrapper.tcl -notrace
+# Log file           : C:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/Reboot_test/Reboot_test.runs/impl_1/reboot_test_block_wrapper.vdi
+# Journal file       : C:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/Reboot_test/Reboot_test.runs/impl_1\vivado.jou
+# Running On         : LAPTOP-FQ2KK7JS
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 19045
+# Processor Detail   : Intel(R) Core(TM) i3-5005U CPU @ 2.00GHz
+# CPU Frequency      : 1995 MHz
+# CPU Physical cores : 2
+# CPU Logical cores  : 4
+# Host memory        : 8499 MB
+# Swap memory        : 10580 MB
+# Total Virtual      : 19080 MB
+# Available Virtual  : 1907 MB
+#-----------------------------------------------------------
+source reboot_test_block_wrapper.tcl -notrace

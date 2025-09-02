@@ -7,6 +7,9 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
+library UNISIM;
+use UNISIM.VComponents.all;
+
 entity fpga_rebooter is
     Port (
         clk : in std_logic;
@@ -16,107 +19,112 @@ entity fpga_rebooter is
     );
 end fpga_rebooter;
 
-architecture Behavioral of fpga_rebooter is
+architecture rtl of fpga_rebooter is
 
-    component ICAPE2
-        generic (
-            DEVICE_ID : std_logic_vector(31 downto 0) := x"03651093"; -- Artix-7 device ID
-            SIM_CFG_FILE_NAME : string := "NONE"
-        );
-        port (
-            CLK   : in  std_logic;
-            CSIB  : in  std_logic;
-            RDWRB : in  std_logic;
-            I     : in  std_logic_vector(31 downto 0);
-            O     : out std_logic_vector(31 downto 0)
-        );
-    end component;
+	type state_type is (IDLE, DUMMY1, DUMMY2, SYNC, NOOP1, WBST, ADDR, CMD, IPROG, NOOP2); 
+	signal state, next_state : state_type; 
 
-    signal icap_csib  : std_logic := '1';
-    signal icap_rdwrb : std_logic := '1';
-    signal icap_i     : std_logic_vector(31 downto 0) := (others => '0');
-    signal icap_o     : std_logic_vector(31 downto 0);
-    signal state      : integer range 0 to 10 := 0;
-    signal trigger_d  : std_logic := '0';
+	-- Signal Declarations
+	signal icap_din  : std_logic_vector(31 downto 0);
+	signal icap_dout : std_logic_vector(31 downto 0);
+	signal icap_ce   : std_logic;
+	signal icap_wr   : std_logic;
 
 begin
 
-    ICAP_INST: ICAPE2
-        port map (
-            CLK   => clk,
-            CSIB  => icap_csib,
-            RDWRB => icap_rdwrb,
-            I     => icap_i,
-            O     => icap_o
-        );
+    ICAPE2_0 : ICAPE2
+	generic map (
+		DEVICE_ID         => X"03651093", -- Specifies the pre-programmed Device ID value to be used for simulation purposes.
+		ICAP_WIDTH        => "X32",      -- Specifies the input and output data width.
+		SIM_CFG_FILE_NAME => "NONE"      -- Specifies the Raw Bitstream (RBT) file to be parsed by the simulation model.
+	)
+	port map (
+		O     => icap_dout, -- 32-bit output: Configuration data output bus
+		CLK   => clk,       -- 1-bit input: Clock Input
+		CSIB  => icap_ce,   -- 1-bit input: Active-Low ICAP Enable
+		I     => icap_din,  -- 32-bit input: Configuration data input bus
+		RDWRB => icap_wr    -- 1-bit input: Read/Write Select input
+	);
 
     process(clk)
     begin
         if rising_edge(clk) then
-            trigger_d <= reboot_trigger;
-
             case state is
-                when 0 =>
-                    if reboot_trigger = '1' and trigger_d = '0' then  -- rising edge of trigger
-                        state <= 1;
-                        led0 <= '1';
-                        led1 <= '0';
-                    else 
-                        led1 <= '1';
-                        led0 <= '0';
-                    end if;
+                when IDLE =>
+					if (reboot_trigger='1') then
+					state     <= DUMMY1;
+					icap_ce   <= '0';
+					icap_wr   <= '0';
+					icap_din  <= X"FFFFFFFF"; -- Bit Reversal of X"FFFFFFFF"
+					else
+					state     <= IDLE;
+					icap_ce   <= '1';
+					icap_wr   <= '1';
+					icap_din  <= X"FFFFFFFF"; -- Bit Reversal of X"FFFFFFFF"
+					end if;
 
-                when 1 =>  -- Send sync word
-                    icap_csib  <= '0';
-                    icap_rdwrb <= '0';
-                    icap_i     <= x"FFFFFFFF";
-                    state      <= 2;
-                    led1 <= '1';
-                    led0 <= '0';
+				when DUMMY1 =>
+					state     <= DUMMY2;
+					icap_ce   <= '0';
+					icap_wr   <= '0';
+					icap_din  <= X"FFFFFFFF";   -- Bit Reversal of X"FFFFFFFF"
 
-                when 2 =>
-                    icap_i <= x"AA995566"; -- NOOP
-                    state  <= 3;
-                    led1 <= '0';
-                    led0 <= '1';
+				when DUMMY2 =>
+					state     <= SYNC;
+					icap_ce   <= '0';
+					icap_wr   <= '0';
+					icap_din  <= X"5599AA66";   -- Bit Reversal of X"AA995566"
 
-                when 3 =>
-                    icap_i <= x"20000000"; -- Type 1 Write to CMD register
-                    state  <= 4;
-                    led1 <= '1';
-                    led0 <= '0';
+				when SYNC =>
+					state     <= NOOP1;
+					icap_ce   <= '0';
+					icap_wr   <= '0';
+					icap_din  <= X"04000000";   -- Bit Reversal of X"20000000"
 
-                when 4 =>
-                    icap_i <= x"0000000F"; -- Command: IPROG (reboot)
-                    state  <= 5;
-                    led1 <= '0';
-                    led0 <= '1';
+				when NOOP1 =>
+					state     <= WBST;
+					icap_ce   <= '0';
+					icap_wr   <= '0';
+					icap_din  <= X"0C400080";   -- Bit Reversal of X"30020001"
 
-                when 5 =>
-                    icap_i <= x"20000000"; -- NOOP
-                    state  <= 6;
-                    led1 <= '1';
-                    led0 <= '0';
+				when WBST =>
+					state     <= ADDR;
+					icap_ce   <= '0';
+					icap_wr   <= '0';
+					icap_din  <= X"00800000";    -- Bit Reversal of X"00010000"
 
-                when 6 =>
-                    icap_i <= x"20000000"; -- NOOP (double NOOP just in case)
-                    state  <= 7;
-                    led1 <= '0';
-                    led0 <= '1';
+				when ADDR =>
+					state     <= CMD;
+					icap_ce   <= '0';
+					icap_wr   <= '0';
+					icap_din  <= X"0C000180";   -- Bit Reversal of X"30008001"
 
-                when 7 =>
-                    icap_csib <= '1'; -- Deactivate ICAP
-                    state <= 8;
-                    led1 <= '1';
-                    led0 <= '0';
+				when CMD =>
+					state     <= IPROG;
+					icap_ce   <= '0';
+					icap_wr   <= '0';
+					icap_din  <= X"000000F0";   -- Bit Reversal of X"0000000F"
 
-                when others =>                   
-                    -- done
-                    led0 <= '0';
-                    led1 <= '0';
-            end case;
+				when IPROG =>
+					state     <= NOOP2;
+					icap_ce   <= '0';
+					icap_wr   <= '0';
+					icap_din  <= X"04000000";   -- Bit Reversal of X"20000000"
+
+				when NOOP2 =>
+					state     <= IDLE;
+					icap_ce   <= '1';
+					icap_wr   <= '1';
+					icap_din  <= X"FFFFFFFF";   -- Bit Reversal of X"FFFFFFFF"
+
+				when others =>
+					state     <= IDLE;
+					icap_ce   <= '1';
+					icap_wr   <= '1';
+					icap_din  <= X"FFFFFFFF";   -- Bit Reversal of X"FFFFFFFF"
+			end case;
         end if;
     end process;
 
-end Behavioral;
+end rtl;
 

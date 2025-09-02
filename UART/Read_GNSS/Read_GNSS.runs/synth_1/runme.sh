@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/Code/GLITCH-Software/FPGA/UART/Read_GNSS/Read_GNSS.runs/synth_1'
+HD_PWD='C:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/UART/Read_GNSS/Read_GNSS.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

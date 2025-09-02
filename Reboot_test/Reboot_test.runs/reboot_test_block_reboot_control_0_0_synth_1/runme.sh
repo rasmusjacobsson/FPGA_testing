@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/Code/GLITCH-Software/FPGA/Reboot_test/Reboot_test.runs/reboot_test_block_reboot_control_0_0_synth_1'
+HD_PWD='C:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/Reboot_test/Reboot_test.runs/reboot_test_block_reboot_control_0_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

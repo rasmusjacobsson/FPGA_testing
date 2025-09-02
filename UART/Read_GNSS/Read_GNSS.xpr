@@ -4,7 +4,7 @@
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.                   -->
 <!-- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.   -->
 
-<Project Product="Vivado" Version="7" Minor="68" Path="D:/Code/GLITCH-Software/FPGA/UART/Read_GNSS/Read_GNSS.xpr">
+<Project Product="Vivado" Version="7" Minor="68" Path="C:/Users/rjaco/Documents/Skolgrejs/FPGA_testing/UART/Read_GNSS/Read_GNSS.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="c3a4a01ca79c4ebf9ecbcb060db4d3a9"/>

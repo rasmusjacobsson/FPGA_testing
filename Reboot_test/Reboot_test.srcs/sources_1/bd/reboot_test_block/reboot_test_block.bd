@@ -162,8 +162,8 @@
         "ports": [
           "sysclk",
           "UART_TXmod_0/sysclk",
-          "reboot_control_0/clk",
-          "fpga_rebooter_0/clk"
+          "fpga_rebooter_0/clk",
+          "reboot_control_0/clk"
         ]
       }
     }
