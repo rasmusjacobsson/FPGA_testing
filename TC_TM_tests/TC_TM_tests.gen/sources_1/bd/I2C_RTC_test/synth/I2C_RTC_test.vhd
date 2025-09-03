@@ -2,8 +2,8 @@
 --Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
---Date        : Sat Aug 23 17:17:04 2025
---Host        : DESKTOP-TTFS3R7 running 64-bit major release  (build 9200)
+--Date        : Wed Sep  3 11:25:38 2025
+--Host        : LAPTOP-FQ2KK7JS running 64-bit major release  (build 9200)
 --Command     : generate_target I2C_RTC_test.bd
 --Design      : I2C_RTC_test
 --Purpose     : IP block netlist
@@ -24,10 +24,10 @@ entity I2C_RTC_test is
     sysclk : in STD_LOGIC;
     uart_rxd_out : out STD_LOGIC
   );
-  attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of I2C_RTC_test : entity is "I2C_RTC_test,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=I2C_RTC_test,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=3,numReposBlks=3,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=3,numPkgbdBlks=0,bdsource=USER,synth_mode=Hierarchical}";
-  attribute HW_HANDOFF : string;
-  attribute HW_HANDOFF of I2C_RTC_test : entity is "I2C_RTC_test.hwdef";
+  attribute core_generation_info : string;
+  attribute core_generation_info of I2C_RTC_test : entity is "I2C_RTC_test,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=I2C_RTC_test,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=3,numReposBlks=3,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=3,numPkgbdBlks=0,bdsource=USER,synth_mode=Hierarchical}";
+  attribute hw_handoff : string;
+  attribute hw_handoff of I2C_RTC_test : entity is "I2C_RTC_test.hwdef";
 end I2C_RTC_test;
 
 architecture STRUCTURE of I2C_RTC_test is
@@ -56,7 +56,7 @@ architecture STRUCTURE of I2C_RTC_test is
     o_TX_Done : out STD_LOGIC
   );
   end component I2C_RTC_test_UART_TXmod_0_0;
-  component I2C_RTC_test_I2Cmod_0_0 is
+  component I2C_RTC_test_I2Cmod_0_1 is
   port (
     sda_i : in STD_LOGIC;
     sda_o : out STD_LOGIC;
@@ -74,7 +74,7 @@ architecture STRUCTURE of I2C_RTC_test is
     data_rd : out STD_LOGIC_VECTOR ( 7 downto 0 );
     ack_error : out STD_LOGIC
   );
-  end component I2C_RTC_test_I2Cmod_0_0;
+  end component I2C_RTC_test_I2Cmod_0_1;
   signal I2C_RTC_0_RTC_DV : STD_LOGIC;
   signal I2C_RTC_0_RTC_data : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal I2C_RTC_0_o_i2c_address : STD_LOGIC_VECTOR ( 6 downto 0 );
@@ -101,7 +101,7 @@ I2C_RTC_0: component I2C_RTC_test_I2C_RTC_0_0
       o_i2c_rw => I2C_RTC_0_o_i2c_rw,
       rst => btn0
     );
-I2Cmod_0: component I2C_RTC_test_I2Cmod_0_0
+I2Cmod_0: component I2C_RTC_test_I2Cmod_0_1
      port map (
       ack_error => NLW_I2Cmod_0_ack_error_UNCONNECTED,
       addr(6 downto 0) => I2C_RTC_0_o_i2c_address(6 downto 0),

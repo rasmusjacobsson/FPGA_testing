@@ -11,8 +11,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity I2C_RTC is
 	generic(Clockfrequency : integer := 12*1000000); -- 12 Mhz
-    Port (clk 			: in std_logic;
-          rst 			: in std_logic;
+    Port (sysclk 			: in std_logic;
+          reset_n 			: in std_logic;
 		  
 		  i_busy        : in std_logic;
 		  i_data_read   : in std_logic_vector(7 downto	0);
@@ -33,19 +33,16 @@ architecture rtl of I2C_RTC is
     
     signal busy_prev : std_logic;
     signal RTC_data_i : std_logic_vector(63 downto 0); -- 8 bytes just for safety (if it turns out the RTC sends more, just add more)
-    
-    
-    
+       
 begin
-    process(clk)
+    process(sysclk)
 		variable busy_cnt   : integer range 0 to 9 := 0;                  -- Count busy transisions during one transaction		
 		variable mess_cnt   : integer range 0 to 2 := 0;                  -- Counting messages sent to TX module 
 		variable timeout 	: integer range 0 to Clockfrequency/1000;	  -- Variable used to stop listening for responses after set time (1 ms)
-	    variable reading_in_progress : boolean := false;
     begin
     
-        if rising_edge(clk) then
-            if rst = '1' then
+        if rising_edge(sysclk) then
+            if reset_n = '1' then
 				busy_cnt := 0;
 				mess_cnt := 0;
 				timeout := 0;
@@ -58,6 +55,9 @@ begin
 				o_i2c_ena <= '0';
 				o_i2c_rw <= '0';
 				
+				RTC_dv <= '0';
+				RTC_data <= (others => '0');
+				
 				state <= s_RTC;
             else 
 				case state is 
@@ -65,15 +65,9 @@ begin
 						state <= s_idle;
 					when s_RTC =>
 						
-                    -- Start counting timeout only once after last byte is read
-                    if (reading_in_progress = false) then
-                        timeout := 0;  -- Reset only once at start
-                    end if;
-
                     if timeout = Clockfrequency/1000 then
                         state <= s_RTC_send;
                         timeout := 0;
-                        reading_in_progress := false;
                     else
                         timeout := timeout + 1;
                     end if;
@@ -82,7 +76,7 @@ begin
 
                     if (busy_prev = '0' and i_busy = '1') then
                         busy_cnt := busy_cnt + 1;
-                        reading_in_progress := true; -- Mark we are reading now
+                        timeout := 0;
                     end if;
 
                     case busy_cnt is

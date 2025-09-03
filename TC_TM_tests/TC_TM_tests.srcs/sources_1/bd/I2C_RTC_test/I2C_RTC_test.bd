@@ -145,8 +145,8 @@
       "I2Cmod_0": {
         "vlnv": "xilinx.com:module_ref:I2Cmod:1.0",
         "ip_revision": "1",
-        "xci_name": "I2C_RTC_test_I2Cmod_0_0",
-        "xci_path": "ip\\I2C_RTC_test_I2Cmod_0_0\\I2C_RTC_test_I2Cmod_0_0.xci",
+        "xci_name": "I2C_RTC_test_I2Cmod_0_1",
+        "xci_path": "ip\\I2C_RTC_test_I2Cmod_0_1\\I2C_RTC_test_I2Cmod_0_1.xci",
         "inst_hier_path": "I2Cmod_0",
         "reference_info": {
           "ref_type": "hdl",
@@ -317,8 +317,8 @@
         "ports": [
           "sysclk",
           "I2C_RTC_0/clk",
-          "UART_TXmod_0/sysclk",
-          "I2Cmod_0/sysclk"
+          "I2Cmod_0/sysclk",
+          "UART_TXmod_0/sysclk"
         ]
       }
     }

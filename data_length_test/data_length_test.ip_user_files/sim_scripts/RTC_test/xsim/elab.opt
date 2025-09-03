@@ -1,0 +1,1 @@
+--incr --debug typical --relax --mt 2  -L xil_defaultlib -L secureip -L xpm --snapshot RTC_test xil_defaultlib.RTC_test -log elaborate.log

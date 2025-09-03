@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Aug 23 17:17:05 2025" VIVADOVERSION="2024.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Sep  3 11:25:39 2025" VIVADOVERSION="2024.2">
 
   <SYSTEMINFO ARCH="artix7" DEVICE="7a35t" NAME="I2C_RTC_test" PACKAGE="cpg236" SPEEDGRADE="-1"/>
 
@@ -43,8 +43,8 @@
     <PORT DIR="I" NAME="sysclk" SIGIS="undef" SIGNAME="External_Ports_sysclk">
       <CONNECTIONS>
         <CONNECTION INSTANCE="I2C_RTC_0" PORT="clk"/>
-        <CONNECTION INSTANCE="UART_TXmod_0" PORT="sysclk"/>
         <CONNECTION INSTANCE="I2Cmod_0" PORT="sysclk"/>
+        <CONNECTION INSTANCE="UART_TXmod_0" PORT="sysclk"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" NAME="uart_rxd_out" SIGIS="undef" SIGNAME="UART_TXmod_0_o_TX_Serial">
@@ -128,7 +128,7 @@
       <PARAMETERS>
         <PARAMETER NAME="Bus_Clockfrequency" VALUE="400000"/>
         <PARAMETER NAME="Sys_Clockfrequency" VALUE="12000000"/>
-        <PARAMETER NAME="Component_Name" VALUE="I2C_RTC_test_I2Cmod_0_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="I2C_RTC_test_I2Cmod_0_1"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
